@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Павел Кощеев](https://up.htmlacademy.ru/htmlcss/22/user/488619).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Алипкин] (https://htmlacademy.ru/profile/ealipkin).
 
 ---
 
