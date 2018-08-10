@@ -7,7 +7,7 @@
   <body>
     <header class='main-header'>
       <nav class='main-navigation'>
-        <a class='main-header-logo'>
+        <a class='main-header-logo' href='#'>
           <img src='img/logo.svd' width='30' height='30' alt='Логотип GllacyShop'>
         </a>
         <ul class='site-navigation'>
@@ -23,7 +23,7 @@
       </nav>
     </header>
     <main class='container'>
-      <h1 class='visually-hidden'>Магазин мороженого Глэйси</h1>
+      <h1 class='visually-hidden'>Магазин мороженого Глэйси</h1> <!--Добавил заголовки с классом "visually-hidden" для удобства разметки-->
       <section class='contact-information-top'>
         <p class='working-hours'>
           С 10 до 20, ежедневно
@@ -32,62 +32,62 @@
           8 812 450-25-25
         </p>
       </section>
-      <section class='slider-top'>
-        <a>
+      <div class='slider-top'>
+        <a href='#'>
           Крем-брюле и пломбир с малиновым джемом
           <img src='img/crem-brulee-and-sebum-rasp'>
           <span class='give-two'>Давайте оба!</span>
         </a>
-      </section>
+      </div>
       <h2 class='visually-hidden'>Спецпредложения</h2>
       <section class='raspberry-offers'>
         <h3 class='free paspberry'>Малинка даром!</h3>
         <p>При покупке 2кг любого фруктового мороженого, добавим
            в ваш заказ банку малинового варенья бесплатно.</p>
-        <span>Хочу варенье!</span>
+        <span class='button'>Хочу варенье!</span>    <!-- Кнопки "Хочу варенье"/"Хочу шоколадки", ведут на другую страницу или нет? -->
       </section>
       <section class='chocolate-offers'>
         <h3 class='free chocolate'>Шоколадки даром!</h3>
         <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку
             вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <span>Хочу шоколадки!</span>
+        <span class='button'>Хочу шоколадки!</span>
       </section>
       <h2 class='visually-hidden'>Популярные товары</h2>
       <section class='hit-products'>
         <ul class='product-icecream'>
             <li>
-              <a href='#'>
+              <a href='#' class='icecream'>
                 <img src='img/creamy-orange'>
                 <p class='icecream-price'>310₽<span class='icecream-kilo'>/кг</span></p>
-                <h3 class='icecream'>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+                <h3 class='icecream-name'>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#' class='icecream'>
                 <img src='img/creamy-coffee'>
                 <p class='icecream-price'>380₽<span class='icecream-kilo'>/кг</span></p>
-                <h3 class='icecream'>Сливочно-кофейное с кусочками шоколада</h3>
+                <h3 class='icecream-name'>Сливочно-кофейное с кусочками шоколада</h3>
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#' class='icecream'>
                 <img src='img/creamy-strawberry'>
                 <p class='icecream-price'>355₽<span class='icecream-kilo'>/кг</span></p>
-                <h3 class='icecream'>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+                <h3 class='icecream-name'>Сливочно-клубничное с присыпкой из белого шоколада</h3>
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#' class='icecream'>
                 <img src='img/creamy-brulee'>
                 <p class='icecream-price'>415₽<span class='icecream-kilo'>/кг</span></p>
-                <h3 class='icecream'>Сливочное крем-брюле с карамальной подливкой</h3>
+                <h3 class='icecream-name'>Сливочное крем-брюле с карамальной подливкой</h3>
               </a>
             </li>
         </ul>
       </section>
       <h2 class='visually-hidden'>Приемущества компании</h2>
       <article class='advantages'>
-        <h3>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
+        <h3 class='definition'>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3> <!--Не уверен на счет того, что это все заголовок-->
         <ul class='advantages-list'>
           <li class='making'>
             <p>Все наше мороженое изготавливается на собственном
@@ -111,6 +111,32 @@
           </li>
         </ul>
       </article>
+      <article class='blog'>
+        <h3 class='blog-caption'>Новое в нашем блоге</h3>
+        <a href='#' class='blog-name'>
+          10 способов сервировки фруктовых щербетов к столу
+        </a>
+      </article>
+      <div class='subscription'>
+        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе высего
+           самого вкусного, что у нас происходит. Обещаем не спамить и не слать
+           всякой ненужной ерунды. Честно =)</p>
+        <span class='email'>Электронная почта (форма)</span>
+        <span class='button'>Отправить</span>
+      </div>
+      <div class='map'>
+          <!--Как понимаю, карту добавляем потом-->
+      </div>
+      <section class='feedback-form'>
+        <p>Адрес главного офиса<br>
+           и офлайн магазина:<br>
+        <span class='adress'>ул. Большая Конюшенная<br>
+            19/8, Санкт-Петербург</span></p>
+        <p>Для заказов по телефону: <br>
+        <span class='phone-number-feedback'> 8 812 450-25-25<br>
+               (c 10 до 20 ежедневно)</span></p>
+        <span class='button'>Форма обратной связи</span>
+      </section>
     </main>
   </body>
 </html>
