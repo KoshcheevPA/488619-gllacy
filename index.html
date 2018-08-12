@@ -7,11 +7,17 @@
   <body>
     <header class='main-header'>
       <nav class='main-navigation'>
-        <a class='main-header-logo' href='#'>
-          <img src='img/logo.svd' width='50' height='50' alt='Логотип GllacyShop'> <!--Ширина и высота изображений задана предварительно-->
-        </a>
+        <img src='img/logo.svd' width='50' height='50' alt='Логотип GllacyShop'> <!--По ТЗ главной страницы логотип не является ссылкой. Исправил.-->
         <ul class='site-navigation'>
-          <li><a href='catalog.html'>Каталог</a></li>
+          <li><a href='#'>Каталог</a>
+            <ul class='catalog-navigation'>
+              <li><a href='#'>Новинки</a></li>
+              <li><a href='catalog.html'>Сливочное</a></li>
+              <li><a href='#'>Щербеты</a></li>
+              <li><a href='#'>Фруктовый лед</a></li>
+              <li><a href='#'>Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href='delivery-and-payment.html'>Доставка и оплата</a></li>
           <li><a href='about-company.html'>О Компании</a></li>
         </ul>
@@ -137,27 +143,27 @@
                (c 10 до 20 ежедневно)</span></p>
         <span class='button'>Форма обратной связи</span>
       </section>
+      <footer class='main-footer'>
+        <div class='footer-social'>
+          <ul class='social-list'>
+            <li><a class='social-button twitter' href='#'>Твиттер</a></li>
+            <li><a class='social-button instagram' href='#'>Инстаграм</a></li>
+            <li><a class='social-button facebook' href='#'>Фэйсбук</a></li>
+            <li><a class='social-button vk' href='#'>Вконтаке</a></li>
+          </ul>
+        </div>
+        <div class='additional'>
+          <ul class='additional-list'>
+            <li><a class='for-providers' href='#'>Для поставщиков</a></li>
+            <li><a class='about-production' href='#'>О производсвте</a></li>
+            <li><a class='documents' href='#'>Наши документы</a></li>
+            <li><a class='standards' href='#'>Экологические стандарты</a></li>
+          </ul>
+        </div>
+        <div class='footer-copyright'>
+          <p>Сделано в <a href='#'>HTML Academy</a> © 2017</p><!--В макете указан 2017-ый ¯\_(ツ)_/¯-->
+        </div>
+      </footer>
     </main>
-    <footer class='main-footer'>
-      <div class='footer-social'>
-        <ul class='social-list'>
-          <li><a class='social-button twitter' href='#'>Твиттер</a></li>
-          <li><a class='social-button instagram' href='#'>Инстаграм</a></li>
-          <li><a class='social-button facebook' href='#'>Фэйсбук</a></li>
-          <li><a class='social-button vk' href='#'>Вконтаке</a></li>
-        </ul>
-      </div>
-      <div class='additional'>
-        <ul class='additional-list'>
-          <li><a class='for-providers' href='#'>Для поставщиков</a></li>
-          <li><a class='about-production' href='#'>О производсвте</a></li>
-          <li><a class='documents' href='#'>Наши документы</a></li>
-          <li><a class='standards' href='#'>Экологические стандарты</a></li>
-        </ul>
-      </div>
-      <div class='footer-copyright'>
-        <p>Сделано в <a href='#'>HTML Academy</a> © 2017</p><!--В макете указан 2017-ый ¯\_(ツ)_/¯-->
-      </div>
-    </footer>
   </body>
 </html>
