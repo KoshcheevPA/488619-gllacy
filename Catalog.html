@@ -8,10 +8,10 @@
     <header class='main-header'>
       <nav class='main-navigation'>
         <a class='main-header-logo' href='index.html'><!--По ТЗ логотип на странице каталога - ссылка, ведущая на главную страницу.-->
-          <img src='img/logo.svd' width='50' height='50' alt='Логотип GllacyShop'> <!--Ширина и высота изображений задана предварительно-->
+          <img src='img/logo.svg' width='154' height='64' alt='Логотип GllacyShop'> <!--Ширина и высота изображений задана предварительно-->
         </a>
         <ul class='site-navigation'>
-          <li><a href='catalog.html'>Каталог</a>
+          <li><a href='#'>Каталог</a>
             <ul class='catalog-navigation'>
               <li><a href='#'>Новинки</a></li>
               <li><a href='catalog.html'>Сливочное</a></li>
@@ -24,41 +24,68 @@
           <li><a href='about-company.html'>О Компании</a></li>
         </ul>
         <div class='user-navigation'>
-            <span class='search'>Поиск</span>
-            <div class='search-window'>
-              <span>Что ищем?</span>
-            </div>
-            <span class='login-link'>Вход</span>
-            <div class='login-window'>
-              <span class='email'>Электронная почта</span>
-              <span class='password'>Пароль</span>
-              <span class='button'>Войти</span>
-              <span class='login-problem'>Забыли пароль?</span> <!--Название login-problem не совсем подходит, но я хотел как то объединить эти кнопки, т.к у них одинаковое оформление-->
-              <span class='login-problem'>Новая регистрация</span>
-            </div>
-            <span class='basket'>2 товара</span>
-              <table>
-                <tr>
-                  <td>x</td>
-                  <td><img src='icecream-orange' alt='Пломбир с апельсиновым джемом'></td>
-                  <td>Пломбир с апельсиновым джемом</td>
-                  <td>1,5 кг х <span class='backet-price'>200 руб.</span></td>
-                  <td>300 руб.</td>
-                </tr>
-                <tr>
-                  <td>x</td>
-                  <td><img src='icecream-strawberry' alt='Клубничный пломбир с присыпкой из белого шоколада'></td>
-                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td>3,0 кг х <span class='backet-price'>300 руб.</span></td>
-                  <td>450 руб.</td>
-                </tr>
-                <tr>
-                  <td colspan="5">Итого 750 руб.</td>
-                </tr>
-                <tr>
-                  <td colspan="5"><span class='button'>Оформить заказ</span></td>
-                </tr>
-              </table>
+          <ul class='search-list'>
+            <li>
+              <span class='search'>Поиск</span>
+              <ul class='search-window'>
+                <li>
+                  <span>Что ищем?</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class='login-list'>
+            <li><span class='login-link'>Вход</span>
+              <ul class='login-window'>
+                <li>
+                  <span class='email'>Электронная почта</span>
+                </li>
+                <li>
+                  <span class='password'>Пароль</span>
+                </li>
+                <li>
+                  <span class='button'>Войти</span>
+                </li>
+                <li>
+                  <span class='login-problem'>Забыли пароль?</span>
+                </li> <!--Название login-problem не совсем подходит, но я хотел как то объединить эти кнопки, т.к у них одинаковое оформление-->
+                <li>
+                  <span class='login-problem'>Новая регистрация</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class='basket-list'>
+            <li>
+              <span class='basket'>2 товара</span>
+              <ul>
+                <li>
+                  <table>
+                    <tr>
+                      <td>x</td>
+                      <td><img src='img/product-01.jpg' width='33' height="33" alt='Пломбир с апельсиновым джемом'></td>
+                      <td>Пломбир с апельсиновым джемом</td>
+                      <td>1,5 кг х <span class='backet-price'>200 руб.</span></td>
+                      <td>300 руб.</td>
+                    </tr>
+                    <tr>
+                      <td>x</td>
+                      <td><img src='img/product-03.jpg' width='33' height="33" alt='Клубничный пломбир с присыпкой из белого шоколада'></td>
+                      <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td>3,0 кг х <span class='backet-price'>300 руб.</span></td>
+                      <td>450 руб.</td>
+                    </tr>
+                    <tr>
+                      <td colspan="5">Итого 750 руб.</td>
+                    </tr>
+                    <tr>
+                      <td colspan="5"><span class='button'>Оформить заказ</span></td>
+                    </tr>
+                  </table>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </nav>
       <div class='contact-information-top'>
@@ -91,7 +118,7 @@
         <ul class='product-icecream'>
             <li>
               <a href='#' class='icecream'> <!--Ширина и высота изображений задана предварительно-->
-                <img src='img/creamy-orange' width='100' height='100' alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
+                <img src='img/product-01.jpg' width='267' height='267' alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
                 <p class='icecream-price'>310₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
               </a>
@@ -99,7 +126,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-coffee' width='100' height='100' alt='Сливочно-кофейное с кусочками шоколада'>
+                <img src='img/product-02.jpg' width='267' height='267' alt='Сливочно-кофейное с кусочками шоколада'>
                 <p class='icecream-price'>380₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочно-кофейное с кусочками шоколада</h2>
               </a>
@@ -107,7 +134,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-strawberry' width='100' height='100' alt='Сливочно-клубничное с присыпкой из белого шоколада'>
+                <img src='img/product-03.jpg' width='267' height='267' alt='Сливочно-клубничное с присыпкой из белого шоколада'>
                 <p class='icecream-price'>355₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочно-клубничное с присыпкой из белого шоколада</h2>
               </a>
@@ -115,7 +142,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-brulee' width='100' height='100' alt='Сливочное крем-брюле с карамальной подливкой'>
+                <img src='img/product-04.jpg' width='267' height='267' alt='Сливочное крем-брюле с карамальной подливкой'>
                 <p class='icecream-price'>415₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочное крем-брюле с карамальной подливкой</h2>
               </a>
@@ -123,7 +150,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-lingonberry' width='100' height='100' alt='Сливочное с брусничным джемом'>
+                <img src='img/product-05.jpg' width='267' height='267' alt='Сливочное с брусничным джемом'>
                 <p class='icecream-price'>325₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочное с брусничным джемом</h2>
               </a>
@@ -131,7 +158,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-blueberries' width='100' height='100' alt='Сливочно-черничное с цельными ягодами черники'>
+                <img src='img/product-06.jpg' width='267' height='267' alt='Сливочно-черничное с цельными ягодами черники'>
                 <p class='icecream-price'>410₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочно-черничное с цельными ягодами черники</h2>
               </a>
@@ -139,7 +166,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-lemon' width='100' height='100' alt='Сливочно-лимонное с карамельной присыпкой'>
+                <img src='img/product-07.jpg' width='267' height='267' alt='Сливочно-лимонное с карамельной присыпкой'>
                 <p class='icecream-price'>375₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочно-лимонное с карамельной присыпкой</h2>
               </a>
@@ -147,7 +174,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-chocolate' width='100' height='100' alt='Сливочное c шоколадной стружкой'>
+                <img src='img/product-08.jpg' width='267' height='267' alt='Сливочное c шоколадной стружкой'>
                 <p class='icecream-price'>320₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочное c шоколадной стружкой</h2>
               </a>
@@ -155,7 +182,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-vanilla' width='100' height='100' alt='Сливочное-ванильное с кусочками шоколада'>
+                <img src='img/product-09.jpg' width='267' height='267' alt='Сливочное-ванильное с кусочками шоколада'>
                 <p class='icecream-price'>440₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочно-ванильное с кусочками шоколада</h2>
               </a>
@@ -163,7 +190,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-menthol' width='100' height='100' alt='Сливочно c ментоловым сиропом'>
+                <img src='img/product-10.jpg' width='267' height='267' alt='Сливочно c ментоловым сиропом'>
                 <p class='icecream-price'>435₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочное c ментоловым сиропом</h2>
               </a>
@@ -171,7 +198,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-black-chocolate' width='100' height='100' alt='Сливочное с кусочками черного шоколада'>
+                <img src='img/product-11.jpg' width='267' height='267' alt='Сливочное с кусочками черного шоколада'>
                 <p class='icecream-price'>355₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочное с кусочками черного шоколада</h2>
               </a>
@@ -179,7 +206,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-mint' width='100' height='100' alt='Сливочное с мятным сиропом'>
+                <img src='img/product-12.jpg' width='267' height='267' alt='Сливочное с мятным сиропом'>
                 <p class='icecream-price'>420₽<span class='icecream-kilo'>/кг</span></p>
                 <h2 class='icecream-name'>Сливочное с мятным сиропом</h2>
               </a>
@@ -215,7 +242,7 @@
         </ul>
         <div class='footer-copyright'>
           <a href='htmlacademy.ru'>
-            <img src='img/academy' width='30' height="30" alt='Логотип HTML academy'>
+            <img src='img/logo-htmlacademy.svg' width='108' height="39" alt='Логотип HTML academy'>
           </a>
           <p>Сделано в <a href='htmlacademy.ru'>HTML Academy</a> © 2017</p><!--В макете указан 2017-ый ¯\_(ツ)_/¯-->
         </div>

@@ -7,7 +7,7 @@
   <body>
     <header class='main-header'>
       <nav class='main-navigation'>
-        <img src='img/logo.svd' width='50' height='50' alt='Логотип GllacyShop'> <!--По ТЗ главной страницы логотип не является ссылкой. Исправил.-->
+        <img src='img/logo.svg' width='154' height='64' alt='Логотип GllacyShop'> <!--По ТЗ главной страницы логотип не является ссылкой. Исправил.-->
         <ul class='site-navigation'>
           <li><a href='#'>Каталог</a>
             <ul class='catalog-navigation'>
@@ -22,19 +22,42 @@
           <li><a href='about-company.html'>О Компании</a></li>
         </ul>
         <div class='user-navigation'>
-            <span class='search'>Поиск</span>
-              <div class='search-window'>
-                <span>Что ищем?</span>
-              </div>
-            <span class='login-link'>Вход</span>
-              <div class='login-window'>
-                <span class='email'>Электронная почта</span>
-                <span class='password'>Пароль</span>
-                <span class='button'>Войти</span>
-                <span class='login-problem'>Забыли пароль?</span> <!--Название login-problem не совсем подходит, но я хотел как то объединить эти кнопки, т.к у них одинаковое оформление-->
-                <span class='login-problem'>Новая регистрация</span>
-              </div>
-            <span class='basket'>Корзина</span>
+          <ul class='search-list'>
+            <li>
+              <span class='search'>Поиск</span>
+              <ul class='search-window'>
+                <li>
+                  <span>Что ищем?</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class='login-list'>
+            <li><span class='login-link'>Вход</span>
+              <ul class='login-window'>
+                <li>
+                  <span class='email'>Электронная почта</span>
+                </li>
+                <li>
+                  <span class='password'>Пароль</span>
+                </li>
+                <li>
+                  <span class='button'>Войти</span>
+                </li>
+                <li>
+                  <span class='login-problem'>Забыли пароль?</span>
+                </li> <!--Название login-problem не совсем подходит, но я хотел как то объединить эти кнопки, т.к у них одинаковое оформление-->
+                <li>
+                  <span class='login-problem'>Новая регистрация</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class='backet-list'>
+            <li>
+              <span class='basket'>Корзина</span>
+            </li>
+          </ul>
         </div>
       </nav>
       <div class='contact-information-top'>
@@ -50,17 +73,17 @@
       <h1 class='visually-hidden'>Магазин мороженого Глэйси</h1> <!--Добавил заголовки с классом "visually-hidden" для удобства разметки-->
       <div class='slider-top' id='first-slide'>
           <p>Крем-брюле и пломбир с малиновым джемом</p>
-          <img src='img/cream-brulee-and-sebum-rasp' height="100" width='100' alt='Крем-брюле и пломбир с малиновым джемом'>
+          <img src='img/icecream-slide1.png' height="881" width='1045' alt='Крем-брюле и пломбир с малиновым джемом'>
           <a class='button' href='#'>Давайте оба!</a>
       </div>
       <div class='slider-top' id='second-slide'>
           <p>Шоколадный пломбир и лимонный сорбет</p>
-          <img src='img/chocolate-cream' height="100" width='100' alt='Шоколадный пломбир и лимонный сорбет'>
+          <img src='img/icecream-slide2.png' height='859' width='1065' alt='Шоколадный пломбир и лимонный сорбет'>
           <a class='button' href='#'>Давайте оба!</a>
       </div>
       <div class='slider-top' id='thrid-slide'>
           <p>Пломбир с помадкой и клубничный щербет</p>
-          <img src='img/cream-and-strawberry' height="100" width='100' alt='Пломбир с помадкой и клубничный щербет'>
+          <img src='img/icecream-slide3.png' height="854" width='1079' alt='Пломбир с помадкой и клубничный щербет'>
           <a class='button' href='#'>Давайте оба!</a>
       </div>
 
@@ -80,7 +103,7 @@
         <ul class='product-icecream'>
             <li>
               <a href='#' class='icecream'> <!--Ширина и высота изображений задана предварительно-->
-                <img src='img/creamy-orange' width='100' height='100' alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
+                <img src='img/product-01.jpg' width='267' height='267' alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
                 <p class='icecream-price'>310₽<span class='icecream-kilo'>/кг</span></p>
                 <h3 class='icecream-name'>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
               </a>
@@ -88,7 +111,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-coffee' width='100' height='100' alt='Сливочно-кофейное с кусочками шоколада'>
+                <img src='img/product-02.jpg' width='267' height='267' alt='Сливочно-кофейное с кусочками шоколада'>
                 <p class='icecream-price'>380₽<span class='icecream-kilo'>/кг</span></p>
                 <h3 class='icecream-name'>Сливочно-кофейное с кусочками шоколада</h3>
               </a>
@@ -96,7 +119,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-strawberry' width='100' height='100' alt='Сливочно-клубничное с присыпкой из белого шоколада'>
+                <img src='img/product-03.jpg' width='267' height='267' alt='Сливочно-клубничное с присыпкой из белого шоколада'>
                 <p class='icecream-price'>355₽<span class='icecream-kilo'>/кг</span></p>
                 <h3 class='icecream-name'>Сливочно-клубничное с присыпкой из белого шоколада</h3>
               </a>
@@ -104,7 +127,7 @@
             </li>
             <li>
               <a href='#' class='icecream'>
-                <img src='img/creamy-brulee' width='100' height='100' alt='Сливочное крем-брюле с карамальной подливкой'>
+                <img src='img/product-04.jpg' width='267' height='267' alt='Сливочное крем-брюле с карамальной подливкой'>
                 <p class='icecream-price'>415₽<span class='icecream-kilo'>/кг</span></p>
                 <h3 class='icecream-name'>Сливочное крем-брюле с карамальной подливкой</h3>
               </a>
@@ -180,7 +203,7 @@
         </ul>
       <div class='footer-copyright'>
         <a href='htmlacademy.ru'>
-          <img src='img/academy' width='30' height="30" alt='Логотип HTML academy'>
+          <img src='img/logo-htmlacademy.svg' width='108' height="39" alt='Логотип HTML academy'>
         </a>
         <p>Сделано в <a href='htmlacademy.ru'>HTML Academy</a> © 2017</p>
       </div>
