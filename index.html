@@ -36,7 +36,7 @@
           </ul>
           <ul class='login-list'>
             <li>
-              <span class='login-link'>Вход</span>
+              <a class='login-link'>Вход</a> <!--думаю, что вход может быть ссылкой-->
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <ul class='login-window'>
                   <li class='login-field'>
@@ -78,22 +78,32 @@
     </header>
     <main class='container'>
       <h1 class='visually-hidden'>Магазин мороженого Глэйси</h1> <!--Добавил заголовки с классом "visually-hidden" для удобства разметки-->
-      <div class='slider-top' id='first-slide'>
+      <form action='#' method='post'>
+        <div class='slider-top' id='first-slide'>
           <p>Крем-брюле и пломбир с малиновым джемом</p>
           <img src='img/icecream-slide1.png' height="881" width='1045' alt='Крем-брюле и пломбир с малиновым джемом'>
           <a class='button' href='#'>Давайте оба!</a>
-      </div>
-      <div class='slider-top' id='second-slide'>
+          <label for='first'>
+            <input class='visually-hidden radio-slider' type='radio' name='slider' id='first' value='1' checked>
+          </label>
+        </div>
+        <div class='slider-top' id='second-slide'>
           <p>Шоколадный пломбир и лимонный сорбет</p>
           <img src='img/icecream-slide2.png' height='859' width='1065' alt='Шоколадный пломбир и лимонный сорбет'>
           <a class='button' href='#'>Давайте оба!</a>
-      </div>
-      <div class='slider-top' id='thrid-slide'>
+          <label for='second'>
+            <input class='visually-hidden radio-slider' type='radio' name='slider' id='second' value='2'>
+          </label>
+        </div>
+        <div class='slider-top' id='thrid-slide'>
           <p>Пломбир с помадкой и клубничный щербет</p>
           <img src='img/icecream-slide3.png' height="854" width='1079' alt='Пломбир с помадкой и клубничный щербет'>
           <a class='button' href='#'>Давайте оба!</a>
-      </div>
-
+          <label for='thrid'>
+            <input class='visually-hidden radio-slider' type='radio' name='slider' id='thrid' value='3'>
+          </label>
+        </div>
+      </form>
       <section class='first-offers'>
         <h2 class='offers-caption'>Малинка даром!</h2>
         <p>При покупке 2кг любого фруктового мороженого, добавим
