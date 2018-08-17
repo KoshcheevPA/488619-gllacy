@@ -29,14 +29,14 @@
               <span class='search'>Поиск</span>
               <ul class='search-window'>
                 <li>
-                  <span>Что ищем?</span>
+                  <input type='search' name='search' placeholder="Что ищем?">
                 </li>
               </ul>
             </li>
           </ul>
-          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <ul class='login-list'>
-              <li><span class='login-link'>Вход</span>
+          <ul class='login-list'>
+            <li><span class='login-link'>Вход</span>
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <ul class='login-window'>
                   <li>
                     <label class="visually-hidden" for="user-email">Электронная почта</label>
@@ -51,14 +51,14 @@
                   </li>
                   <li>
                     <a class='login-problem' href='#'>Забыли пароль?</a>
-                  </li> 
+                  </li> <!--Название login-problem не совсем подходит, но я хотел как то объединить эти кнопки, т.к у них одинаковое оформление-->
                   <li>
                     <a class='login-problem' href='#'>Новая регистрация</a>
                   </li>
                 </ul>
-              </li>
-            </ul>
-          </form>
+              </form>
+            </li>
+          </ul>   
           <ul class='basket-list'>
             <li>
               <span class='basket'>2 товара</span>
