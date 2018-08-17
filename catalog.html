@@ -34,27 +34,31 @@
               </ul>
             </li>
           </ul>
-          <ul class='login-list'>
-            <li><span class='login-link'>Вход</span>
-              <ul class='login-window'>
-                <li>
-                  <span class='email'>Электронная почта</span>
-                </li>
-                <li>
-                  <span class='password'>Пароль</span>
-                </li>
-                <li>
-                  <span class='button'>Войти</span>
-                </li>
-                <li>
-                  <span class='login-problem'>Забыли пароль?</span>
-                </li> <!--Название login-problem не совсем подходит, но я хотел как то объединить эти кнопки, т.к у них одинаковое оформление-->
-                <li>
-                  <span class='login-problem'>Новая регистрация</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+            <ul class='login-list'>
+              <li><span class='login-link'>Вход</span>
+                <ul class='login-window'>
+                  <li>
+                    <label class="visually-hidden" for="user-email">Электронная почта</label>
+                    <input class='login-field' type='email' name='email' id='user-email' placeholder="Электронная почта">
+                  </li>
+                  <li>
+                    <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input class='login-field' type='password' name='password' id='user-password' placeholder="Пароль">
+                  </li>
+                  <li>
+                    <button class='button' type='submit'>Войти</button>
+                  </li>
+                  <li>
+                    <a class='login-problem' href='#'>Забыли пароль?</a>
+                  </li> 
+                  <li>
+                    <a class='login-problem' href='#'>Новая регистрация</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </form>
           <ul class='basket-list'>
             <li>
               <span class='basket'>2 товара</span>
