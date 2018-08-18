@@ -41,11 +41,11 @@
                 <ul class='login-window'>
                   <li class='login-field'>
                     <label class="visually-hidden" for="user-email">Электронная почта</label>
-                    <input type='email' name='email' id='user-email' placeholder="Электронная почта">
+                    <input type='email' name='email' id='user-email' placeholder="Электронная почта" required>
                   </li>
                   <li class='login-field'>
                     <label class="visually-hidden" for="user-password">Пароль</label>
-                    <input type='password' name='password' id='user-password' placeholder="Пароль">
+                    <input type='password' name='password' id='user-password' placeholder="Пароль" required>
                   </li>
                   <li class='sign-in'>
                     <button class='button' type='submit'>Войти</button>
@@ -82,17 +82,17 @@
       <div class='slider-top' id='first-slide'>
         <p>Крем-брюле и пломбир с малиновым джемом</p>
         <img src='img/icecream-slide1.png' height="881" width='1045' alt='Крем-брюле и пломбир с малиновым джемом'>
-        <button type='submit' class='button' href='#'>Давайте оба!</button> <!--Не совсем понятен функционал кнопки (а ссылки) "Давайте оба". Склоняюсь к тому, что нопка доабвляет в корзину определенный вид мороженного -->
+        <button type='submit' class='button'>Давайте оба!</button> <!--Не совсем понятен функционал кнопки (а ссылки) "Давайте оба". Склоняюсь к тому, что нопка доабвляет в корзину определенный вид мороженного -->
       </div>
       <div class='slider-top' id='second-slide'>
         <p>Шоколадный пломбир и лимонный сорбет</p>
         <img src='img/icecream-slide2.png' height='859' width='1065' alt='Шоколадный пломбир и лимонный сорбет'>
-        <button type='submit' class='button' href='#'>Давайте оба!</button>
+        <button type='submit' class='button'>Давайте оба!</button>
       </div>
       <div class='slider-top' id='thrid-slide'>
         <p>Пломбир с помадкой и клубничный щербет</p>
         <img src='img/icecream-slide3.png' height="854" width='1079' alt='Пломбир с помадкой и клубничный щербет'>
-        <button  type='submit' class='button' href='#'>Давайте оба!</button>
+        <button  type='submit' class='button'>Давайте оба!</button>
       </div>
       <form action='#' method='post'>
         <label for='first'>
@@ -207,7 +207,7 @@
         <p>Для заказов по телефону:</p>
         <p class='adress'> 8 812 450-25-25</p>
         <p>(c 10 до 20 ежедневно)</p>
-        <button type='submit' class='button'>Форма обратной связи</button>
+        <a href='#' class='button'>Форма обратной связи</a>
       </div>
     </main>
     <footer class='main-footer'>
@@ -241,14 +241,14 @@
             </li>
             <li>
               <label class="visually-hidden" for="user-name">Имя</label>
-              <input type='text' name='your-name' class='feedback-contacts' id='user-name' placeholder="Как вас зовут?">
+              <input type='text' name='your-name' class='feedback-contacts' id='user-name' placeholder="Как вас зовут?" required>
             </li>
             <li>
               <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-              <input type='email' name='email-feedback' class='feedback-contacts' id='feedback-email' placeholder="Ваша почта для ответа?">
+              <input type='email' name='email-feedback' class='feedback-contacts' id='feedback-email' placeholder="Ваша почта для ответа?" required>
             </li>
             <li>
-              <textarea class='feedback-comment' name='comment' id='comment-field' rows='5' placeholder="Напишите что-нибудь..."></textarea>
+              <textarea class='feedback-comment' name='comment' id='comment-field' rows='5' placeholder="Напишите что-нибудь..." required></textarea>
             </li>
             <li>
               <button type='submit' class='button'>Отправить</button>
