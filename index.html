@@ -109,49 +109,50 @@
         <h2 class='offers-caption'>Малинка даром!</h2>
         <p>При покупке 2кг любого фруктового мороженого, добавим
            в ваш заказ банку малинового варенья бесплатно.</p>
-        <span class='button'>Хочу варенье!</span>
-      </section>
+        <button type='submit' class='button'>Хочу варенье!</button> <!--Опять вопрос к функционалу, преположил, что это кнопка, которая доабавляет в корзину товар, а не ведет на друую страницу. -->
+      </section>        <!--хотя, если это кнопка, то должна быть форма с методом отправки данных... скорее всего-->
       <section class='second-offers'>
         <h2 class='offers-caption'>Шоколадки даром!</h2>
         <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку
             вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <span class='button'>Хочу шоколадки!</span>
+        <button type='submit' class='button'>Хочу шоколадки!</button>
       </section>
-
-        <ul class='product-icecream'>
-            <li>
-              <a href='#' class='icecream'> <!--Ширина и высота изображений задана предварительно-->
-                <img src='img/product-01.jpg' width='267' height='267' alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
-                <p class='icecream-price'>310₽<span class='icecream-kilo'>/кг</span></p>
-                <h3 class='icecream-name'>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-              </a>
-              <span class='button'>Быстрый просмотр</span>
-            </li>
-            <li>
-              <a href='#' class='icecream'>
-                <img src='img/product-02.jpg' width='267' height='267' alt='Сливочно-кофейное с кусочками шоколада'>
-                <p class='icecream-price'>380₽<span class='icecream-kilo'>/кг</span></p>
-                <h3 class='icecream-name'>Сливочно-кофейное с кусочками шоколада</h3>
-              </a>
-              <span class='button'>Быстрый просмотр</span>
-            </li>
-            <li>
-              <a href='#' class='icecream'>
-                <img src='img/product-03.jpg' width='267' height='267' alt='Сливочно-клубничное с присыпкой из белого шоколада'>
-                <p class='icecream-price'>355₽<span class='icecream-kilo'>/кг</span></p>
-                <h3 class='icecream-name'>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-              </a>
-              <span class='button'>Быстрый просмотр</span>
-            </li>
-            <li>
-              <a href='#' class='icecream'>
-                <img src='img/product-04.jpg' width='267' height='267' alt='Сливочное крем-брюле с карамальной подливкой'>
-                <p class='icecream-price'>415₽<span class='icecream-kilo'>/кг</span></p>
-                <h3 class='icecream-name'>Сливочное крем-брюле с карамальной подливкой</h3>
-              </a>
-              <span class='button'>Быстрый просмотр</span>
-            </li>
-        </ul>
+      <ul class='product-icecream'>
+        <li>
+          <a href='#' class='icecream'> <!--Ширина и высота изображений задана предварительно-->
+            <img src='img/product-01.jpg' width='267' height='267' alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
+            <p class='icecream-price'>310₽<span class='icecream-kilo'>/кг</span></p>
+            <h3 class='icecream-name'>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+          </a>
+          <a class='button' href='#'>Быстрый просмотр</a> <!--На счет ссылок "быстрый просмотр" тоже в раздумьях. Посмотрел на другие сайты,
+                                                      у кого это это ссылка (хотя URL при прохождении по ней не меняется),
+                                                      у кого то div. Я сначала думал, что это кнопка-->
+        </li>
+        <li>
+          <a href='#' class='icecream'>
+            <img src='img/product-02.jpg' width='267' height='267' alt='Сливочно-кофейное с кусочками шоколада'>
+            <p class='icecream-price'>380₽<span class='icecream-kilo'>/кг</span></p>
+            <h3 class='icecream-name'>Сливочно-кофейное с кусочками шоколада</h3>
+          </a>
+          <a class='button' href='#'>Быстрый просмотр</a>
+        </li>
+        <li>
+          <a href='#' class='icecream'>
+            <img src='img/product-03.jpg' width='267' height='267' alt='Сливочно-клубничное с присыпкой из белого шоколада'>
+            <p class='icecream-price'>355₽<span class='icecream-kilo'>/кг</span></p>
+            <h3 class='icecream-name'>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+          </a>
+          <a class='button' href='#'>Быстрый просмотр</a>
+        </li>
+        <li>
+          <a href='#' class='icecream'>
+            <img src='img/product-04.jpg' width='267' height='267' alt='Сливочное крем-брюле с карамальной подливкой'>
+            <p class='icecream-price'>415₽<span class='icecream-kilo'>/кг</span></p>
+            <h3 class='icecream-name'>Сливочное крем-брюле с карамальной подливкой</h3>
+          </a>
+          <a class='button' href='#'>Быстрый просмотр</a>
+        </li>
+      </ul>
 
       <article class='advantages'>
         <h2 class='visually-hidden'>Приемущества компании</h2>
@@ -189,8 +190,11 @@
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе высего
            самого вкусного, что у нас происходит. Обещаем не спамить и не слать
            всякой ненужной ерунды. Честно =)</p>
-        <span class='email'>Электронная почта (форма)</span>
-        <span class='button'>Отправить</span>
+        <form action="#" method='post'>
+          <label class="visually-hidden" for="subs-email">Электронная почта</label>
+          <input type='email' name='email-subs' id='subs-email' placeholder="Электронная почта">
+          <button type='submit' class='button'>Отправить</button>
+        </form>
       </div>
       <div class='map'>
           <!--Как понимаю, карту добавляем потом-->
@@ -203,7 +207,7 @@
         <p>Для заказов по телефону:</p>
         <p class='adress'> 8 812 450-25-25</p>
         <p>(c 10 до 20 ежедневно)</p>
-        <span class='button'>Форма обратной связи</span>
+        <button type='submit' class='button'>Форма обратной связи</button>
       </div>
     </main>
     <footer class='main-footer'>
@@ -227,11 +231,30 @@
       </div>
     </footer>
     <div class='feedback-window'>
-      <b>Мы обязательно вам ответим!</b>
-      <span class='text'>Как вас зовут?</span>
-      <span class='email'>Ваша почта для ответа?</span>
-      <span class='textarea'>Напишите что-нибудь...</span>
-      <span class='button'>Отправить</span>
+      <form action='#' method="post">
+        <fieldset>
+          <legend class='visually-hidden'>Форма обратной связи</legend>
+          <b>Мы обязательно вам ответим!</b>
+            <ul class='feedback-list'>
+              <li>
+                <span class='close'>х</span> <!--Не знаю, как задать закрытие высплывающего окна-->
+              </li>
+              <li>
+                <label class="visually-hidden" for="user-name">Имя</label>
+                <input type='text' name='your-name' class='feedback-contacts' id='user-name' placeholder="Как вас зовут?">
+              </li>
+              <li>
+                <label class="visually-hidden" for="feedback-email">Электронная почта</label>
+                <input type='email' name='email-feedback' class='feedback-contacts' id='feedback-email' placeholder="Ваша почта для ответа?">
+              </li>
+              <li>
+                <textarea class='feedback-comment' name='comment' id='comment-field' rows='5' placeholder="Напишите что-нибудь..."></textarea>
+              </li>
+              <li>
+                <button type='submit' class='button'>Отправить</button>
+              </li>
+            </ul>
+        </fieldset>
     </div>
   </body>
 </html>
