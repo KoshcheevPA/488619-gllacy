@@ -38,7 +38,7 @@
           </ul>
           <ul class='login-list'>
             <li>
-              <span class='login-link'>Вход</span>
+              <a class='login-link' href='#'>Вход</a>
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <ul class='login-window'>
                   <li class='login-field'>
@@ -64,12 +64,12 @@
           </ul>
           <ul class='basket-list'>
             <li>
-              <span class='basket'>2 товара</span>
+              <a class='basket' href='#'>2 товара</a>
               <ul>
                 <li>
                   <table>
                     <tr>
-                      <td>x</td>
+                      <td class='close'>x</td>
                       <td><img src='img/product-01.jpg' width='33' height="33" alt='Пломбир с апельсиновым джемом'></td>
                       <td>Пломбир с апельсиновым джемом</td>
                       <td>1,5 кг х <span class='backet-price'>200 руб.</span></td>
@@ -83,10 +83,14 @@
                       <td>450 руб.</td>
                     </tr>
                     <tr>
-                      <td colspan="5">Итого 750 руб.</td>
+                      <td colspan="5"><hr>Итого 750 руб.</td>
                     </tr>
                     <tr>
-                      <td colspan="5"><span class='button'>Оформить заказ</span></td>
+                      <td colspan="5">
+                        <form action='#' method='get'>
+                          <button type='submit' class='button'>Оформить заказ</button>
+                        </form>
+                      </td>
                     </tr>
                   </table>
                 </li>
