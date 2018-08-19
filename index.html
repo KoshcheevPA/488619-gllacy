@@ -7,7 +7,7 @@
   <body>
     <header class='main-header'>
       <nav class='main-navigation'>
-        <img src='img/logo.svg' width='154' height='64' alt='Логотип GllacyShop'> <!--По ТЗ главной страницы логотип не является ссылкой. Исправил.-->
+        <img src='img/logo.svg' width='154' height='64' alt='Логотип GllacyShop'>
         <ul class='site-navigation'>
           <li><a href='#'>Каталог</a>
             <ul class='catalog-navigation'>
@@ -25,10 +25,10 @@
           <ul class='search-list'>
             <li>
               <span class='search-logo'>Поиск</span>
-              <form class='seacrh-form' action='https://echo.htmlacademy.ru' method="get">
+              <form class='seacrh-form' action='https://echo.htmlacademy.ru' method='get'>
                 <ul class='search-window'>
                   <li>
-                    <input type='search' name='search' placeholder="Что ищем?">
+                    <input type='search' name='search' placeholder='Что ищем?'>
                   </li>
                 </ul>
               </form>
@@ -36,23 +36,23 @@
           </ul>
           <ul class='login-list'>
             <li>
-              <a class='login-link'>Вход</a> <!--думаю, что вход может быть ссылкой-->
-              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+              <a href='#' class='login-link'>Вход</a>
+              <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
                 <ul class='login-window'>
                   <li class='login-field'>
-                    <label class="visually-hidden" for="user-email">Электронная почта</label>
-                    <input type='email' name='email' id='user-email' placeholder="Электронная почта" required>
+                    <label class='visually-hidden' for='user-email'>Электронная почта</label>
+                    <input type='email' name='email' id='user-email' placeholder='Электронная почта' required>
                   </li>
                   <li class='login-field'>
-                    <label class="visually-hidden" for="user-password">Пароль</label>
-                    <input type='password' name='password' id='user-password' placeholder="Пароль" required>
+                    <label class='visually-hidden' for='user-password'>Пароль</label>
+                    <input type='password' name='password' id='user-password' placeholder='Пароль' required>
                   </li>
                   <li class='sign-in'>
                     <button class='button' type='submit'>Войти</button>
                   </li>
                   <li class='login-password-info'>
                     <a class='login-problem' href='#'>Забыли пароль?</a>
-                  </li> <!--Название login-problem не совсем подходит, но я хотел как то объединить эти кнопки, т.к у них одинаковое оформление-->
+                  </li>
                   <li class='login-password-info'>
                     <a class='login-problem' href='#'>Новая регистрация</a>
                   </li>
@@ -77,45 +77,38 @@
       </div>
     </header>
     <main class='container'>
-      <h1 class='visually-hidden'>Магазин мороженого Глэйси</h1> <!--Добавил заголовки с классом "visually-hidden" для удобства разметки-->
-       <!--Не совсем уверен в правильности реализации radio-слайдера. Возможно его следует сделать внутри дива-->
-      <div class='slider-top' id='first-slide'>
-        <p>Крем-брюле и пломбир с малиновым джемом</p>
-        <img src='img/icecream-slide1.png' height="881" width='1045' alt='Крем-брюле и пломбир с малиновым джемом'>
-        <button type='submit' class='button'>Давайте оба!</button> <!--Не совсем понятен функционал кнопки (а ссылки) "Давайте оба". Склоняюсь к тому, что нопка доабвляет в корзину определенный вид мороженного -->
+      <h1 class='visually-hidden'>Магазин мороженого Глэйси</h1>
+
+      <div class='slider'>
+        <button type='button' class='slider-button-1 visually-hidden'></button>
+        <button type='button' class='slider-button-2 visually-hidden'></button><!--Сделал пока кнопки для слайдер, раз радио не нужны для слайдер, сделал обычные кнопки -->
+        <button type='button' class='slider-button-3 visually-hidden'></button>
+        <div class='slider-top' id='first-slide'>
+          <p>Крем-брюле и пломбир с малиновым джемом</p>
+          <img src='img/icecream-slide1.png' height='881' width='1045' alt='Крем-брюле и пломбир с малиновым джемом'>
+          <a href='#' class='button'>Давайте оба!</a>
+        <div class='slider-top' id='second-slide'>
+          <p>Шоколадный пломбир и лимонный сорбет</p>
+          <img src='img/icecream-slide2.png' height='859' width='1065' alt='Шоколадный пломбир и лимонный сорбет'>
+          <a href='#' class='button'>Давайте оба!</a>
+        </div>
+        <div class='slider-top' id='thrid-slide'>
+          <p>Пломбир с помадкой и клубничный щербет</p>
+          <img src='img/icecream-slide3.png' height='854' width='1079' alt='Пломбир с помадкой и клубничный щербет'>
+          <a href='#' class='button'>Давайте оба!</a>
+        </div>
       </div>
-      <div class='slider-top' id='second-slide'>
-        <p>Шоколадный пломбир и лимонный сорбет</p>
-        <img src='img/icecream-slide2.png' height='859' width='1065' alt='Шоколадный пломбир и лимонный сорбет'>
-        <button type='submit' class='button'>Давайте оба!</button>
-      </div>
-      <div class='slider-top' id='thrid-slide'>
-        <p>Пломбир с помадкой и клубничный щербет</p>
-        <img src='img/icecream-slide3.png' height="854" width='1079' alt='Пломбир с помадкой и клубничный щербет'>
-        <button  type='submit' class='button'>Давайте оба!</button>
-      </div>
-      <form action='#' method='post'>
-        <label for='first'>
-          <input class='visually-hidden radio-slider' type='radio' name='slider' id='first' value='1' checked>
-        </label>
-        <label for='second'>
-          <input class='visually-hidden radio-slider' type='radio' name='slider' id='second' value='2'>
-        </label>
-        <label for='thrid'>
-          <input class='visually-hidden radio-slider' type='radio' name='slider' id='thrid' value='3'>
-        </label>
-      </form>
       <section class='first-offers'>
         <h2 class='offers-caption'>Малинка даром!</h2>
         <p>При покупке 2кг любого фруктового мороженого, добавим
            в ваш заказ банку малинового варенья бесплатно.</p>
-        <button type='submit' class='button'>Хочу варенье!</button> <!--Опять вопрос к функционалу, преположил, что это кнопка, которая доабавляет в корзину товар, а не ведет на друую страницу. -->
-      </section>        <!--хотя, если это кнопка, то должна быть форма с методом отправки данных... скорее всего-->
+        <a href='#' class='button'>Хочу варенье!</a>
+      </section>
       <section class='second-offers'>
         <h2 class='offers-caption'>Шоколадки даром!</h2>
         <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку
             вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <button type='submit' class='button'>Хочу шоколадки!</button>
+        <a href='#' class='button'>Хочу шоколадки!</a>
       </section>
       <ul class='product-icecream'>
         <li>
@@ -124,9 +117,7 @@
             <p class='icecream-price'>310₽<span class='icecream-kilo'>/кг</span></p>
             <h3 class='icecream-name'>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           </a>
-          <a class='button' href='#'>Быстрый просмотр</a> <!--На счет ссылок "быстрый просмотр" тоже в раздумьях. Посмотрел на другие сайты,
-                                                      у кого это это ссылка (хотя URL при прохождении по ней не меняется),
-                                                      у кого то div. Я сначала думал, что это кнопка-->
+          <button type='button' class='button' href='#'>Быстрый просмотр</button>
         </li>
         <li>
           <a href='#' class='icecream'>
@@ -134,7 +125,7 @@
             <p class='icecream-price'>380₽<span class='icecream-kilo'>/кг</span></p>
             <h3 class='icecream-name'>Сливочно-кофейное с кусочками шоколада</h3>
           </a>
-          <a class='button' href='#'>Быстрый просмотр</a>
+          <button type='button' class='button'>Быстрый просмотр</button>
         </li>
         <li>
           <a href='#' class='icecream'>
@@ -142,7 +133,7 @@
             <p class='icecream-price'>355₽<span class='icecream-kilo'>/кг</span></p>
             <h3 class='icecream-name'>Сливочно-клубничное с присыпкой из белого шоколада</h3>
           </a>
-          <a class='button' href='#'>Быстрый просмотр</a>
+          <button type='button' class='button'>Быстрый просмотр</button>
         </li>
         <li>
           <a href='#' class='icecream'>
@@ -150,7 +141,7 @@
             <p class='icecream-price'>415₽<span class='icecream-kilo'>/кг</span></p>
             <h3 class='icecream-name'>Сливочное крем-брюле с карамальной подливкой</h3>
           </a>
-          <a class='button' href='#'>Быстрый просмотр</a>
+          <button type='button' class='button'>Быстрый просмотр</button>
         </li>
       </ul>
 
@@ -190,9 +181,9 @@
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе высего
            самого вкусного, что у нас происходит. Обещаем не спамить и не слать
            всякой ненужной ерунды. Честно =)</p>
-        <form action="#" method='post'>
-          <label class="visually-hidden" for="subs-email">Электронная почта</label>
-          <input type='email' name='email-subs' id='subs-email' placeholder="Электронная почта">
+        <form action='#' method='post'>
+          <label class='visually-hidden' for='subs-email'>Электронная почта</label>
+          <input type='email' name='email-subs' id='subs-email' placeholder='Электронная почта'>
           <button type='submit' class='button'>Отправить</button>
         </form>
       </div>
@@ -207,7 +198,7 @@
         <p>Для заказов по телефону:</p>
         <p class='adress'> 8 812 450-25-25</p>
         <p>(c 10 до 20 ежедневно)</p>
-        <a href='#' class='button'>Форма обратной связи</a>
+        <button type='button' class='button'>Форма обратной связи</button>
       </div>
     </main>
     <footer class='main-footer'>
@@ -237,18 +228,18 @@
           <b>Мы обязательно вам ответим!</b>
           <ul class='feedback-list'>
             <li>
-              <span class='close'>х</span> <!--Не знаю, как задать закрытие высплывающего окна-->
+              <button type='button' class='visually-hidden close'>х</button>
             </li>
             <li>
-              <label class="visually-hidden" for="user-name">Имя</label>
-              <input type='text' name='your-name' class='feedback-contacts' id='user-name' placeholder="Как вас зовут?" required>
+              <label class='visually-hidden' for='user-name'>Имя</label>
+              <input type='text' name='your-name' class='feedback-contacts' id='user-name' placeholder='Как вас зовут?' required>
             </li>
             <li>
-              <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-              <input type='email' name='email-feedback' class='feedback-contacts' id='feedback-email' placeholder="Ваша почта для ответа?" required>
+              <label class='visually-hidden' for='feedback-email'>Электронная почта</label>
+              <input type='email' name='email-feedback' class='feedback-contacts' id='feedback-email' placeholder='Ваша почта для ответа?' required>
             </li>
             <li>
-              <textarea class='feedback-comment' name='comment' id='comment-field' rows='5' placeholder="Напишите что-нибудь..." required></textarea>
+              <textarea class='feedback-comment' name='comment' id='comment-field' rows='5' placeholder='Напишите что-нибудь...' required></textarea>
             </li>
             <li>
               <button type='submit' class='button'>Отправить</button>
