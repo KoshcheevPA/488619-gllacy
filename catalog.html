@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class='main-header'>
@@ -26,7 +28,7 @@
         <div class='user-navigation'>
           <ul class='search-list'>
             <li>
-              <span class='search'>Поиск</span>
+              <span class='search-logo'></span>
               <form class='seacrh-form' action='https://echo.htmlacademy.ru' method='get'>
                 <ul class='search-window'>
                   <li>
@@ -65,7 +67,7 @@
           <ul class='basket-list'>
             <li>
               <a class='basket' href='#'>2 товара</a>
-              <ul>
+              <ul class='basket-table'>
                 <li>
                   <table>
                     <tr>
@@ -126,7 +128,7 @@
             <input class='visually-hidden' type='range' min='100' max='500' step='10' name='price' id='price'>
           </p>
           <span>Жирность:</span>
-          <ul>
+          <ul class='fatness-list'>
             <li>
               <label>
                 <input class='visually-hidden' type='radio' name='fatness' value='0'><span>0%</span>
@@ -149,7 +151,7 @@
             </li>
           </ul>
           <span>Наполнители:</span>
-          <ul>
+          <ul class='add-list'>
             <li>
               <label for='chocolate'>
                 <input class='visually-hidden' type='checkbox' name='chocolate-fillers' id='chocolate' checked>шоколадные
