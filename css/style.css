@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  color:  #ffffff;
+
+  background-color: #849d8f;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation a{
+  color: #ffffff;
+  background-color: #849d8f;
+
+}
+.site-navigation a{
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+}
+.site-navigation a:hover,
+.site-navigation a:focus
+ {
+  color: #333333;
+  background-color: #f7f6f3;
+  border-radius: 10px;
+}
+
+
+.catalog-navigation,
+.site-navigation,
+.search-window,
+.search-list,
+.login-list,
+.login-window,
+.backet-list,
+.product-icecream,
+.advantages-list,
+.social-list,
+.additional-list,
+.feedback-list,
+.breadcrumbs,
+.fatness-list,
+.add-list,
+.pagination
+{
+  list-style: none;
+}
