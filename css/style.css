@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
@@ -61,13 +61,13 @@ display: inline-block;
   height: 33px;
   background-color: #a0b5a9;
   border-radius: 50%;                           /*В этом задании не надо задавать размеры и вставлять svg вроде бы, сделал наперед*/
-  background-image: url("../img/loupe.svg");
+  background-image: url('../img/loupe.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
 .search-logo:hover {
   background-color: #f8f7f4;
-  background-image: url("../img/loupe-black.svg");
+  background-image: url('../img/loupe-black.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -92,17 +92,17 @@ display: inline-block;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
-  background-color: #a0b5a9; /* вот здесь не понял, как выровнить текст "вход" по макету*/
+  background-color: #a0b5a9; /* вот здесь не понял, как выровнить текст 'вход' по макету*/
   border-radius: 20px;
   text-align: right;
-  background-image: url("../img/entrance-white.svg");
+  background-image: url('../img/entrance-white.svg');
   background-position: 16px 6px;
   background-repeat: no-repeat;
 }
 .login-link:hover {
   color: #323232;
   background-color: #f8f7f4;
-  background-image: url("../img/entrance.svg");
+  background-image: url('../img/entrance.svg');
   background-position: 16px 6px;
   background-repeat: no-repeat;
 }
@@ -131,10 +131,10 @@ display: inline-block;
 .login-window input:focus {
   border: 1px solid #8fbdec;
 }
-.login-window input:focus {  /*Не знаю как задать параметры, когда курсор внутри поля.*/
-  border: 1px solid #d3d3d2;
-  font-weight: bold;
-}
+/* .login-window input: {  Не знаю как задать параметры, когда курсор внутри поля.Шрифт меняется вместе с placeholder*/
+  /* border: 1px solid #d3d3d2; */
+  /* font-weight: bold; */
+/* } */
 
 
 .button {
@@ -165,7 +165,7 @@ display: inline-block;
   font-weight: bold;
   border-radius: 20px;
   background-color: #a0b5a9;
-  background-image: url("../img/basket.svg");
+  background-image: url('../img/basket.svg');
   background-position: 16px 6px;
   background-repeat: no-repeat;
 }
@@ -184,5 +184,175 @@ display: inline-block;
 .slider-top p {
   font-size: 60px;
   line-height: 60px;
+  font-weight: bold;
+}
+
+.slider-top .button {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.first-offers {
+  width: 560px;
+  height: 229px;
+  background-image: url('../img/raspberries-background.jpg');
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.second-offers {
+  width: 560px;
+  height: 229px;
+  background-image: url('../img/chocolate-background.jpg');
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.offers-caption {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.offers-buttton {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.icecream img {
+  border-radius: 50%;
+}
+
+.icecream {
+  color: #ffffff;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+.icecream-kilo {
+  font-size: 30px;
+}
+
+.icecream-name {
+  font-size: 16px;
+  line-height: 22px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.product-icecream .button {
+  font-size: 18px;
+  line-height: 24px;
+
+}
+
+.product-icecream li:hover {
+  background-color: #9bafa3;
+}
+
+.advantages {
+  width: 1146px;
+  height: 306px;
+  color: #323232;
+  background-image: url('../img/wafer1200.jpg');
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.definition {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.advantages-list {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.blog {
+  width: 560px;
+  height: 220px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+  background-image: url('../img/strawberry-background.jpg');
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.blog-name {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #323232;
+  text-decoration: underline;
+}
+
+.subscription{
+  width: 548px;
+  height: 210px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5a5a5a;
+  background-color: #f8f7f4;
+  background-origin: content-box;
+  border-image-width: 5px;
+  border-image-source: url('../img/bg-post.svg');
+}
+
+
+.subscription input {
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.subscription input:hover {
+  border: 1px solid #c7c6c5;
+}
+.subscription input:focus {
+  border: 1px solid #8fbdec;
+}
+
+.map {
+  width: 1250px;
+  height: 430px;
+  background-image: url('../img/map.jpg');
+  background-repeat: no-repeat;
+}
+
+.contact-information {
+  width: 302px;
+  height: 305px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #323232;
+  border-radius: 15px;
+  background-color: #fefefe;
+}
+
+.adress {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.contact-information p:nth-child(4) {
+  line-height: 22px;
+}
+
+.contact-information p:nth-child(5) {
+  line-height: 22px;
+}
+
+.contact-information .button {
+  font-size: 18px;
+  line-height: 24px;
   font-weight: bold;
 }
