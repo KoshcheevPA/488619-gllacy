@@ -55,8 +55,48 @@ a {
   list-style: none;
 }
 /* ------------------------------------------------*/
+.catalog-navigation {
+  display: inline-block;
+  width: 143px;
+  height: 171px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.catalog-navigation a {
+  color: #323232;
+
+}
+
+.catalog-navigation li:first-child {
+  font-weight: bold;
+  border-bottom: 1px solid #d1d0ce;
+}
+
+.catalog-navigation li:hover,
+.catalog-navigation a:hover {
+  background-color: #fbded7;
+  border-radius: 0;
+}
+.catalog-navigation li:active,
+.catalog-navigation a:active {
+  background-color: #f6b5a5;
+  border-radius: 0;
+}
+
+.active {
+  background-color: #d07058;
+}
+
+.active a {
+  color: #ffffff;
+}
+
+
 .search-logo {
-display: inline-block;
+  display: inline-block;
   width: 33px;
   height: 33px;
   background-color: #a0b5a9;
@@ -169,6 +209,65 @@ display: inline-block;
   background-position: 16px 6px;
   background-repeat: no-repeat;
 }
+
+.basket-table {
+  font-size: 13px;
+  line-height: 16px;
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.basket-table img {
+  border-radius: 50%;
+}
+
+.basket-price {
+  color: #999999;
+}
+
+.basket-sum {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #323232;
+}
+
+.checkout-btn {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
+}
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-caption {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.option-caption{
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.sorting-type {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #9db1a5;
+}
+
+.sorting-type:hover {
+  color: #323232;
+}
+
+
 
 .contact-information-top {
   font-size: 14px;
@@ -410,4 +509,65 @@ display: inline-block;
 .footer-copyright a:last-child {
   color: #ffffff;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.apply-btn {
+  font-weight: bold;
+  color: #fcfcfc;
+  background-color: #a6b7ae;
+  border: 2px solid #fcfcfc;
+}
+
+.apply-btn:hover {
+  color :#323232;
+  background-color: #fbfcfb;
+}
+
+.apply-btn:active {
+  color :#323232;
+  background-color: #eaeaea;
+  box-shadow: inset 0 2px 0 1px #696969;
+  border: none;
+}
+
+.icecream-name:hover,
+.icevream-name:active {
+  color: #ffbc9e;
+  border-bottom: 2px solid rgba(255, 188, 158, 0.2);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:active {
+  color: #ffbc9e;
+  border-bottom: 2px solid rgba(255, 188, 158, 0.2);
+}
+
+.additional-list a:hover,
+.additional-list a:active {
+  color: #ffbc9e;
+  border-bottom: 2px solid rgba(255, 188, 158, 0.2);
+}
+
+.fatness-list span {
+  font-weight: bold;
+}
+
+.add-list {
+  font-weight: bold;
+}
+
+.pagination a {
+  color: #ffffff;
+}
+
+.pagination li:hover {
+  background-color: #9db1a5;
+}
+
+.pagination li:active {
+  background-color: #ffffff;
+}
+
+.pagination a:active {
+  color: #353535;
 }
