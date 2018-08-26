@@ -6,12 +6,12 @@ body {
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
-  color:  #ffffff;
+  color: #ffffff;
 
   background-color: #849d8f;
 }
 
-a {
+.link {
   text-decoration: none;
 }
 
@@ -24,8 +24,8 @@ a {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 
 }
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-navigation::not(.catalog-navigation) a:hover,
+.site-navigation::not(.catalog-navigation) a:focus {
   color: #333333;
   background-color: #f7f6f3;
   border-radius: 10px;
@@ -37,12 +37,8 @@ a {
 
 .catalog-navigation,
 .site-navigation,
-.search-window,
-.search-list,
-.login-list,
 .login-window,
-.basket-list,
-.product-icecream,    /*Склоняюсь к тому, что так делать не совсем красиво*/
+.product-icecream,
 .advantages-list,
 .social-list,
 .additional-list,
@@ -50,11 +46,10 @@ a {
 .breadcrumbs,
 .fatness-list,
 .add-list,
-.pagination,
-.basket-table {
+.pagination {
   list-style: none;
 }
-/* ------------------------------------------------*/
+
 .catalog-navigation {
   display: inline-block;
   width: 143px;
@@ -75,13 +70,11 @@ a {
   border-bottom: 1px solid #d1d0ce;
 }
 
-.catalog-navigation li:hover,
-.catalog-navigation a:hover {
+.catalog-navigation li:hover {
   background-color: #fbded7;
   border-radius: 0;
 }
-.catalog-navigation li:active,
-.catalog-navigation a:active {
+.catalog-navigation li:active {
   background-color: #f6b5a5;
   border-radius: 0;
 }
@@ -94,24 +87,25 @@ a {
   color: #ffffff;
 }
 
-
 .search-logo {
   display: inline-block;
   width: 33px;
   height: 33px;
   background-color: #a0b5a9;
-  border-radius: 50%;                           /*В этом задании не надо задавать размеры и вставлять svg вроде бы, сделал наперед*/
+  border-radius: 50%;
   background-image: url('../img/loupe.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .search-logo:hover {
   background-color: #f8f7f4;
   background-image: url('../img/loupe-black.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
-.search-window {
+
+.search-form {
   width: 341px;
   height: 84px;
   font-size: 16px;
@@ -120,11 +114,13 @@ a {
   border-radius: 5px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
-.search-window input {
+
+.search-field {
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   background-color: #ffffff;
 }
+
 .login-link {
   display: inline-block;
   width: 92px;
@@ -139,6 +135,7 @@ a {
   background-position: 16px 6px;
   background-repeat: no-repeat;
 }
+
 .login-link:hover {
   color: #323232;
   background-color: #f8f7f4;
@@ -146,6 +143,7 @@ a {
   background-position: 16px 6px;
   background-repeat: no-repeat;
 }
+
 .login-window {
   width: 227px;
   height: 214px;
@@ -153,6 +151,7 @@ a {
   border-radius: 5px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
+
 .login-window input {
   font-size: 16px;
   line-height: 18px;
@@ -160,22 +159,26 @@ a {
   border-radius: 5px;
   background-color: #ffffff;
 }
+
 .login-window .login-problem {
   color: #323232;
   text-decoration: underline;
 }
 
-.login-window input:hover {
+.login-window input:hover,
+.search-field:hover {
   border: 1px solid #c7c6c5;
 }
-.login-window input:focus {
+
+.login-window input:focus,
+.search-field:focus {
   border: 1px solid #8fbdec;
 }
+
 /* .login-window input: {  Не знаю как задать параметры, когда курсор внутри поля.Шрифт меняется вместе с placeholder*/
   /* border: 1px solid #d3d3d2; */
   /* font-weight: bold; */
 /* } */
-
 
 .button {
   font-weight: bold;
@@ -185,7 +188,6 @@ a {
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 1px 2px 0px #ac1000;
   border: none;
-
 }
 
 .sign-in {
@@ -267,18 +269,16 @@ a {
   color: #323232;
 }
 
-
-
 .contact-information-top {
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
 }
+
 .phone-number {
   font-size: 22px;
   line-height: 24px;
 }
-
 
 .slider-top p {
   font-size: 60px;
@@ -347,7 +347,6 @@ a {
 .product-icecream .button {
   font-size: 18px;
   line-height: 24px;
-
 }
 
 .product-icecream li:hover {
@@ -392,7 +391,7 @@ a {
   text-decoration: underline;
 }
 
-.subscription{
+.subscription {
   width: 548px;
   height: 210px;
   font-size: 16px;
@@ -404,7 +403,6 @@ a {
   border-image-source: url('../img/bg-post.svg');
 }
 
-
 .subscription input {
   font-size: 16px;
   line-height: 18px;
@@ -415,6 +413,7 @@ a {
 .subscription input:hover {
   border: 1px solid #c7c6c5;
 }
+
 .subscription input:focus {
   border: 1px solid #8fbdec;
 }
@@ -436,19 +435,19 @@ a {
   background-color: #fefefe;
 }
 
-.adress {
+.address {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
 }
 
-.contact-information p:nth-child(4) {
-  line-height: 22px;
-}
+/* .contact-information p:nth-child(4) {
+   line-height: 22px;
+ } */
 
-.contact-information p:nth-child(5) {
+/* .contact-information p:nth-child(5) {
   line-height: 22px;
-}
+ } */
 
 .contact-information .button {
   font-size: 18px;
@@ -462,9 +461,9 @@ a {
   height: 32px;
   border: 3px solid #c2cec7;
   border-radius: 50%;
+  opacity: 0.8;
 }
 
-                                      /* <цвет фона социальных кнопок отличается от макета, что-то не понимаю, как исправить> */
 .twitter {
   background-image: url('../img/twitter.svg');
   background-position: center;
@@ -487,6 +486,14 @@ a {
   background-image: url('../img/vk.svg');
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.social-button:hover {
+  opacity: 1;
+}
+
+.social-button:active {
+  opacity: 0.9;
 }
 
 .additional-list a {
