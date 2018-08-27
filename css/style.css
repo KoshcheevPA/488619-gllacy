@@ -594,7 +594,7 @@ body {
 html,
 body {
   min-width: 1200px;
-  min-height: 1750px;
+  min-height: 2400px;
 }
 
 .container {
@@ -605,31 +605,32 @@ body {
   padding: 0 27px;
   padding-top: 9px;
   margin: 0 auto;
-  outline: 2px solid purple;
 }
 
 .main-header {
   min-height: 104px;
-  outline: 2px solid orange;
   margin-bottom: 20px;
+  margin: 0 auto;
 }
+
 .main-navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 2px solid red;
-
+  margin: 0 auto;
 }
+
 .main-header-logo {
   width: 154px;
   height: 64px;
+  margin: 0;
+  margin-left: 27px;
 }
 
 .main-navigation-wrapper {
   width: 100%;
   background-color: #849d8f;
   background-color: transparent;
-   outline: 2px solid green;
 }
 
 .main-navigation-wrapper .container {
@@ -640,19 +641,19 @@ body {
 .site-navigation {
   margin: 0;
   padding: 0;
-  width: 580px;
-   outline: 2px solid blue;
+  width: 560px;
 }
 
 .user-navigation {
-  width: 420px;
-  outline: 2px solid skyblue;
+  width: 380px;
+  margin: 0;
+  padding: 0;
 }
 
 .second-slide,
 .thrid-slide,
 .feedback-window {
-  display: none;    /* Временно не отобрааются, для удобства позиционирования*/
+  display: none;    /* Временно не отобржаются, для удобства позиционирования*/
 }
 
 .slider {
@@ -660,17 +661,15 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 881px;
+  margin: 0 auto;
   margin-top: -200px;
   margin-bottom: -500px;
-  margin-left: 0;
-  margin-right: 0;
-  /* outline: 2px solid skyblue; */
 }
 
 .slider-top {
   min-height: 881px;
   width: 1079px;
-  /* outline: 2px solid skyblue; */
+  margin: 0 auto;
 }
 
 .caption-slide {
@@ -681,37 +680,94 @@ body {
   padding: 0;
   bottom: 550px;
   text-align: center;
-  outline: 2px solid skyblue;
 }
 
 .offers-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
-  outline: 2px solid skyblue;
+  width: 1146px;
+  margin: auto;
   margin-bottom: 40px;
 }
 
 .first-offers,
 .second-offers {
-
   width: 560px;
   min-height: 229px;
 }
 
 .product-icecream {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  width: 1200px;
+  width: 1146px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  outline: 2px solid skyblue;
 }
 
 .product-icecream li {
-  min-height: 325px;
-  width: 267px;
+  text-align: center;
+  min-height: 405px;
+  width: 293px;
+}
 
+.other-info-wrapper {
+  margin: auto;
+  margin-top: 40px;
+  width: 1146px;
+  min-height: 567px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.advantages {
+  margin: 0 auto;
+  padding: 0;
+  width: 1146px;
+}
+
+.subscription,
+.blog {
+  align-self: flex-end;
+}
+
+.map {
+  margin-top: 40px;
+}
+
+.contact-information {
+  position: relative;
+  left: 871px;
+  top: 62px;
+}
+
+.main-footer {
+  min-height: 103px;
+}
+
+.main-footer .container {
+  display: flex;
+}
+
+.social-list {
+  margin: 0;
+  margin-top: 36px;
+  width: 267px;
+  margin-right: 80px;
+}
+
+.additional-list {
+  margin: 0;
+  margin-top: 34px;
+  width: 410px;
+}
+
+.footer-copyright {
+  margin: 0;
+  margin-top: 16px;
+  width: 225px;
+  margin-left: auto;
 }
