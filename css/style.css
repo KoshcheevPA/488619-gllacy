@@ -594,25 +594,42 @@ body {
 html,
 body {
   min-width: 1200px;
+  min-height: 1750px;
 }
 
 .container {
-  width: 100% ;
-  padding: 9px 27px 0;
-
+  width: 1200px;
+  /* padding-left: 27px; */
+  /* padding-right: 27px; */
+  /* padding-top: 9px; */
+  padding: 0 27px;
+  padding-top: 9px;
+  margin: 0 auto;
+  outline: 2px solid purple;
 }
 
+.main-header {
+  min-height: 104px;
+  outline: 2px solid orange;
+  margin-bottom: 20px;
+}
 .main-navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
+  outline: 2px solid red;
 
+}
+.main-header-logo {
+  width: 154px;
+  height: 64px;
 }
 
 .main-navigation-wrapper {
   width: 100%;
   background-color: #849d8f;
   background-color: transparent;
+   outline: 2px solid green;
 }
 
 .main-navigation-wrapper .container {
@@ -620,22 +637,16 @@ body {
   justify-content:space-between;
 }
 
-.main-header {
-  min-height: 104px;
-;
-}
-
 .site-navigation {
   margin: 0;
   padding: 0;
   width: 580px;
-
-  margin-left: 24px;
+   outline: 2px solid blue;
 }
 
 .user-navigation {
-  width: 402px;
-
+  width: 420px;
+  outline: 2px solid skyblue;
 }
 
 .second-slide,
@@ -647,17 +658,22 @@ body {
 .slider {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  align-items: center;
   min-height: 881px;
-  margin-top: -220px;
+  margin-top: -200px;
+  margin-bottom: -500px;
+  margin-left: 0;
+  margin-right: 0;
+  /* outline: 2px solid skyblue; */
 }
 
 .slider-top {
   min-height: 881px;
   width: 1079px;
+  /* outline: 2px solid skyblue; */
 }
 
-.caption-cr {
+.caption-slide {
   position: relative;
   width: 680px;
   min-height: 116px;
@@ -665,11 +681,37 @@ body {
   padding: 0;
   bottom: 550px;
   text-align: center;
-
+  outline: 2px solid skyblue;
 }
 
-.contact-information-top {
-  position: relative;
-  margin-right: 27px;
-  left: 1178px;
+.offers-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  outline: 2px solid skyblue;
+  margin-bottom: 40px;
+}
+
+.first-offers,
+.second-offers {
+
+  width: 560px;
+  min-height: 229px;
+}
+
+.product-icecream {
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: 2px solid skyblue;
+}
+
+.product-icecream li {
+  min-height: 325px;
+  width: 267px;
+
 }
