@@ -9,48 +9,52 @@
   <body>
     <header class='main-header'>
       <nav class='main-navigation'>
-        <img src='img/logo.svg' width='154' height='64' alt='Логотип GllacyShop'>
-        <ul class='site-navigation'>
-          <li><a href='#' class='link'>Каталог</a>
-            <ul class='catalog-navigation'>
-              <li><a href='#' class='link'>Новинки</a></li>
-              <li><a href='catalog.html' class='link'>Сливочное</a></li>
-              <li><a href='#' class='link'>Щербеты</a></li>
-              <li><a href='#' class='link'>Фруктовый лед</a></li>
-              <li><a href='#' class='link'>Мелорин</a></li>
+        <div class='main-navigation-wrapper'>
+          <div class='container'>
+            <img src='img/logo.svg' width='154' height='64' class='main-header-logo' alt='Логотип GllacyShop'>
+            <ul class='site-navigation'>
+              <li><a href='#' class='link main-menu'>Каталог</a>
+                <ul class='catalog-navigation'>
+                  <li><a href='#' class='link'>Новинки</a></li>
+                  <li><a href='catalog.html' class='link'>Сливочное</a></li>
+                  <li><a href='#' class='link'>Щербеты</a></li>
+                  <li><a href='#' class='link'>Фруктовый лед</a></li>
+                  <li><a href='#' class='link'>Мелорин</a></li>
+                </ul>
+              </li>
+              <li><a href='delivery-and-payment.html' class='link main-menu'>Доставка и оплата</a></li>
+              <li><a href='about-company.html' class='link main-menu'>О Компании</a></li>
             </ul>
-          </li>
-          <li><a href='delivery-and-payment.html' class='link'>Доставка и оплата</a></li>
-          <li><a href='about-company.html' class='link'>О Компании</a></li>
-        </ul>
-        <div class='user-navigation'>
-          <span class='search-logo'></span>
-          <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
-            <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
-          </form>
-          <a href='#' class='login-link link'>Вход</a>
-          <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
-            <ul class='login-window'>
-              <li class='login-field'>
-                <label class='visually-hidden' for='user-email'>Электронная почта</label>
-                <input type='email' name='email' id='user-email' placeholder='Электронная почта'>
-              </li>
-              <li class='login-field'>
-                <label class='visually-hidden' for='user-password'>Пароль</label>
-                <input type='password' name='password' id='user-password' placeholder='Пароль'>
-              </li>
-              <li>
-                <button class='button sign-in' type='submit'>Войти</button>
-              </li>
-              <li class='login-password-info'>
-                <a class='login-problem link' href='#'>Забыли пароль?</a>
-              </li>
-              <li class='login-password-info'>
-                <a class='login-problem link' href='#'>Новая регистрация</a>
-              </li>
-            </ul>
-          </form>
-          <span class='basket'>Пусто</span>
+            <div class='user-navigation'>
+              <span class='search-logo'></span>
+              <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
+                <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
+              </form>
+              <a href='#' class='login-link link'>Вход</a>
+              <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
+                <ul class='login-window'>
+                  <li class='login-field'>
+                    <label class='visually-hidden' for='user-email'>Электронная почта</label>
+                    <input type='email' name='email' id='user-email' placeholder='Электронная почта'>
+                  </li>
+                  <li class='login-field'>
+                    <label class='visually-hidden' for='user-password'>Пароль</label>
+                    <input type='password' name='password' id='user-password' placeholder='Пароль'>
+                  </li>
+                  <li>
+                    <button class='button sign-in' type='submit'>Войти</button>
+                  </li>
+                  <li class='login-password-info'>
+                    <a class='login-problem link' href='#'>Забыли пароль?</a>
+                  </li>
+                  <li class='login-password-info'>
+                    <a class='login-problem link' href='#'>Новая регистрация</a>
+                  </li>
+                </ul>
+              </form>
+              <span class='basket'>Пусто</span>
+            </div>
+          </div>
         </div>
       </nav>
       <div class='contact-information-top'>
@@ -64,22 +68,23 @@
     </header>
     <main class='container'>
       <h1 class='visually-hidden'>Магазин мороженого Глэйси</h1>
-
       <div class='slider'>
         <button type='button' class='slider-button-1 visually-hidden'></button>
         <button type='button' class='slider-button-2 visually-hidden'></button><!--Сделал пока кнопки для слайдер, раз радио не нужны для слайдер, сделал обычные кнопки -->
         <button type='button' class='slider-button-3 visually-hidden'></button>
-        <div class='slider-top' id='first-slide'>
-          <p>Крем-брюле и пломбир с малиновым джемом</p>
+        <div class='slider-top first-slide' id='first-slide'>
           <img src='img/icecream-slide1.png' height='881' width='1045' alt='Крем-брюле и пломбир с малиновым джемом'>
-          <a href='#' class='button link'>Давайте оба!</a>
+          <div class='caption-cr'>
+            <p>Крем-брюле и пломбир с малиновым джемом</p>
+            <a href='#' class='button link'>Давайте оба!</a>
+          </div>
         </div>
-        <div class='slider-top' id='second-slide'>
+        <div class='slider-top second-slide' id='second-slide'>
           <p>Шоколадный пломбир и лимонный сорбет</p>
           <img src='img/icecream-slide2.png' height='859' width='1065' alt='Шоколадный пломбир и лимонный сорбет'>
           <a href='#' class='button link'>Давайте оба!</a>
         </div>
-        <div class='slider-top' id='thrid-slide'>
+        <div class='slider-top thrid-slide' id='thrid-slide'>
           <p>Пломбир с помадкой и клубничный щербет</p>
           <img src='img/icecream-slide3.png' height='854' width='1079' alt='Пломбир с помадкой и клубничный щербет'>
           <a href='#' class='button link'>Давайте оба!</a>

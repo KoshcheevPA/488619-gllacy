@@ -7,7 +7,6 @@ body {
   line-height: 18px;
   font-weight: normal;
   color: #ffffff;
-
   background-color: #849d8f;
 }
 
@@ -17,15 +16,18 @@ body {
 
 .main-navigation a {
   color: #ffffff;
-
 }
 
 .site-navigation a {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-
 }
-.site-navigation::not(.catalog-navigation) a:hover,
-.site-navigation::not(.catalog-navigation) a:focus {
+
+.main-menu {
+  position: relative;
+}
+
+.main-menu:hover,
+.main-menu:focus {
   color: #333333;
   background-color: #f7f6f3;
   border-radius: 10px;
@@ -52,6 +54,8 @@ body {
 
 .catalog-navigation {
   display: inline-block;
+  position: absolute;
+  display: none;
   width: 143px;
   height: 171px;
   font-size: 14px;
@@ -60,9 +64,12 @@ body {
   background-color: #f8f7f4;
 }
 
+.site-navigation >li:hover .catalog-navigation {
+  display: block;
+}
+
 .catalog-navigation a {
   color: #323232;
-
 }
 
 .catalog-navigation li:first-child {
@@ -74,6 +81,7 @@ body {
   background-color: #fbded7;
   border-radius: 0;
 }
+
 .catalog-navigation li:active {
   background-color: #f6b5a5;
   border-radius: 0;
@@ -106,6 +114,7 @@ body {
 }
 
 .search-form {
+  display: none; /* На время построения сетки*/
   width: 341px;
   height: 84px;
   font-size: 16px;
@@ -145,6 +154,7 @@ body {
 }
 
 .login-window {
+  display: none; /* На время построения сетки*/
   width: 227px;
   height: 214px;
   background-color: #f8f7f4;
@@ -282,7 +292,7 @@ body {
 
 .slider-top p {
   font-size: 60px;
-  line-height: 60px;
+  line-height: 60.35px;
   font-weight: bold;
 }
 
@@ -577,4 +587,89 @@ body {
 
 .pagination a:active {
   color: #353535;
+}
+
+/* ------------------Сетка------------------ */
+
+html,
+body {
+  min-width: 1200px;
+}
+
+.container {
+  width: 100% ;
+  padding: 9px 27px 0;
+
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.main-navigation-wrapper {
+  width: 100%;
+  background-color: #849d8f;
+  background-color: transparent;
+}
+
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content:space-between;
+}
+
+.main-header {
+  min-height: 104px;
+;
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  width: 580px;
+
+  margin-left: 24px;
+}
+
+.user-navigation {
+  width: 402px;
+
+}
+
+.second-slide,
+.thrid-slide,
+.feedback-window {
+  display: none;    /* Временно не отобрааются, для удобства позиционирования*/
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  min-height: 881px;
+  margin-top: -220px;
+}
+
+.slider-top {
+  min-height: 881px;
+  width: 1079px;
+}
+
+.caption-cr {
+  position: relative;
+  width: 680px;
+  min-height: 116px;
+  margin: 0 auto;
+  padding: 0;
+  bottom: 550px;
+  text-align: center;
+
+}
+
+.contact-information-top {
+  position: relative;
+  margin-right: 27px;
+  left: 1178px;
 }
