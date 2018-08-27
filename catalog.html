@@ -9,71 +9,73 @@
   <body>
     <header class='main-header'>
       <nav class='main-navigation'>
-        <a class='main-header-logo link' href='index.html'>
-          <img src='img/logo.svg' width='154' height='64' alt='Логотип GllacyShop'>
-        </a>
-        <ul class='site-navigation'>
-          <li><a href='#' class='active link main-menu'>Каталог</a>
-            <ul class='catalog-navigation'>
-              <li><a href='#' class='link'>Новинки</a></li>
-              <li><a href='catalog.html' class='link'>Сливочное</a></li>
-              <li><a href='#' class='link'>Щербеты</a></li>
-              <li><a href='#' class='link'>Фруктовый лед</a></li>
-              <li><a href='#' class='link'>Мелорин</a></li>
-            </ul>
-          </li>
-          <li><a href='delivery-and-payment.html' class='link main-menu'>Доставка и оплата</a></li>
-          <li><a href='about-company.html' class='link main-menu'>О Компании</a></li>
-        </ul>
-        <div class='user-navigation'>
-          <span class='search-logo'></span>
-          <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
-            <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
-          </form>
-          <a href='#' class='login-link link'>Вход</a>
-          <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
-            <ul class='login-window'>
-              <li class='login-field'>
-                <label class='visually-hidden' for='user-email'>Электронная почта</label>
-                <input type='email' name='email' id='user-email' placeholder='Электронная почта'>
-              </li>
-              <li class='login-field'>
-                <label class='visually-hidden' for='user-password'>Пароль</label>
-                <input type='password' name='password' id='user-password' placeholder='Пароль'>
-              </li>
-              <li>
-                <button class='button sign-in' type='submit'>Войти</button>
-              </li>
-              <li class='login-password-info'>
-                <a class='login-problem link' href='#'>Забыли пароль?</a>
-              </li>
-              <li class='login-password-info'>
-                <a class='login-problem link' href='#'>Новая регистрация</a>
-              </li>
-            </ul>
-          </form>
-          <a class='basket link' href='#'>2 товара</a>
-          <div class='basket-table'> <!--обернул в див, чтобы ссылка "оформить заказ" не выпадала из окна таблицы-->
-            <table>
-              <tr>
-                <td><button type='button' class='visually-hidden delete'>x</button></td>
-                <td><img src='img/product-01.jpg' width='33' height='33' alt='Пломбир с апельсиновым джемом'></td>
-                <td>Пломбир с апельсиновым джемом</td>
-                <td>1,5 кг х <span class='basket-price'>200 руб.</span></td>
-                <td>300 руб.</td>
-              </tr>
-              <tr>
-                <td><button type='button' class='visually-hidden delete'>x</button></td>
-                <td><img src='img/product-03.jpg' width='33' height='33' alt='Клубничный пломбир с присыпкой из белого шоколада'></td>
-                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td>3,0 кг х <span class='basket-price'>300 руб.</span></td>
-                <td>450 руб.</td>
-              </tr>
-              <tr>
-                <td colspan='5' class='basket-sum'><hr>Итого: 750 руб.</td>
-              </tr>
-            </table>
-            <a href='#' class='button checkout-btn link'>Оформить заказ</a>
+        <div class='main-navigation-wrapper'>
+          <a class='main-header-logo link' href='index.html'>
+            <img src='img/logo.svg' width='154' height='64' alt='Логотип GllacyShop'>
+          </a>
+          <ul class='site-navigation'>
+            <li><a href='#' class='active link main-menu'>Каталог</a>
+              <ul class='catalog-navigation'>
+                <li><a href='#' class='link'>Новинки</a></li>
+                <li><a href='catalog.html' class='link'>Сливочное</a></li>
+                <li><a href='#' class='link'>Щербеты</a></li>
+                <li><a href='#' class='link'>Фруктовый лед</a></li>
+                <li><a href='#' class='link'>Мелорин</a></li>
+              </ul>
+            </li>
+            <li><a href='delivery-and-payment.html' class='link main-menu'>Доставка и оплата</a></li>
+            <li><a href='about-company.html' class='link main-menu'>О Компании</a></li>
+          </ul>
+          <div class='user-navigation'>
+            <span class='search-logo'></span>
+            <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
+              <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
+            </form>
+            <a href='#' class='login-link link'>Вход</a>
+            <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
+              <ul class='login-window'>
+                <li class='login-field'>
+                  <label class='visually-hidden' for='user-email'>Электронная почта</label>
+                  <input type='email' name='email' id='user-email' placeholder='Электронная почта'>
+                </li>
+                <li class='login-field'>
+                  <label class='visually-hidden' for='user-password'>Пароль</label>
+                  <input type='password' name='password' id='user-password' placeholder='Пароль'>
+                </li>
+                <li>
+                  <button class='button sign-in' type='submit'>Войти</button>
+                </li>
+                <li class='login-password-info'>
+                  <a class='login-problem link' href='#'>Забыли пароль?</a>
+                </li>
+                <li class='login-password-info'>
+                  <a class='login-problem link' href='#'>Новая регистрация</a>
+                </li>
+              </ul>
+            </form>
+            <a class='basket link' href='#'>2 товара</a>
+            <div class='basket-table'> <!--обернул в див, чтобы ссылка "оформить заказ" не выпадала из окна таблицы-->
+              <table>
+                <tr>
+                  <td><button type='button' class='visually-hidden delete'>x</button></td>
+                  <td><img src='img/product-01.jpg' width='33' height='33' alt='Пломбир с апельсиновым джемом'></td>
+                  <td>Пломбир с апельсиновым джемом</td>
+                  <td>1,5 кг х <span class='basket-price'>200 руб.</span></td>
+                  <td>300 руб.</td>
+                </tr>
+                <tr>
+                  <td><button type='button' class='visually-hidden delete'>x</button></td>
+                  <td><img src='img/product-03.jpg' width='33' height='33' alt='Клубничный пломбир с присыпкой из белого шоколада'></td>
+                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td>3,0 кг х <span class='basket-price'>300 руб.</span></td>
+                  <td>450 руб.</td>
+                </tr>
+                <tr>
+                  <td colspan='5' class='basket-sum'><hr>Итого: 750 руб.</td>
+                </tr>
+              </table>
+              <a href='#' class='button checkout-btn link'>Оформить заказ</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -96,7 +98,7 @@
       <form class='options' action='#' method='get'>
         <fieldset>
           <legend class='visually-hidden'>Критерии поиска</legend>
-          <p>
+          <p class='sorting'>
             <label for='sorting' class='option-caption'>Соритровка:</label>
             <select class='sorting-type' name='sorting-type'>
               <option value='popularity'>по-популярности</option>
@@ -105,7 +107,7 @@
               <option value='fat-content'>по жирности</option>
             </select>
           </p>
-          <p>
+          <p class='price-field'>
             <label for='price' class='option-caption'>Цена: 100 руб. - 500 руб.</label>
             <input class='' type='range' min='100' max='500' step='10' name='price' id='price'>
           </p>
@@ -160,7 +162,7 @@
               </label>
             </li>
           </ul>
-          <p>
+          <p class='accept'>
             <button class='apply-btn' type='submit'>Применить</button>
           </p>
         </fieldset>
@@ -278,23 +280,25 @@
       </ul>
     </main>
     <footer class='main-footer'>
-      <ul class='social-list'>
-        <li><a class='social-button twitter link' href='#' aria-label='Твиттер'></a></li>
-        <li><a class='social-button instagram link' href='#' aria-label='Инстаграм'></a></li>
-        <li><a class='social-button facebook link' href='#' aria-label='Фэйсбук'></a></li>
-        <li><a class='social-button vk link' href='#' aria-label='В контакте'></a></li>
-      </ul>
-      <ul class='additional-list'>
-        <li><a class='for-providers link' href='#'>Для поставщиков</a></li>
-        <li><a class='about-production link' href='#'>О производсвте</a></li>
-        <li><a class='documents link' href='#'>Наши документы</a></li>
+      <div class='container'>
+        <ul class='social-list'>
+          <li><a class='social-button twitter link' href='#' aria-label='Твиттер'></a></li>
+          <li><a class='social-button instagram link' href='#' aria-label='Инстаграм'></a></li>
+          <li><a class='social-button facebook link' href='#' aria-label='Фэйсбук'></a></li>
+          <li><a class='social-button vk link' href='#' aria-label='В контакте'></a></li>
+        </ul>
+        <ul class='additional-list'>
+          <li><a class='for-providers link' href='#'>Для поставщиков</a></li>
+          <li><a class='about-production link' href='#'>О производсвте</a></li>
+          <li><a class='documents link' href='#'>Наши документы</a></li>
         <li><a class='standards link' href='#'>Экологические стандарты</a></li>
-      </ul>
-      <div class='footer-copyright'>
-        <a href='htmlacademy.ru' class='link'>
-          <img src='img/logo-htmlacademy.svg' width='108' height='39' alt='Логотип HTML academy'>
-        </a>
-        <p>Сделано в <a href='htmlacademy.ru' class='link'>HTML Academy</a> © 2017</p>
+        </ul>
+        <div class='footer-copyright'>
+          <a href='htmlacademy.ru' class='link'>
+            <img src='img/logo-htmlacademy.svg' width='108' height='39' alt='Логотип HTML academy'>
+          </a>
+          <p>Сделано в <a href='htmlacademy.ru' class='link'>HTML Academy</a> © 2017</p>
+        </div>
       </div>
     </footer>
   </body>

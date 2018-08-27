@@ -593,19 +593,20 @@ body {
 
 html,
 body {
-  min-width: 1200px;
+  min-width: 1200px;      /* Сомневаюсь на счет позиционарования номера телефона и графика работы
+                                  в шапке страницы. Поизионировать ее на флексбоксе или же другим способом?*/
   min-height: 2400px;
 }
 
-.container {
-  width: 1200px;
-  /* padding-left: 27px; */
-  /* padding-right: 27px; */
-  /* padding-top: 9px; */
-  padding: 0 27px;
-  padding-top: 9px;
-  margin: 0 auto;
-}
+ .container {
+   width: 1200px;
+   padding-left: 27px;
+   padding-right: 27px;
+   padding-top: 9px;
+   padding: 0 27px;
+   padding-top: 9px;
+   margin: 0 auto;
+ }
 
 .main-header {
   min-height: 104px;
@@ -615,8 +616,15 @@ body {
 
 .main-navigation {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 1200px;
+  /* padding-left: 27px; */
+  /* padding-right: 27px; */
+  /* padding-top: 9px; */
+  padding: 0 27px;
+  padding-top: 9px;
   margin: 0 auto;
 }
 
@@ -633,7 +641,7 @@ body {
   background-color: transparent;
 }
 
-.main-navigation-wrapper .container {
+.main-navigation-wrapper {
   display: flex;
   justify-content:space-between;
 }
@@ -704,12 +712,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .product-icecream li {
   text-align: center;
-  min-height: 405px;
-  width: 293px;
+  min-height: 400px;
+  width: 280px;
 }
 
 .other-info-wrapper {
@@ -770,4 +779,69 @@ body {
   margin-top: 16px;
   width: 225px;
   margin-left: auto;
+}
+                        /*Не понимаю, почему на главной странице при наведении на иконку поиска/входа
+                        нет никакой реакции, хотя на странице каталога есть*/
+.basket-table {
+  display: none;
+}
+
+.breadcrumbs {
+  padding: 0;
+  margin: 0;
+  min-height: 20px;
+  margin-bottom: 5px;
+}
+
+.main-caption {
+  padding: 0;
+  margin: 0;
+  min-height: 36px;
+  margin-bottom: 25px;
+}
+
+.options {
+  width: 880px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.sorting {
+  width: 193px;
+  margin: 0;
+  padding: 0;
+}
+
+.price-field {
+  width: 218px;
+  margin: 0;
+  padding: 0;
+}
+
+.fatness-list {
+  width: 414px;
+  margin: 0;
+  padding: 0;
+}
+
+.add-list {
+  width: 702px;
+  margin: 0;
+  padding: 0;
+}
+
+.accept {
+  width: 143px;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination {
+  padding: 0;
+  margin: 0;
 }
