@@ -786,16 +786,28 @@ body {
   display: none;
 }
 
+.wrapper-top {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .breadcrumbs {
   padding: 0;
   margin: 0;
+  margin-left: 27px;
   min-height: 20px;
   margin-bottom: 5px;
 }
 
 .main-caption {
+  width: 400px;
   padding: 0;
   margin: 0;
+  margin-left: 27px;
   min-height: 36px;
   margin-bottom: 25px;
 }
@@ -808,7 +820,9 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 0;
+  margin-left: 27px;
   padding: 0;
+  margin-bottom: 40px;
 }
 
 .sorting {
@@ -844,4 +858,5 @@ body {
 .pagination {
   padding: 0;
   margin: 0;
+  margin-left: 27px;
 }
