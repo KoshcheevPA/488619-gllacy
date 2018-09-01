@@ -7,52 +7,50 @@
     <link href='css/style.css' rel='stylesheet'>
   </head>
   <body>
-    <header class='main-header'>
+    <header class='main-header container'>
       <nav class='main-navigation'>
-        <div class='main-navigation-wrapper'>
-          <img src='img/logo.svg' width='154' height='64' class='main-header-logo' alt='Логотип GllacyShop'>
-          <ul class='site-navigation'>
-            <li><a href='#' class='link main-menu'>Каталог</a>
-              <ul class='catalog-navigation'>
-                <li><a href='#' class='link'>Новинки</a></li>
-                <li><a href='catalog.html' class='link'>Сливочное</a></li>
-                <li><a href='#' class='link'>Щербеты</a></li>
-                <li><a href='#' class='link'>Фруктовый лед</a></li>
-                <li><a href='#' class='link'>Мелорин</a></li>
-              </ul>
-            </li>
-            <li><a href='delivery-and-payment.html' class='link main-menu'>Доставка и оплата</a></li>
-            <li><a href='about-company.html' class='link main-menu'>О Компании</a></li>
-          </ul>
-          <div class='user-navigation'>
-            <span class='search-logo'></span>
-            <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
-              <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
-            </form>
-            <a href='#' class='login-link link'>Вход</a>
-            <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
-              <ul class='login-window'>
-                <li class='login-field'>
-                  <label class='visually-hidden' for='user-email'>Электронная почта</label>
-                  <input type='email' name='email' id='user-email' placeholder='Электронная почта'>
-                </li>
-                <li class='login-field'>
-                  <label class='visually-hidden' for='user-password'>Пароль</label>
-                  <input type='password' name='password' id='user-password' placeholder='Пароль'>
-                </li>
-                <li>
-                  <button class='button sign-in' type='submit'>Войти</button>
-                </li>
-                <li class='login-password-info'>
-                  <a class='login-problem link' href='#'>Забыли пароль?</a>
-                </li>
-                <li class='login-password-info'>
-                  <a class='login-problem link' href='#'>Новая регистрация</a>
-                </li>
-              </ul>
-            </form>
-            <span class='basket'>Пусто</span>
-          </div>
+        <img src='img/logo.svg' width='154' height='64' class='main-header-logo' alt='Логотип GllacyShop'>
+        <ul class='site-navigation'>
+          <li class='submenu-container site-navigation-item'><a href='#' class='link main-menu'>Каталог</a>
+            <ul class='catalog-navigation'>
+              <li><a href='#' class='link new'>Новинки</a></li>
+              <li><a href='catalog.html' class='link'>Сливочное</a></li>
+              <li><a href='#' class='link'>Щербеты</a></li>
+              <li><a href='#' class='link'>Фруктовый лед</a></li>
+              <li><a href='#' class='link'>Мелорин</a></li>
+            </ul>
+          </li>
+          <li class='site-navigation-item'><a href='delivery-and-payment.html' class='link main-menu'>Доставка и оплата</a></li>
+          <li class='site-navigation-item'><a href='about-company.html' class='link main-menu'>О Компании</a></li>
+        </ul>
+        <div class='user-navigation'>
+          <span class='search-logo user-navigation-item'></span>
+          <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
+            <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
+          </form>
+          <a href='#' class='login-link link user-navigation-item'>Вход</a>
+          <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
+            <ul class='login-window'>
+              <li class='login-field'>
+                <label class='visually-hidden' for='user-email'>Электронная почта</label>
+                <input type='email' name='email' id='user-email' placeholder='Электронная почта'>
+              </li>
+              <li class='login-field'>
+                <label class='visually-hidden' for='user-password'>Пароль</label>
+                <input type='password' name='password' id='user-password' placeholder='Пароль'>
+              </li>
+              <li>
+                <button class='button sign-in' type='submit'>Войти</button>
+              </li>
+              <li class='login-password-info'>
+                <a class='login-problem link' href='#'>Забыли пароль?</a>
+              </li>
+              <li class='login-password-info'>
+                <a class='login-problem link' href='#'>Новая регистрация</a>
+              </li>
+            </ul>
+          </form>
+          <span class='basket user-navigation-item'>Пусто</span>
         </div>
       </nav>
       <div class='contact-information-top'>
@@ -73,7 +71,7 @@
         <div class='slider-top first-slide' id='first-slide'>
           <img src='img/icecream-slide1.png' height='881' width='1045' alt='Крем-брюле и пломбир с малиновым джемом'>
           <div class='caption-slide'>
-            <p>Крем-брюле и пломбир с малиновым джемом</p>
+            <p>Крем-брюле и пломбир<br>с малиновым джемом</p>
             <a href='#' class='button link'>Давайте оба!</a>
           </div>
         </div>
@@ -107,7 +105,9 @@
           <a href='#' class='icecream link'> <!--Ширина и высота изображений задана предварительно-->
             <img src='img/product-01.jpg' width='267' height='267' alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
             <p class='icecream-price'>310₽<span class='icecream-kilo'>/кг</span></p>
-            <h3 class='icecream-name'>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            <h3 class='icecream-name'>
+              <span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+            </h3>
           </a>
           <button type='button' class='button' href='#'>Быстрый просмотр</button>
         </li>
@@ -115,7 +115,9 @@
           <a href='#' class='icecream link'>
             <img src='img/product-02.jpg' width='267' height='267' alt='Сливочно-кофейное с кусочками шоколада'>
             <p class='icecream-price'>380₽<span class='icecream-kilo'>/кг</span></p>
-            <h3 class='icecream-name'>Сливочно-кофейное с кусочками шоколада</h3>
+            <h3 class='icecream-name'>
+              <span>Сливочно-кофейное с кусочками шоколада</span>
+            </h3>
           </a>
           <button type='button' class='button'>Быстрый просмотр</button>
         </li>
@@ -123,7 +125,9 @@
           <a href='#' class='icecream link'>
             <img src='img/product-03.jpg' width='267' height='267' alt='Сливочно-клубничное с присыпкой из белого шоколада'>
             <p class='icecream-price'>355₽<span class='icecream-kilo'>/кг</span></p>
-            <h3 class='icecream-name'>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            <h3 class='icecream-name'>
+              <span>Сливочно-клубничное с присыпкой из белого шоколада</span>
+            </h3>
           </a>
           <button type='button' class='button'>Быстрый просмотр</button>
         </li>
@@ -131,7 +135,9 @@
           <a href='#' class='icecream link'>
             <img src='img/product-04.jpg' width='267' height='267' alt='Сливочное крем-брюле с карамальной подливкой'>
             <p class='icecream-price'>415₽<span class='icecream-kilo'>/кг</span></p>
-            <h3 class='icecream-name'>Сливочное крем-брюле с карамальной подливкой</h3>
+            <h3 class='icecream-name'>
+              <span>Сливочное крем-брюле с карамальной подливкой</span>
+            </h3>
           </a>
           <button type='button' class='button'>Быстрый просмотр</button>
         </li>
@@ -139,7 +145,9 @@
       <div class='other-info-wrapper'>
         <article class='advantages'>
           <h2 class='visually-hidden'>Приемущества компании</h2>
-          <h3 class='definition'>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
+          <h3 class='definition'>
+            <span>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</span>
+          </h3>
           <ul class='advantages-list'>
             <li class='making'>
               <p>Все наше мороженое изготавливается на собственном
@@ -180,20 +188,21 @@
           </form>
         </div>
       </div>
-      <div class='map'>
-          <!--Как понимаю, карту добавляем потом-->
+    </main>
+    <div class='map'>
+      <div class='container'>
         <div class='contact-information'>
-          <p>Адрес главного офиса
-            и офлайн магазина:</p>
-           <p class='address'>ул. Большая Конюшенная
+          Адрес главного офиса<br>
+            и офлайн магазина:
+          <p class='address'>ул. Большая Конюшенная<br>
               19/8, Санкт-Петербург</p>
-            <p>Для заказов по телефону:</p>
-          <p class='address'> 8 812 450-25-25</p>
-          <p>(c 10 до 20 ежедневно)</p>
+          Для заказов по телефону:
+          <p class='phone'> 8 812 450-25-25</p>
+          (c 10 до 20 ежедневно)
           <button type='button' class='button'>Форма обратной связи</button>
         </div>
       </div>
-    </main>
+    </div>
     <footer class='main-footer'>
       <div class='container'>
         <ul class='social-list'>
