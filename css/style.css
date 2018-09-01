@@ -119,11 +119,16 @@ body {
   font-weight: bold;
   padding-top: 11px;
   padding-bottom: 11px;
+  margin-bottom: 6px;
 }
 
 .catalog-navigation .new {
   font-weight: bold;
   border-bottom: 1px solid #d1d0ce;
+}
+
+.catalog-navigation {
+  padding-bottom: 11px;
 }
 
 .catalog-navigation li:hover {
@@ -138,13 +143,21 @@ body {
 
 .active {
   background-color: #d07058;
+  border-radius: 30px;
+  border-bottom: none;
 }
 
-.active a {
+.active-item {
   color: #ffffff;
+  border-bottom: none;
+}
+
+.site-navigation-item:hover {
+    background-color: #f7f6f3;
 }
 
 .search-logo {
+  position: relative;
   display: inline-block;
   width: 33px;
   height: 33px;
@@ -173,6 +186,13 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+.search-logo:hover .search-form {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 38px;
+}
+
 .search-field {
   border: 1px solid #d3d3d2;
   border-radius: 5px;
@@ -180,18 +200,22 @@ body {
 }
 
 .login-link {
+  position: relative;
   display: inline-block;
   width: 92px;
-  height: 32px;
+  height: 33px;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
   background-color: #a0b5a9; /* вот здесь не понял, как выровнить текст 'вход' по макету*/
   border-radius: 20px;
-  text-align: right;
   background-image: url('../img/entrance-white.svg');
   background-position: 16px 6px;
   background-repeat: no-repeat;
+  box-sizing: border-box;
+  /* text-align: center; */
+  padding-left: 45px;
+  padding-top: 8px;
 }
 
 .login-link:hover {
@@ -202,13 +226,21 @@ body {
   background-repeat: no-repeat;
 }
 
-.login-window {
+.login-form {
   display: none; /* На время построения сетки*/
   width: 227px;
   height: 214px;
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.login-link:hover .login-form {
+  display: block;
+  position: absolute;
+  top: 37px;
+  right: 0;
+  z-index: 20;
 }
 
 .login-window input {
@@ -241,12 +273,42 @@ body {
 
 .button {
   font-weight: bold;
-  color: #fefefe;
+  color: #ffffff;
   text-align: center;
   vertical-align: middle;
-  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 1px 2px 0px #ac1000;
+  background-image: linear-gradient(0deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   border: none;
+  text-shadow:
+  0 0 5px rgba(61, 61, 46, 0.34),
+  0 2px 5px rgba(160, 32, 11, 0.76);
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+}
+
+.offers-button {
+  background-image: linear-gradient(0deg, rgb(202, 56, 36) 0%, rgb(242, 104, 67) 100%);
+  box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
+  text-shadow: none;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+  box-shadow: 0 2px 2px 0 rgb(172, 16, 0);
+}
+
+.offers-button:hover {
+  color: #fefefe;
+  box-shadow: 0 1px 2px 0 rgb(172, 16, 0);
+}
+
+.button:active {
+  background-color: rgba(0, 0, 0, 0.07);
+  background-blend-mode: lighten;
+  box-shadow: inset 0 2px 2px 0 rgb(148, 39, 24);
+}
+
+.offers-button:active {
+  color: #fceeec;
 }
 
 .sign-in {
@@ -258,9 +320,10 @@ body {
 }
 
 .basket {
+  position: relative;
   display: inline-block;
   width: 100px;
-  height: 32px;
+  height: 33px;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
@@ -269,6 +332,10 @@ body {
   background-image: url('../img/basket.svg');
   background-position: 16px 6px;
   background-repeat: no-repeat;
+  box-sizing: border-box;
+  padding-left: 45px;
+  padding-top: 8px;
+
 }
 
 .basket-table {
@@ -350,7 +417,10 @@ body {
 .slider-top .button {
   font-size: 32px;
   line-height: 44px;
+  padding: 12px 40px;
+  border-radius: 30px;
 }
+
 
 .first-offers {
   background-image: url('../img/raspberries-background.jpg');
@@ -359,6 +429,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
+  position: relative;
 }
 
 .second-offers {
@@ -368,6 +439,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
+  position: relative;
 }
 
 .offers-caption {
@@ -455,8 +527,6 @@ body {
 }
 
 .advantages {
-  width: 1146px;
-  height: 306px;
   color: #323232;
   background-image: url('../img/wafer1200.jpg');
   background-repeat: no-repeat;
@@ -786,9 +856,15 @@ body {
   margin-bottom: 50px;
 }
 
-.offers-btn {
+.offers-button {
   padding: 13px 24px;
   border-radius: 30px;
+}
+
+.offers-button {
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
 }
 
 .product-icecream {
@@ -854,36 +930,52 @@ body {
   padding-top: 32px;
   padding-bottom: 30px;
   padding-right: 0;
+  box-sizing: border-box;
     /* left: 871px;
     top: 62px; */
 }
 
 .main-footer {
-  min-height: 103px;
-}
-
-.main-footer .container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  padding-top: 18px;
 }
 
 .social-list {
+  display: flex;
+  padding: 0;
   margin: 0;
-  margin-top: 36px;
-  width: 267px;
-  margin-right: 80px;
+  padding-left: 27px;
+}
+
+.social-list li {
+  padding-right: 12px;
+
 }
 
 .additional-list {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
   margin: 0;
-  margin-top: 34px;
-  width: 410px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.additional-list li{
+  width: 49%;
 }
 
 .footer-copyright {
   margin: 0;
-  margin-top: 16px;
-  width: 225px;
-  margin-left: auto;
+  padding: 0;
+  padding-right: 27px;
+}
+
+.footer-copyright p {
+  margin-top: 0;
 }
                         /*Не понимаю, почему на главной странице при наведении на иконку поиска/входа
                         нет никакой реакции, хотя на странице каталога есть*/

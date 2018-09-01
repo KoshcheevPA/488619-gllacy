@@ -24,32 +24,34 @@
           <li class='site-navigation-item'><a href='about-company.html' class='link main-menu'>О Компании</a></li>
         </ul>
         <div class='user-navigation'>
-          <span class='search-logo user-navigation-item'></span>
-          <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
-            <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
-          </form>
-          <a href='#' class='login-link link user-navigation-item'>Вход</a>
-          <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
-            <ul class='login-window'>
-              <li class='login-field'>
-                <label class='visually-hidden' for='user-email'>Электронная почта</label>
-                <input type='email' name='email' id='user-email' placeholder='Электронная почта'>
-              </li>
-              <li class='login-field'>
-                <label class='visually-hidden' for='user-password'>Пароль</label>
-                <input type='password' name='password' id='user-password' placeholder='Пароль'>
-              </li>
-              <li>
-                <button class='button sign-in' type='submit'>Войти</button>
-              </li>
-              <li class='login-password-info'>
-                <a class='login-problem link' href='#'>Забыли пароль?</a>
-              </li>
-              <li class='login-password-info'>
-                <a class='login-problem link' href='#'>Новая регистрация</a>
-              </li>
-            </ul>
-          </form>
+          <span class='search-logo user-navigation-item'>
+            <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
+              <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
+            </form>
+          </span>
+          <div href='#' class='login-link link user-navigation-item'>Вход
+            <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
+              <ul class='login-window'>
+                <li class='login-field'>
+                  <label class='visually-hidden' for='user-email'>Электронная почта</label>
+                  <input type='email' name='email' id='user-email' placeholder='Электронная почта'>
+                </li>
+                <li class='login-field'>
+                  <label class='visually-hidden' for='user-password'>Пароль</label>
+                  <input type='password' name='password' id='user-password' placeholder='Пароль'>
+                </li>
+                <li>
+                  <button class='button sign-in' type='submit'>Войти</button>
+                </li>
+                <li class='login-password-info'>
+                  <a class='login-problem link' href='#'>Забыли пароль?</a>
+                </li>
+                <li class='login-password-info'>
+                  <a class='login-problem link' href='#'>Новая регистрация</a>
+                </li>
+              </ul>
+            </form>
+          </div>
           <span class='basket user-navigation-item'>Пусто</span>
         </div>
       </nav>
@@ -91,13 +93,13 @@
           <h2 class='offers-caption'>Малинка даром!</h2>
           <p class='offers'>При покупке 2кг любого фруктового мороженого, добавим
            в ваш заказ банку малинового варенья бесплатно.</p>
-           <a href='#' class='button offers-btn link'>Хочу варенье!</a>
+           <a href='#' class='button offers-button link'>Хочу варенье!</a>
         </section>
         <section class='second-offers'>
           <h2 class='offers-caption'>Шоколадки даром!</h2>
           <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку
             вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a href='#' class='button offers-btn link'>Хочу шоколадки!</a>
+          <a href='#' class='button offers-button link'>Хочу шоколадки!</a>
         </section>
       </div>
       <ul class='product-icecream'>
@@ -203,26 +205,24 @@
         </div>
       </div>
     </div>
-    <footer class='main-footer'>
-      <div class='container'>
-        <ul class='social-list'>
-          <li><a class='social-button twitter link' href='#' aria-label='Твиттер'></a></li>
-          <li><a class='social-button instagram link' href='#' aria-label='Инстаграм'></a></li>
-          <li><a class='social-button facebook link' href='#' aria-label='Фэйсбук'></a></li>
-          <li><a class='social-button vk link' href='#' aria-label='В контакте'></a></li>
-        </ul>
-        <ul class='additional-list'>
-          <li><a class='for-providers link' href='#'>Для поставщиков</a></li>
-          <li><a class='about-production link' href='#'>О производсвте</a></li>
-          <li><a class='documents link' href='#'>Наши документы</a></li>
-          <li><a class='standards link' href='#'>Экологические стандарты</a></li>
-        </ul>
-        <div class='footer-copyright'>
-          <a href='htmlacademy.ru' class='link'>
-            <img src='img/logo-htmlacademy.svg' width='108' height='39' alt='Логотип HTML academy'>
-          </a>
-          <p>Сделано в <a href='htmlacademy.ru' class='link'>HTML Academy</a> © 2017</p>
-        </div>
+    <footer class='main-footer container'>
+      <ul class='social-list'>
+        <li><a class='social-button twitter link' href='#' aria-label='Твиттер'></a></li>
+        <li><a class='social-button instagram link' href='#' aria-label='Инстаграм'></a></li>
+        <li><a class='social-button facebook link' href='#' aria-label='Фэйсбук'></a></li>
+        <li><a class='social-button vk link' href='#' aria-label='В контакте'></a></li>
+      </ul>
+      <ul class='additional-list'>
+        <li><a class='for-providers link' href='#'>Для поставщиков</a></li>
+        <li><a class='documents link' href='#'>Наши документы</a></li>
+        <li><a class='about-production link' href='#'>О производсвте</a></li>
+        <li><a class='standards link' href='#'>Экологические стандарты</a></li>
+      </ul>
+      <div class='footer-copyright'>
+        <a href='htmlacademy.ru' class='link'>
+          <img src='img/logo-htmlacademy.svg' width='108' height='39' alt='Логотип HTML academy'>
+        </a>
+        <p>Сделано в <a href='htmlacademy.ru' class='link'>HTML Academy</a> © 2017</p>
       </div>
     </footer>
     <div class='feedback-window'>
