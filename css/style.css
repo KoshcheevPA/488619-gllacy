@@ -458,6 +458,8 @@ body {
 }
 
 .icecream {
+  position: relative;
+  z-index: 20;
   display: block;
   color: #ffffff;
   font-weight: bold;
@@ -509,20 +511,30 @@ body {
   text-align: center;
 }
 
-.product-icecream li:hover {
+.product-icecream li:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 400px;  /*Не знаю, можно ли задавать высоту в таком случае, он влияет только на обложку при наведении*/
+  opacity: 0.8;
+  top: 0;
   background-color: #9bafa3;
   box-shadow:
   0 0 0 13px #9bafa3,
   0 20px 40px rgba(0, 0, 0, 0.4);
+  z-index: 5;
   border-radius: 1px;
 }
 
 .product-icecream li:hover .button {
   display: block;
-  position: relative;
+  position: absolute;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
+  top: 340px;
+  z-index: 20;
+  left: 25px;
   /* transform: translateY(-50px); */
 }
 
@@ -530,17 +542,65 @@ body {
   color: #323232;
   background-image: url('../img/wafer1200.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 15px;
+  /* padding-top: 28px; */
+  /* padding-left: 20px; */
 }
 
 .definition {
   font-size: 24px;
   line-height: 30px;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 28px;
+  padding-bottom: 10px;
 }
 
 .advantages-list {
   font-size: 16px;
   line-height: 22px;
+}
+
+/* .making { */
+  /* background-image: url('../img/ice-cream.svg'); */
+  /* background-repeat: no-repeat; */
+/* } */
+.making::before {
+  content: '';
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  background-image: url('../img/ice-cream.svg'); */
+  background-repeat: no-repeat;
+}
+
+.purchase::before {
+  content: '';
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  background-image: url('../img/cow.svg'); */
+  background-repeat: no-repeat;
+}
+
+.ecology::before {
+  content: '';
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  background-image: url('../img/eco.svg'); */
+  background-repeat: no-repeat;
+}
+
+.delivery::before {
+  content: '';
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  background-image: url('../img/thermometer.svg'); */
+  background-repeat: no-repeat;
 }
 
 .blog {
@@ -550,7 +610,11 @@ body {
   color: #323232;
   background-image: url('../img/strawberry-background.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 15px;
+  padding-top: 24px;
+  padding-left: 18px;
+  padding-bottom: 70px;
 }
 
 .blog-name {
@@ -559,26 +623,66 @@ body {
   font-weight: bold;
   color: #323232;
   text-decoration: underline;
+  padding: 0;
+  margin: 0;
+  padding-right: 250px;
+
+}
+
+.blog-caption {
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 .subscription {
-  width: 48%;
+  width: 47%;
   font-size: 16px;
   line-height: 22px;
   color: #5a5a5a;
-  background-color: #f8f7f4;
-  background-origin: content-box;
-  border: 6px solid black;
+  background-image: url('../img/bg-post.svg');
+  background-repeat: no-repeat;
+  padding: 7px;
+  background-size: cover;
   border-radius: 10px;
-  /* border-image-width: 6px; */
-  /* border-image-source: url('../img/bg-post.svg'); */
+}
+
+.sub-info {
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+}
+
+.sub-button {
+  display: inline-block;
+  padding: 13px 19px;
+  border-radius: 30px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #fefefe;
+}
+
+.sub-info p {
+  padding-bottom: 30px;
 }
 
 .subscription input {
+  display: inline-block;
+  width: 340px;
+  height: 44px;
   font-size: 16px;
   line-height: 18px;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
+  padding-right: 12px;
+  vertical-align: middle;
 }
 
 .subscription input:hover {
@@ -590,28 +694,41 @@ body {
 }
 
 .map {
+  position: relative;
    /*Не понимаю, почему без высоты карты отображается не полностью*/
   background-image: url('../img/map.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-top: 40px;
+
 }
 
 .contact-information {
+  display: block;
   font-size: 14px;
   line-height: 20px;
   color: #323232;
   border-radius: 15px;
   background-color: #fefefe;
+  padding-right: 10px;
+}
+.pin {
+  width: 154px;
+  height: 220px;
+  top: 160px;
+  left: 300px;
+  position: absolute;
+  background-image: url('../img/pin.svg');
+  background-repeat: no-repeat;   /*В макете есть еще тень за мороженкой на карте. Их нужно экспортировать вместе в пнг, или есть другой способ?*/
 }
 
 .address {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  /* margin: 0;
-  padding: 0; */
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .phone {
@@ -622,14 +739,6 @@ body {
   padding: 0;
   margin-bottom: 0;
 }
-
-/* .contact-information p:nth-child(4) {
-   line-height: 22px;
- } */
-
-/* .contact-information p:nth-child(5) {
-  line-height: 22px;
- } */
 
 .contact-information .button {
   font-size: 18px;
@@ -690,6 +799,17 @@ body {
 
 .for-providers {
   font-weight: bold;
+  position: relative;
+}
+
+.for-providers::before {
+  position: absolute;
+  left: -22px;
+  top: 2px;
+  content: '';
+  background-image: url('../img/heart.svg');
+  width: 15px;
+  height: 13px;
 }
 
 .footer-copyright {
@@ -735,7 +855,9 @@ body {
 }
 
 .additional-list a:hover,
-.additional-list a:active {
+.additional-list a:active,
+.footer-copyright a:hover,
+.footer-copyright a:active {
   color: #ffbc9e;
   border-bottom: 2px solid rgba(255, 188, 158, 0.2);
 }
@@ -846,14 +968,14 @@ body {
 .second-offers {
   width: 48.87%;
   box-sizing: border-box;
-  padding: 18px 28px 36px 18px;
+  padding: 18px 28px 36px 18px;/*Текст блока не получается расположить так, как на макете (в 2 строки)*/
   background-size: cover;
 }
 
 .first-offers p,
 .second-offers p {
   margin-top: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 53px;
 }
 
 .offers-button {
@@ -868,13 +990,13 @@ body {
 }
 
 .product-icecream {
-  /* width: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: inherit;
   margin: 0 auto;
+
 }
 
 .product-icecream li {
@@ -882,15 +1004,36 @@ body {
   width: 267px;
   padding: 0;
   margin: 0;
+  position: relative;
+  z-index: 20;
+}
+
+.product-icecream li::before {
+  content:'';
+  position: absolute;
+  left: 0;
+  z-index: 30;
+  width: 61px;
+  height: 61px;
+  background-image: url('../img/hit.svg');
+  background-repeat: no-repeat;
+}
+
+.product-icecream li::after {
+  content:'';
+  position: absolute;
+  left: 0;
+  z-index: 30;
+  width: 61px;
+  height: 61px;
+
 }
 
 .other-info-wrapper {
-  /* margin: 0 auto; */
   padding: inherit;
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   flex-wrap: wrap;
 }
 
@@ -905,34 +1048,38 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  padding-left: 18px;
+  padding-bottom: 10px;
 }
 
 .advantages-list li {
-  width: 48%;
+  width: 50%;
+  padding: 0;
+  margin: 0;
 }
 
-/* .subscription,
-.blog {
-  align-self: flex-end;
-} */
+.advantages-list p {
+  padding-left: 58px;
+  padding-right: 33px;
+}
+
 .map {
   padding: 0;
   padding-top: 63px;
   padding-bottom: 63px;
 }
 
-.container .contact-information {
-  /* position: relative; */
-  width: 302px;
+.contact-information {
+  width: 290px;
   margin-left: auto;
   margin-right: 27px;
   padding-left: 24px;
   padding-top: 32px;
   padding-bottom: 30px;
   padding-right: 0;
-  box-sizing: border-box;
-    /* left: 871px;
-    top: 62px; */
+
 }
 
 .main-footer {
