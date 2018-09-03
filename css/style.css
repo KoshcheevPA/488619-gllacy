@@ -43,6 +43,15 @@ body {
    padding-top: 9px;
 }
 
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 21px;
+  padding-left: 10px;
+}
+
 .site-navigation a {
   display: block;
   font-weight: bold;
@@ -55,7 +64,6 @@ body {
 .site-navigation-item {
   margin-right: 0;
   padding: 7px 14px;
-
 }
 
 .site-navigation-item:hover,
@@ -85,6 +93,18 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.user-navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: auto;
+  padding-top: 23px;
+}
+
+.user-navigation-item {
+  margin-left: 10px;
 }
 
 .catalog-navigation,
@@ -201,7 +221,7 @@ body {
 }
 
 .search-form {
-  display: none; /* На время построения сетки*/
+  display: none;
   width: 341px;
   height: 84px;
   font-size: 16px;
@@ -232,13 +252,12 @@ body {
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
-  background-color: #a0b5a9; /* вот здесь не понял, как выровнить текст 'вход' по макету*/
+  background-color: #a0b5a9;
   border-radius: 20px;
   background-image: url('../img/entrance-white.svg');
   background-position: 16px 6px;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  /* text-align: center; */
   padding-left: 45px;
   padding-top: 8px;
 }
@@ -252,7 +271,7 @@ body {
 }
 
 .login-form {
-  display: none; /* На время построения сетки*/
+  display: none;
   width: 227px;
   height: 214px;
   background-color: #f8f7f4;
@@ -291,11 +310,6 @@ body {
   border: 1px solid #8fbdec;
 }
 
-/* .login-window input: {  Не знаю как задать параметры, когда курсор внутри поля.Шрифт меняется вместе с placeholder*/
-  /* border: 1px solid #d3d3d2; */
-  /* font-weight: bold; */
-/* } */
-
 .button {
   font-weight: bold;
   color: #ffffff;
@@ -310,6 +324,11 @@ body {
 }
 
 .offers-button {
+  padding: 13px 24px;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
   background-image: linear-gradient(0deg, rgb(202, 56, 36) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
   text-shadow: none;
@@ -360,7 +379,6 @@ body {
   box-sizing: border-box;
   padding-left: 45px;
   padding-top: 8px;
-
 }
 
 .basket-table {
@@ -433,6 +451,10 @@ body {
 .main-caption {
   font-size: 35px;
   line-height: 41px;
+  padding: 0;
+  margin: 0;
+  min-height: 36px;
+  margin-bottom: 25px;
 }
 
 .option-caption{
@@ -485,6 +507,16 @@ body {
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
+  position: absolute;
+  top: 100%;
+  right: 27px;
+  text-align: right;
+}
+
+.contact-information-top p {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 6px;
 }
 
 .phone-number {
@@ -507,6 +539,13 @@ body {
   border-radius: 30px;
 }
 
+.slider {
+  margin-top: -72px;
+}
+
+.slider-top {
+  text-align: center;
+}
 
 .first-offers {
   background-image: url('../img/raspberries-background.jpg');
@@ -526,6 +565,20 @@ body {
   line-height: 22px;
   font-weight: bold;
   position: relative;
+}
+
+.first-offers,
+.second-offers {
+  width: 48.87%;
+  box-sizing: border-box;
+  padding: 18px 28px 36px 18px;/*Текст блока не получается расположить так, как на макете (в 2 строки)*/
+  background-size: cover;
+}
+
+.first-offers p,
+.second-offers p {
+  margin-top: 16px;
+  margin-bottom: 53px;
 }
 
 .offers-caption {
@@ -584,9 +637,6 @@ body {
   transform: translateY(-60px);
   text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
-/* .icecream-name span {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-} */
 
 .product-icecream .button {
   display: none;
@@ -631,8 +681,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
-  /* padding-top: 28px; */
-  /* padding-left: 20px; */
+  margin-bottom: 40px;
 }
 
 .definition {
@@ -648,6 +697,13 @@ body {
 .advantages-list {
   font-size: 16px;
   line-height: 22px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  padding-left: 18px;
+  padding-bottom: 10px;
 }
 
 .making::before {
@@ -709,7 +765,6 @@ body {
   padding: 0;
   margin: 0;
   padding-right: 250px;
-
 }
 
 .blog-caption {
@@ -778,24 +833,31 @@ body {
 
 .map {
   position: relative;
-   /*Не понимаю, почему без высоты карты отображается не полностью*/
   background-image: url('../img/map.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-top: 40px;
-
+  padding: 0;
+  padding-top: 63px;
+  padding-bottom: 63px;
 }
 
 .contact-information {
   display: block;
+  width: 290px;
   font-size: 14px;
   line-height: 20px;
   color: #323232;
   border-radius: 15px;
   background-color: #fefefe;
-  padding-right: 10px;
+  margin-left: auto;
+  padding-left: 24px;
+  padding-top: 32px;
+  padding-bottom: 30px;
+  padding-right: 0;
 }
+
 .pin {
   width: 154px;
   height: 220px;
@@ -896,6 +958,8 @@ body {
 }
 
 .footer-copyright {
+  margin: 0;
+  padding: 0;
   font-size: 12px;
   line-height: 18px;
   color: #ffffff;
@@ -904,6 +968,10 @@ body {
 .footer-copyright a:last-child {
   color: #ffffff;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-copyright p {
+  margin-top: 0;
 }
 
 .apply-button {
@@ -917,7 +985,6 @@ body {
   color: #fcfcfc;
   background-color: #a6b7ae;
   border: 2px solid #fcfcfc;
-  /* outline: solid #fcfcfc; */
 }
 
 .apply-button:hover {
@@ -959,6 +1026,7 @@ body {
 .active-page {
   background-color: #ffffff;
 }
+
 .active-page a {
   color: #323232;
 }
@@ -1002,44 +1070,10 @@ body {
   padding: 5px 5px;
 }
 
-/* ------------------Сетка------------------ */
-
-
-.main-header-logo {
-   margin: 0;
-   padding: 0;
-   padding-top: 9px;
-}
-
-.site-navigation {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 21px;
-  padding-left: 10px;
-}
-
-.user-navigation {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  margin-left: auto;
-  padding-top: 23px;
-}
-
 .second-slide,
 .thrid-slide,
 .feedback-window {
-  display: none;    /* Временно не отобржаются, для удобства позиционирования*/
-}
-
-.slider {
-  margin-top: -72px;
-}
-
-.slider-top {
-  text-align: center;
+  display: none;    /*не отобржаются до лучших времен*/
 }
 
 .caption-slide {
@@ -1053,33 +1087,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  /* padding: 0 27px; */
   margin-bottom: 40px;
-}
-
-.first-offers,
-.second-offers {
-  width: 48.87%;
-  box-sizing: border-box;
-  padding: 18px 28px 36px 18px;/*Текст блока не получается расположить так, как на макете (в 2 строки)*/
-  background-size: cover;
-}
-
-.first-offers p,
-.second-offers p {
-  margin-top: 16px;
-  margin-bottom: 53px;
-}
-
-.offers-button {
-  padding: 13px 24px;
-  border-radius: 30px;
-}
-
-.offers-button {
-  position: absolute;
-  bottom: 22px;
-  right: 22px;
 }
 
 .product-icecream {
@@ -1135,20 +1143,6 @@ body {
   flex-wrap: wrap;
 }
 
-.advantages {
-  margin-bottom: 40px;
-}
-
-.advantages-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  padding-left: 18px;
-  padding-bottom: 10px;
-}
-
 .advantages-list li {
   width: 50%;
   padding: 0;
@@ -1158,22 +1152,6 @@ body {
 .advantages-list p {
   padding-left: 58px;
   padding-right: 33px;
-}
-
-.map {
-  padding: 0;
-  padding-top: 63px;
-  padding-bottom: 63px;
-}
-
-.contact-information {
-  width: 290px;
-  margin-left: auto;
-  padding-left: 24px;
-  padding-top: 32px;
-  padding-bottom: 30px;
-  padding-right: 0;
-
 }
 
 .main-footer {
@@ -1192,12 +1170,10 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
-  /* padding-left: 27px; */
 }
 
 .social-list li {
   padding-right: 12px;
-
 }
 
 .additional-list {
@@ -1209,18 +1185,8 @@ body {
   flex-wrap: wrap;
 }
 
-.additional-list li{
+.additional-list li {
   width: 49%;
-}
-
-.footer-copyright {
-  margin: 0;
-  padding: 0;
-  /* padding-right: 27px */
-}
-
-.footer-copyright p {
-  margin-top: 0;
 }
 
 .wrapper-top {
@@ -1241,25 +1207,14 @@ body {
   display: flex;
 }
 
-.main-caption {
-  width: 400px;
-  padding: 0;
-  margin: 0;
-  min-height: 36px;
-  margin-bottom: 25px;
-}
-
 .options {
   display: flex;
-  /* flex-direction: row; */
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 1000px;
   font-weight: 500;
-  /* justify-content: space-between; */
   margin-bottom: 40px;
-  /* align-items:center; */
 }
 
 .options fieldset {
@@ -1275,11 +1230,9 @@ body {
   padding: 0;
 }
 
-
 .fatness-radio {
   padding: 0;
 }
-
 
 .fatness-radio .option-caption {
   padding-bottom: 5px;
@@ -1299,7 +1252,6 @@ body {
 .fatness-list li {
   display: inline-block;
   padding-left: 46px;
-  /* text-align: center; */
 }
 
 .fatness-list label {
@@ -1323,7 +1275,6 @@ body {
   opacity: 0.8;
   background-position: 0 5px;
   transform: scale(0.88);
-
 }
 
 .radio-button[type='radio']:checked + label::before {
@@ -1361,7 +1312,6 @@ body {
   padding-top: 9px;
   padding-bottom: 9px;
   padding-right: 20px;
-  /* padding-right: */
 }
 
 .checkbox-filters {
@@ -1458,7 +1408,6 @@ body {
   width: 40px;
   background-image: url('../img/filter-button.svg');
   background-repeat: no-repeat;
-  /* opacity: 0.8; */
   background-position: 0 5px;
   z-index: 20;
 }
@@ -1474,7 +1423,6 @@ body {
   width: 40px;
   background-image: url('../img/filter-button.svg');
   background-repeat: no-repeat;
-  /* opacity: 0.8; */
   background-position: 0 5px;
   z-index: 20;
 }
@@ -1512,7 +1460,6 @@ body {
   right: 20px;
 }
 
-
 .accept {
   margin: 0;
   padding: 0;
@@ -1532,22 +1479,4 @@ body {
   text-align: center;
   padding: 5px 9px;
   border-radius: 50%;
-}
-
-.user-navigation-item {
-  margin-left: 10px;
-}
-
-.contact-information-top {
-  position: absolute;
-  top: 100%;
-  right: 27px;
-  text-align: right;
-
-}
-
-.contact-information-top p {
-  padding: 0;
-  margin: 0;
-  padding-bottom: 6px;
 }
