@@ -3,35 +3,35 @@
   <head>
     <meta charset='utf-8'>
     <title>HTML Academy: Глейси</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href='css/style.css' rel='stylesheet'>
   </head>
   <body>
     <header class='main-header container'>
       <nav class='main-navigation'>
-
-          <a class='main-header-logo link' href='index.html'>
-            <img src='img/logo.svg' width='154' height='64' alt='Логотип GllacyShop'>
-          </a>
-          <ul class='site-navigation'>
-            <li class='submenu-container site-navigation-item active'><a href='#' class='link main-menu active-item'>Каталог</a>
-              <ul class='catalog-navigation'>
-                <li><a href='#' class='link new'>Новинки</a></li>
-                <li><a href='catalog.html' class='link'>Сливочное</a></li>
-                <li><a href='#' class='link'>Щербеты</a></li>
-                <li><a href='#' class='link'>Фруктовый лед</a></li>
-                <li><a href='#' class='link'>Мелорин</a></li>
-              </ul>
-            </li>
-            <li class='site-navigation-item'><a href='delivery-and-payment.html' class='link main-menu'>Доставка и оплата</a></li>
-            <li class='site-navigation-item'><a href='about-company.html' class='link main-menu'>О Компании</a></li>
-          </ul>
-          <div class='user-navigation'>
-            <span class='search-logo user-navigation-item'></span>
+        <a class='main-header-logo link' href='index.html'>
+          <img src='img/logo.svg' width='154' height='64' alt='Логотип GllacyShop'>
+        </a>
+        <ul class='site-navigation'>
+          <li class='submenu-container site-navigation-item active'><a href='#' class='link main-menu active-item'>Каталог</a>
+            <ul class='catalog-navigation'>
+              <li><a href='#' class='link new'>Новинки</a></li>
+              <li><a href='catalog.html' class='link'>Сливочное</a></li>
+              <li><a href='#' class='link'>Щербеты</a></li>
+              <li><a href='#' class='link'>Фруктовый лед</a></li>
+              <li><a href='#' class='link'>Мелорин</a></li>
+            </ul>
+          </li>
+          <li class='site-navigation-item'><a href='delivery-and-payment.html' class='link main-menu'>Доставка и оплата</a></li>
+          <li class='site-navigation-item'><a href='about-company.html' class='link main-menu'>О Компании</a></li>
+        </ul>
+        <div class='user-navigation'>
+          <span class='search-logo user-navigation-item'>
             <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
               <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
             </form>
-            <a href='#' class='login-link link user-navigation-item'>Вход</a>
+          </span>
+          <div href='#' class='login-link link user-navigation-item'>Вход
             <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
               <ul class='login-window'>
                 <li class='login-field'>
@@ -53,7 +53,8 @@
                 </li>
               </ul>
             </form>
-            <a class='basket link user-navigation-item' href='#'>2 товара</a>
+          </div>
+          <div class='inner-page-basket basket link user-navigation-item' href='#'>2 товара
             <div class='basket-table'> <!--обернул в див, чтобы ссылка "оформить заказ" не выпадала из окна таблицы-->
               <table>
                 <tr>
@@ -70,14 +71,12 @@
                   <td>3,0 кг х <span class='basket-price'>300 руб.</span></td>
                   <td>450 руб.</td>
                 </tr>
-                <tr>
-                  <td colspan='5' class='basket-sum'><hr>Итого: 750 руб.</td>
-                </tr>
               </table>
+              <span class='basket-sum'>Итого: 750 руб.</span>
               <a href='#' class='button checkout-btn link'>Оформить заказ</a>
             </div>
           </div>
-
+        </div>
       </nav>
       <div class='contact-information-top'>
         <p class='working-hours'>
@@ -88,87 +87,91 @@
         </p>
       </div>
     </header>
-    <main class='container'>
+    <main class='container inner-page'>
       <div class='wrapper-top'>
         <ul class='breadcrumbs'>
-            <li><a href='index.html' class='link'>Главная</a> » </li>
-            <li><a href='#' class='link'>Каталог</a> » </li>
-            <li>Сливочное</li>
-          </ul>
-          <h1 class='main-caption'>Сливочное мороженое</h1>
-          <form class='options' action='#' method='get'>
-            <fieldset>
-              <legend class='visually-hidden'>Критерии поиска</legend>
-              <p class='sorting'>
-                <label for='sorting' class='option-caption'>Соритровка:</label>
-                <select class='sorting-type' name='sorting-type'>
-                  <option value='popularity'>по-популярности</option>
-                  <option value='inexpensive-first'>сначала недорогие</option>
-                  <option value='expensive-first'>сначала дорогие</option>
-                  <option value='fat-content'>по жирности</option>
-                </select>
-              </p>
-              <p class='price-field'>
-                <label for='price' class='option-caption'>Цена: 100 руб. - 500 руб.</label>
-                <input class='' type='range' min='100' max='500' step='10' name='price' id='price'>
-              </p>
-              <span class='option-caption'>Жирность:</span>
-              <ul class='fatness-list'>
-                <li>
-                  <label>
-                    <input class='' type='radio' name='fatness' value='0'><span>0%</span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input class='' type='radio' name='fatness' value='10' checked><span>до 10%</span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input class='' type='radio' name='fatness' value='30'><span>до 30%</span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input class='' type='radio' name='fatness' value='>30'><span>выше 30%</span>
-                  </label>
-                </li>
-              </ul>
-              <span class='option-caption'>Наполнители:</span>
-              <ul class='add-list'>
-                <li>
-                  <label for='chocolate'>
-                    <input class='' type='checkbox' name='chocolate-fillers' id='chocolate' checked>шоколадные
-                  </label>
-                </li>
-                <li>
-                  <label for='sugar'>
-                    <input class='' type='checkbox' name='sugar-fillers' id='sugar' checked>сахарные присыпки
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input class='' type='checkbox' name='fruit-fillers' id='fruit'>фрукты
-                  </label>
-                </li>
-                <li>
-                  <label for='syrup'>
-                    <input class='' type='checkbox' name='syrup-fillers' id='syrup'>сироп
-                  </label>
-                </li>
-                <li>
-                  <label for='jam'>
-                    <input class='' type='checkbox' name='jam-fillers' id='jam'>джем
-                  </label>
-                </li>
-              </ul>
-              <p class='accept'>
-                <button class='apply-btn' type='submit'>Применить</button>
-              </p>
-            </fieldset>
-          </form>
-        </div>
+          <li>
+            <a href='index.html' class='link'>Главная</a>
+            <span aria-hidden='true'>&raquo;</span>
+          </li>
+          <li>
+            <a href='#' class='link'>Каталог</a>
+            <span aria-hidden='true'>&raquo;</span>
+          </li>
+          <li>Сливочное</li>
+        </ul>
+        <h1 class='main-caption'>Сливочное мороженое</h1>
+        <form class='options' action='#' method='get'>
+          <fieldset class='sorting'>
+            <legend class='option-caption'>Сортировка:</legend>
+            <label for='sorting' class='option-caption' for='sort'></label>
+              <select class='sorting-type' name='sorting-type' id='sort'>
+                <option value='popularity'>по-популярности</option>
+                <option value='inexpensive-first'>сначала недорогие</option>
+                <option value='expensive-first'>сначала дорогие</option>
+                <option value='fat-content'>по жирности</option>
+              </select>
+              </label>
+          </fieldset>
+          <fieldset class='price-field'>
+            <legend class='option-caption'>Цена: 100 руб. - 500 руб.</legend>
+            <div class='range-container'>
+              <span class='scale'></span>
+              <input class='range-sort' type='range' min='100' max='500' step='10' name='price' id='price'>
+              <label for='price'></label>
+            </div>
+          </fieldset>
+          <fieldset class='fatness-radio'>
+            <legend class='option-caption'>Жирность:</legend>
+            <ul class='fatness-list'>
+              <li>
+                <input class='radio-button' hidden type='radio' name='fatness' value='0' id='zero'>
+                <label for='zero'>0%</label>
+              </li>
+              <li>
+                <input class='radio-button' hidden type='radio' name='fatness' value='10' checked id='ten'>
+                <label for='ten'>до 10%</label>
+              </li>
+              <li>
+                <input class='radio-button' hidden type='radio' name='fatness' value='30' id='before-thrity'>
+                <label for='before-thrity'>до 30%</label>
+              </li>
+              <li>
+                <input class='radio-button' hidden type='radio' name='fatness' value='>30' id='after-thrity'>
+                <label for='after-thrity'>выше 30%</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class='checkbox-filters'>
+            <legend class='option-caption'>Наполнители:</legend>
+            <ul class='add-list'>
+              <li>
+                <input class='checkbox-button' type='checkbox' name='chocolate-fillers' id='chocolate' checked>
+                <label for='chocolate'>шоколадные</label>
+              </li>
+              <li>
+                <input class='checkbox-button' type='checkbox' name='sugar-fillers' id='sugar' checked>
+                <label for='sugar'>сахарные присыпки</label>
+              </li>
+              <li>
+                <input class='checkbox-button' type='checkbox' name='fruit-fillers' id='fruit'>
+                <label for='fruit'>фрукты</label>
+              </li>
+              <li>
+                <input class='checkbox-button' type='checkbox' name='syrup-fillers' id='syrup'>
+                <label for='syrup'>сиропы</label>
+              </li>
+              <li>
+                <input class='checkbox-button' type='checkbox' name='jam-fillers' id='jam'>
+                <label for='jam'>джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <p class='accept'>
+            <button class='apply-button' type='submit'>Применить</button>
+          </p>
+        </form>
+      </div>
       <ul class='product-icecream'>
         <li>
           <a href='#' class='icecream link'>
@@ -292,20 +295,20 @@
         </li>
       </ul>
       <ul class='pagination'>
-        <li>
-          <a href='' class='back link'><span aria-hidden='true'>&laquo;</span></a>
+        <li class='left'>
+          <a href='#' class='back link'></a>
         </li>
-        <li><a href='catalog.html' class='link'>1</a></li>
+        <li class='active-page'><a href='catalog.html' class='link'>1</a></li>
         <li><a href='catalog2.html' class='link'>2</a></li>
         <li><a href='catalog3.html' class='link'>3</a></li>
         <li><a href='catalog4.html' class='link'>4</a></li>
         <li><a href='catalog5.html' class='link'>5</a></li>
-        <li>
-          <a href='' class='next link'><span aria-hidden='true'>&raquo;</span></a>
+        <li class='right'>
+          <a href='#' class='next link'></a>
         </li>
       </ul>
     </main>
-    <footer class='main-footer container'>
+    <footer class='inner-page main-footer container'>
       <ul class='social-list'>
         <li><a class='social-button twitter link' href='#' aria-label='Твиттер'></a></li>
         <li><a class='social-button instagram link' href='#' aria-label='Инстаграм'></a></li>
