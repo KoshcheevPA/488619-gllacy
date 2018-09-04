@@ -19,6 +19,7 @@ body {
 
 .main-header {
   position: relative;
+  z-index: 100;
 }
 
 .link {
@@ -353,12 +354,14 @@ body {
 }
 
 .login-window input:hover,
-.search-field:hover {
+.search-field:hover,
+.feedback-form input:hover {
   border: 1px solid #c7c6c5;
 }
 
 .login-window input:focus,
-.search-field:focus {
+.search-field:focus,
+.feedback-form input:focus {
   border: 1px solid #8fbdec;
 }
 
@@ -643,6 +646,72 @@ body {
 
 .slider-top {
   text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.slider-controls {
+  width: 150px;
+  height: 40px;
+  position: absolute;
+  z-index: 1;
+  top: 563px;
+}
+
+.slider-button {
+  background-color: #ffffff;
+}
+
+.slider-button[type='radio'] {
+  display: none;
+}
+
+.slider-button[type='radio'] + label::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -30px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: none;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.slider-button[type='radio']:checked + label::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -30px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: none;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.slider-button[type='radio']:checked:hover + label::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -30px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: none;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.slider-button[type='radio']:hover + label::before {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slider-controls label {
+  position: relative;
+  margin-left: 30px;
 }
 
 .first-offer {
@@ -1683,7 +1752,7 @@ body {
 
 .feedback-window {
   position: fixed;
-  display: block;
+  display: none;
   width: 427px;
   border-radius: 10px;
   padding-top: 17px;
@@ -1693,8 +1762,8 @@ body {
   background-color: #f8f7f4;
   z-index: 150;
   left: 50%;
-  top: 230px;
-  margin-left: -239px;
+  top: 330px;
+  margin-left: -239px; /*Это, если что, нас так на лекции учили)*/
 }
 
 .feedback-window b {
@@ -1762,4 +1831,29 @@ body {
   border-radius: 30px;
   display: block;
   margin-left: auto;
+}
+
+.login-window input:hover,
+.search-field:hover,
+.feedback-form input:hover,
+.feedback-comment:hover {
+  border: 1px solid #c7c6c5;
+}
+
+.login-window input:focus,
+.search-field:focus,
+.feedback-form input:focus,
+.feedback-comment:focus {
+  border: 1px solid #8fbdec;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  background-color: #000000;
+  opacity: 0.3;
+  z-index: 100;
 }
