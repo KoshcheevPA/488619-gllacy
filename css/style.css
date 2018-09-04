@@ -75,9 +75,10 @@ body {
 .site-navigation-item:hover .main-menu,
 .site-navigation-item:focus .main-menu {
   color: #333333;
+  border: none;
 }
 
-.site-navigation-item:active  {
+.site-navigation-item:active {
   background-color: rgba(248, 247, 244);
   box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
 }
@@ -137,6 +138,7 @@ body {
   background-color: #f8f7f4;
   text-align: left;
   padding: 0;
+  padding-bottom: 11px;
   margin: 0;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   vertical-align: middle;
@@ -149,7 +151,43 @@ body {
   padding: 0 20px;
 }
 
-.site-navigation >li:hover .catalog-navigation {
+.catalog-navigation::before {  /*Чтобы выпадающее меню не закрывалось, я выдумал это, т.к. если делать отступы ссылкам и увеличивать li, то от ссылок улетает border. Но мне кажется тебе не понравится этот способ))*/
+  content: '';  /*Возможно он даже неправильный*/
+  position: absolute;
+  height: 5px;
+  top: -5px;
+  width: 110px;
+}
+
+.search-form::before {
+  content: '';
+  position: absolute;
+  height: 40px;
+  top: -30px;        /*С поиском и входом та же проблема*/
+  right: 0;
+  width: 110px;
+}
+
+.login-form::before {
+  content: '';    /*Проблема решена, пользоваться теперь удобно, взял значания с запасом*/
+  position: absolute;
+  height: 20px;
+  top: -20px;
+  right: 0;
+  width: 95px;
+}
+
+.basket-table::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  top: -20px;
+  right: 0;
+  width: 120px;
+}
+
+.site-navigation-item:hover .catalog-navigation,
+.site-navigation-item:focus .catalog-navigation {
   display: block;
 }
 
@@ -165,20 +203,12 @@ body {
   padding-top: 11px;
   padding-bottom: 11px;
   margin-bottom: 6px;
-}
-
-.catalog-navigation .new {
-  font-weight: bold;
   border-bottom: 1px solid #d1d0ce;
 }
 
-.catalog-navigation {
-  padding-bottom: 11px;
-}
-
-.catalog-navigation li:hover {
+.catalog-navigation li:hover,
+.catalog-navigation li:focus {
   background-color: #fbded7;
-  border-radius: 0;
 }
 
 .catalog-navigation li:active {
@@ -222,13 +252,12 @@ body {
 
 .search-form {
   display: none;
-  width: 341px;
-  height: 84px;
   font-size: 16px;
   line-height: 18px;
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
 }
 
 .search-logo:hover .search-form {
@@ -239,6 +268,13 @@ body {
 }
 
 .search-field {
+  width: 311px;
+  font-family: inherit;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 45px;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   background-color: #ffffff;
@@ -271,33 +307,43 @@ body {
 }
 
 .login-form {
+  position: absolute;
   display: none;
-  width: 227px;
-  height: 214px;
+  top: 37px;
+  right: 0;
   background-color: #f8f7f4;
+  padding: 21px 18px;
   border-radius: 5px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  z-index: 20;
 }
 
 .login-link:hover .login-form {
   display: block;
-  position: absolute;
-  top: 37px;
-  right: 0;
-  z-index: 20;
+}
+
+.login-window {
+  padding: 0;
+  margin: 0;
 }
 
 .login-window input {
-  font-size: 16px;
-  line-height: 18px;
+  width: 209px;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: inherit;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 10px 15px;
 }
 
-.login-window .login-problem {
-  color: #323232;
-  text-decoration: underline;
+.login-password-info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: auto;
+
 }
 
 .login-window input:hover,
@@ -356,11 +402,25 @@ body {
 }
 
 .sign-in {
-  width: 102px;
-  height: 46px;
   font-size: 18px;
   line-height: 24px;
+  font-family: inherit;
   border-radius: 25px;
+  padding: 10px 24px;
+  text-align: center;
+}
+
+.button-item {
+  display: inline-block;
+}
+
+.login-password-info a {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 24px;
+  display: block;
+  color: #323232;
+  text-decoration: underline;
 }
 
 .basket {
@@ -547,7 +607,8 @@ body {
   text-align: center;
 }
 
-.first-offers {
+.first-offer {
+  background-color: #820222;
   background-image: url('../img/raspberries-background.jpg');
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -557,7 +618,8 @@ body {
   position: relative;
 }
 
-.second-offers {
+.second-offer {
+  background-color: #5e3725;
   background-image: url('../img/chocolate-background.jpg');
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -567,16 +629,16 @@ body {
   position: relative;
 }
 
-.first-offers,
-.second-offers {
+.first-offer,
+.second-offer {
   width: 48.87%;
   box-sizing: border-box;
   padding: 18px 28px 36px 18px;/*Текст блока не получается расположить так, как на макете (в 2 строки)*/
   background-size: cover;
 }
 
-.first-offers p,
-.second-offers p {
+.first-offer p,
+.second-offer p {
   margin-top: 16px;
   margin-bottom: 53px;
 }
@@ -602,20 +664,20 @@ body {
   display: block;
   color: #ffffff;
   font-weight: bold;
-  position: relative;
 }
 
 .icecream-price {
   font-size: 45px;
   line-height: 45px;
+  text-shadow: 1px 0 3px rgba(49, 50, 53, 0.5);
 }
 
 .icecream-kilo {
   font-size: 30px;
+  text-shadow: 1px 0 3px rgba(49, 50, 53, 0.5);
 }
 
  .icecream-name {
-  /* transform: translateY(-60px); */
   margin-bottom: 10px;
   padding-bottom: 0;
   margin-top: -40px;   /*наверно нужно найти другое решение*/
@@ -652,14 +714,18 @@ body {
   position: absolute;
   width: 100%;
   height: 400px;  /*Не знаю, можно ли задавать высоту в таком случае, он влияет только на обложку при наведении*/
-  opacity: 0.8;
+  opacity: 0.2;
   top: 0;
-  background-color: #9bafa3;
+  background-color: #ffffff;
   box-shadow:
-  0 0 0 13px #9bafa3,
+  0 0 0 13px #ffffff,
   0 20px 40px rgba(0, 0, 0, 0.4);
   z-index: 5;
   border-radius: 1px;
+}
+
+.product-icecream li:hover {
+  z-index: 21;
 }
 
 .product-icecream li:hover .button {
@@ -677,6 +743,7 @@ body {
 
 .advantages {
   color: #323232;
+  background-color: #e9ddc4;
   background-image: url('../img/wafer1200.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -747,6 +814,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #323232;
+  background-color: #ffffff;
   background-image: url('../img/strawberry-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -788,8 +856,8 @@ body {
 
 .sub-info {
   display: block;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
   padding-bottom: 20px;
   padding-top: 10px;
   background-color: #f8f7f4;
@@ -798,7 +866,7 @@ body {
 
 .sub-button {
   display: inline-block;
-  padding: 13px 19px;
+  padding: 10px 18px;
   border-radius: 30px;
   font-size: 18px;
   line-height: 24px;
@@ -813,14 +881,15 @@ body {
 
 .subscription input {
   display: inline-block;
-  width: 340px;
-  height: 44px;
+  width: 338px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 24px;
+  font-family: inherit;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   padding-right: 12px;
   vertical-align: middle;
+  padding: 10px 15px;
 }
 
 .subscription input:hover {
@@ -1013,8 +1082,8 @@ body {
 
 .additional-list a:hover,
 .additional-list a:active,
-.footer-copyright a:hover,
-.footer-copyright a:active {
+.footer-copyright .link:hover,
+.footer-copyright .link:active {
   color: #ffbc9e;
   border-bottom: 2px solid rgba(255, 188, 158, 0.2);
 }
@@ -1048,6 +1117,9 @@ body {
   color: #353535;
 }
 
+.pagination .disabled:hover {
+  background-color: inherit;
+}
 .right {
   background-image: url('../img/icon-right-small.svg');
   background-position: center;  /*Как сделать эффект наложения цвета на фоновое изображение стрелочки? Она должна быть белее*/
@@ -1085,7 +1157,6 @@ body {
 .offers-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 0 auto;
   margin-bottom: 40px;
 }
@@ -1102,7 +1173,7 @@ body {
   padding-bottom: 40px;
 }
 
-.product-icecream li:not(:nth-of-type(4n+4)) {
+.product-icecream li:not(:nth-of-type(4n)) {
   margin-right: 26px; /*Выравнивает карточки в каталоге. Обнуляет отступ у каждого 4-го элемента (крайнего в строке)*/
 }
 
@@ -1124,6 +1195,10 @@ body {
   height: 61px;
   background-image: url('../img/hit.svg');
   background-repeat: no-repeat;
+}
+
+.inner-page .product-icecream li::before{
+  background-image: none;
 }
 
 .product-icecream li::after {
@@ -1219,6 +1294,10 @@ body {
 
 .options fieldset {
   border: none;
+}
+
+.options label:hover {
+  color: #323232;
 }
 
 .options-caption {
@@ -1405,11 +1484,12 @@ body {
   left: 15px;
   display: inline-block;
   height: 30px;
-  width: 40px;
+  width: 20px;
   background-image: url('../img/filter-button.svg');
   background-repeat: no-repeat;
   background-position: 0 5px;
   z-index: 20;
+  cursor: pointer;
 }
 
 
@@ -1420,11 +1500,12 @@ body {
   left: 125px;
   display: inline-block;
   height: 30px;
-  width: 40px;
+  width: 20px;
   background-image: url('../img/filter-button.svg');
   background-repeat: no-repeat;
   background-position: 0 5px;
   z-index: 20;
+  cursor: pointer;
 }
 
 .scale {
