@@ -16,7 +16,7 @@
           <li class='submenu-container site-navigation-item active'><a href='#' class='link main-menu active-item'>Каталог</a>
             <ul class='catalog-navigation'>
               <li><a href='#' class='link new'>Новинки</a></li>
-              <li><a href='catalog.html' class='link'>Сливочное</a></li>
+              <li class='active-menu-item'><a href='catalog.html' class='link'>Сливочное</a></li>
               <li><a href='#' class='link'>Щербеты</a></li>
               <li><a href='#' class='link'>Фруктовый лед</a></li>
               <li><a href='#' class='link'>Мелорин</a></li>
@@ -26,12 +26,12 @@
           <li class='site-navigation-item'><a href='about-company.html' class='link main-menu'>О Компании</a></li>
         </ul>
         <div class='user-navigation'>
-          <span class='search-logo user-navigation-item'>
+          <div class='search-logo user-navigation-item'>
             <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
               <input type='search' class='search-field' name='search' placeholder='Что ищем?'>
             </form>
-          </span>
-          <div href='#' class='login-link link user-navigation-item'>Вход
+          </div>
+          <div class='login-link link user-navigation-item'>Вход
             <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
               <ul class='login-window'>
                 <li class='login-field'>
@@ -42,38 +42,36 @@
                   <label class='visually-hidden' for='user-password'>Пароль</label>
                   <input type='password' name='password' id='user-password' placeholder='Пароль'>
                 </li>
-                <li>
+                <li class='button-item'>
                   <button class='button sign-in' type='submit'>Войти</button>
                 </li>
                 <li class='login-password-info'>
                   <a class='login-problem link' href='#'>Забыли пароль?</a>
-                </li>
-                <li class='login-password-info'>
                   <a class='login-problem link' href='#'>Новая регистрация</a>
                 </li>
               </ul>
             </form>
           </div>
-          <div class='inner-page-basket basket link user-navigation-item' href='#'>2 товара
+          <div class='inner-page-basket basket link user-navigation-item'>2 товара
             <div class='basket-table'>
               <table>
                 <tr>
-                  <td><button type='button' class='visually-hidden delete'>x</button></td>
+                  <td class='delete-field'><button type='button' class='delete'>x</button></td>
                   <td><img src='img/product-01.jpg' width='33' height='33' alt='Пломбир с апельсиновым джемом'></td>
-                  <td>Пломбир с апельсиновым джемом</td>
-                  <td>1,5 кг х <span class='basket-price'>200 руб.</span></td>
-                  <td>300 руб.</td>
+                  <td class='basket-product-name'>Пломбир с апельсиновым джемом</td>
+                  <td class='basket-product-weight'>1,5 кг х <span class='basket-price'>200 руб.</span></td>
+                  <td class='basket-product-price'>300 руб.</td>
                 </tr>
                 <tr>
-                  <td><button type='button' class='visually-hidden delete'>x</button></td>
+                  <td class='delete-field'><button type='button' class='delete'>x</button></td>
                   <td><img src='img/product-03.jpg' width='33' height='33' alt='Клубничный пломбир с присыпкой из белого шоколада'></td>
-                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td>3,0 кг х <span class='basket-price'>300 руб.</span></td>
-                  <td>450 руб.</td>
+                  <td class='basket-product-name'>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td class='basket-product-weight'>3,0 кг х <span class='basket-price'>300 руб.</span></td>
+                  <td class='basket-product-price'>450 руб.</td>
                 </tr>
               </table>
               <span class='basket-sum'>Итого: 750 руб.</span>
-              <a href='#' class='button checkout-btn link'>Оформить заказ</a>
+              <a href='#' class='button checkout-button link'>Оформить заказ</a>
             </div>
           </div>
         </div>
@@ -104,14 +102,13 @@
         <form class='options' action='#' method='get'>
           <fieldset class='sorting'>
             <legend class='option-caption'>Сортировка:</legend>
-            <label for='sorting' class='option-caption' for='sort'></label>
-              <select class='sorting-type' name='sorting-type' id='sort'>
-                <option value='popularity'>по-популярности</option>
-                <option value='inexpensive-first'>сначала недорогие</option>
-                <option value='expensive-first'>сначала дорогие</option>
-                <option value='fat-content'>по жирности</option>
-              </select>
-              </label>
+            <label class='option-caption' for='sort'></label>
+            <select class='sorting-type' name='sorting-type' id='sort'>
+              <option value='popularity'>по-популярности</option>
+              <option value='inexpensive-first'>сначала недорогие</option>
+              <option value='expensive-first'>сначала дорогие</option>
+              <option value='fat-content'>по жирности</option>
+            </select>
           </fieldset>
           <fieldset class='price-field'>
             <legend class='option-caption'>Цена: 100 руб. - 500 руб.</legend>
