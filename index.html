@@ -229,30 +229,30 @@
       </div>
     </footer>
     <div class='feedback-window'>
-      <form action='#' method='post'>
-        <fieldset>
-          <legend class='visually-hidden'>Форма обратной связи</legend>
-          <b>Мы обязательно вам ответим!</b>
-          <ul class='feedback-list'>
-            <li>
-              <button type='button' class='visually-hidden close'>х</button>
-            </li>
-            <li>
-              <label class='visually-hidden' for='user-name'>Имя</label>
-              <input type='text' name='your-name' class='feedback-contacts' id='user-name' placeholder='Как вас зовут?' required>
-            </li>
-            <li>
-              <label class='visually-hidden' for='feedback-email'>Электронная почта</label>
-              <input type='email' name='email-feedback' class='feedback-contacts' id='feedback-email' placeholder='Ваша почта для ответа?' required>
-            </li>
-            <li>
-              <textarea class='feedback-comment' name='comment' id='comment-field' rows='5' placeholder='Напишите что-нибудь...' required></textarea>
-            </li>
-            <li>
-              <button type='submit' class='button'>Отправить</button>
-            </li>
-          </ul>
-        </fieldset>
+      <b>Мы обязательно вам ответим!</b>
+      <form action='#' method='post' class='feedback-form'>
+        <ul class='feedback-list'>
+          <li>
+            <button type='button' class='visually-hidden close'>х</button>
+          </li>
+          <li>
+            <label class='visually-hidden' for='user-name'>Имя</label>
+            <input type='text' name='your-name' class='feedback-contacts' id='user-name' placeholder='Как вас зовут?'>
+          </li>
+          <li>
+            <label class='visually-hidden' for='feedback-email'>Электронная почта</label>
+            <input type='email' name='email-feedback' class='feedback-contacts' id='feedback-email' placeholder='Ваша почта для ответа?'>
+          </li>
+          <li>
+            <textarea class='feedback-comment' name='comment' id='comment-field' rows='5' placeholder='Напишите что-нибудь...'></textarea>
+          </li>
+          <li>
+            <button type='submit' class='button feedback-button'>Отправить</button>
+          </li>
+          <li>
+            <button type='button' class='feedback-close'>Закрыть</button>
+          </li>
+        </ul>
       </form>
     </div>
   </body>
