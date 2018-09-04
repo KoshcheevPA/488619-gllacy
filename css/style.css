@@ -123,6 +123,7 @@ body {
 .pagination {
   list-style: none;
 }
+
 .submenu-container {
   position: relative;
 }
@@ -154,7 +155,7 @@ body {
 
 .catalog-navigation::before {  /*Чтобы выпадающее меню не закрывалось, я выдумал это, т.к. если делать отступы ссылкам и увеличивать li, то от ссылок улетает border. Но мне кажется тебе не понравится этот способ))*/
   content: '';  /*Возможно он даже неправильный*/
-  position: absolute;
+  position: absolute;   /*То, что между пунктом и окном невидимая обалсть, которая не дает закрываться окошку, мне показалось удобным*/
   height: 5px;
   top: -5px;
   width: 110px;
@@ -381,9 +382,8 @@ body {
 .offers-button {
   padding: 13px 24px;
   border-radius: 30px;
-  position: absolute;
-  bottom: 22px;
-  right: 22px;
+  display: inline-block;
+  margin-left: auto;
   background-image: linear-gradient(0deg, rgb(202, 56, 36) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
   text-shadow: none;
@@ -740,20 +740,22 @@ body {
 .second-offer {
   width: 48.87%;
   box-sizing: border-box;
-  padding: 18px 28px 36px 18px;/*Текст блока не получается расположить так, как на макете (в 2 строки)*/
+  padding: 18px 28px 20px 18px;/*Текст блока не получается расположить так, как на макете (в 2 строки)*/
   background-size: cover;
 }
 
 .first-offer p,
 .second-offer p {
   margin-top: 16px;
-  margin-bottom: 53px;
+  margin-bottom: 45px;
+  text-align: left;
 }
 
 .offers-caption {
   font-size: 35px;
   line-height: 41px;
   margin: 0;
+  text-align: left;
 }
 
 .offers-buttton {
@@ -864,7 +866,7 @@ body {
   padding: 0;
   margin: 0;
   padding-left: 20px;
-  padding-top: 28px;
+  padding-top: 22px;
   padding-bottom: 10px;
 }
 
@@ -1291,6 +1293,7 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   margin-bottom: 40px;
+  text-align: right;
 }
 
 .product-icecream {
@@ -1357,6 +1360,11 @@ body {
 }
 
 .advantages-list p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 10px;
+  padding-bottom: 12px;
   padding-left: 58px;
   padding-right: 33px;
 }
