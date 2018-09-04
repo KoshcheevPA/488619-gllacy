@@ -1529,7 +1529,7 @@ body {
   width: 200px;
   background-color: #a9bab0;
   border-radius: 30px;
-  padding: 16px 21px;
+  padding: 0 21px;
   margin: 0 15px;
 }
 
@@ -1544,7 +1544,7 @@ body {
 .range-sort[type='range'] + label::before {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: 5px;
   left: 15px;
   display: inline-block;
   height: 30px;
@@ -1560,7 +1560,7 @@ body {
 .range-sort[type='range'] + label::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: 5px;
   left: 125px;
   display: inline-block;
   height: 30px;
@@ -1573,36 +1573,39 @@ body {
 }
 
 .scale {
-  display: block;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
   height: 4px;
   width: 110px;
   background-color: #ffffff;
   position: relative;
-  top: 1px;
+  top: 15px;
   left: 15px;
 }
 
 .scale::after {
   content: '';
-  display: block;
+  display: inline-block;
   height: 4px;
   width: 106px;
   background-color: #ffffff;
   opacity: 0.5;
   position: relative;
   left: 75px;
-  top: -4px;
+  top: -29px;
 }
 
 .scale::before {
   content: '';
-  display: block;
+  display: inline-block;
   height: 4px;
   width: 106px;
   background-color: #ffffff;
   opacity: 0.5;
   position: relative;
   right: 20px;
+  top: -11px;
 }
 
 .accept {
@@ -1649,7 +1652,7 @@ body {
   border: 0;
   cursor: pointer;
 }
-  /* background-image: url('../img/cross-small.svg'); */
+
 
 .basket-table td {
   font-weight: normal;
