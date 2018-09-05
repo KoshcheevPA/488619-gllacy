@@ -1,13 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
   color: #ffffff;
   background-color: #849d8f;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {
@@ -45,10 +48,10 @@ body {
 }
 
 .site-navigation {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   padding-top: 21px;
   padding-left: 10px;
 }
@@ -98,9 +101,9 @@ body {
 }
 
 .user-navigation {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
   margin-left: auto;
   padding-top: 23px;
 }
@@ -129,21 +132,21 @@ body {
 }
 
 .catalog-navigation {
-  position: absolute;
   display: none;
+  position: absolute;
   width: 143px;
   top: 37px;
   left: -7px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 11px;
+  text-align: left;
+  vertical-align: middle;
   font-size: 14px;
   line-height: 16px;
   color: #323232;
   background-color: #f8f7f4;
-  text-align: left;
-  padding: 0;
-  padding-bottom: 11px;
-  margin: 0;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-  vertical-align: middle;
   outline-offset: 1px solid #c2cec7;
   border-radius: 5px;
   z-index: 50;
@@ -153,39 +156,39 @@ body {
   padding: 0 20px;
 }
 
-.catalog-navigation::before {  /*Чтобы выпадающее меню не закрывалось, я выдумал это, т.к. если делать отступы ссылкам и увеличивать li, то от ссылок улетает border. Но мне кажется тебе не понравится этот способ))*/
-  content: '';  /*Возможно он даже неправильный*/
-  position: absolute;   /*То, что между пунктом и окном невидимая обалсть, которая не дает закрываться окошку, мне показалось удобным*/
+.catalog-navigation::before {
+  content: '';
+  position: absolute;
+  width: 110px;
   height: 5px;
   top: -5px;
-  width: 110px;
 }
 
 .search-form::before {
   content: '';
   position: absolute;
-  height: 40px;
-  top: -30px;        /*С поиском и входом та же проблема*/
-  right: 0;
   width: 110px;
+  height: 40px;
+  top: -30px;
+  right: 0;
 }
 
 .login-form::before {
-  content: '';    /*Проблема решена, пользоваться теперь удобно, взял значания с запасом*/
+  content: '';
   position: absolute;
+  width: 95px;
   height: 20px;
   top: -20px;
   right: 0;
-  width: 95px;
 }
 
 .basket-table::before {
   content: '';
   position: absolute;
+  width: 120px;
   height: 20px;
   top: -20px;
   right: 0;
-  width: 120px;
 }
 
 .site-navigation-item:hover .catalog-navigation,
@@ -194,19 +197,18 @@ body {
 }
 
 .catalog-navigation a {
-  font-weight: normal;
-  color: #323232;
   padding-top: 6px;
   padding-bottom: 6px;
+  font-weight: normal;
+  color: #323232;
 }
 
 .catalog-navigation .new {
-  font-weight: bold;
   padding-top: 11px;
   padding-bottom: 11px;
   margin-bottom: 6px;
+  font-weight: bold;
   border-bottom: 1px solid #d1d0ce;
-
 }
 
 .catalog-navigation li:hover,
@@ -238,19 +240,20 @@ body {
 }
 
 .site-navigation-item:hover {
-    background-color: #f7f6f3;
+  background-color: #f7f6f3;
 }
 
 .search-logo {
-  position: relative;
   display: inline-block;
+  position: relative;
+  vertical-align: middle;
   width: 33px;
   height: 33px;
   background-color: #a0b5a9;
-  border-radius: 50%;
   background-image: url('../img/loupe.svg');
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 50%;
 }
 
 .search-logo:hover {
@@ -262,12 +265,12 @@ body {
 
 .search-form {
   display: none;
+  padding: 15px 20px;
   font-size: 16px;
   line-height: 18px;
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  padding: 15px 20px;
 }
 
 .search-logo:hover .search-form {
@@ -279,32 +282,33 @@ body {
 
 .search-field {
   width: 311px;
-  font-family: inherit;
+  height: 45px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 45px;
+  font-family: inherit;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   background-color: #ffffff;
 }
 
 .login-link {
-  position: relative;
   display: inline-block;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: bold;
-  background-color: #a0b5a9;
-  border-radius: 20px;
-  background-image: url('../img/entrance-white.svg');
-  background-position: 16px 6px;
-  background-repeat: no-repeat;
+  position: relative;
+  vertical-align: middle;
   box-sizing: border-box;
   padding-left: 45px;
   padding-top: 8px;
   padding-right: 15px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  background-color: #a0b5a9;
+  background-image: url('../img/entrance-white.svg');
+  background-position: 16px 6px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
 }
 
 .login-link:hover {
@@ -316,12 +320,12 @@ body {
 }
 
 .login-form {
-  position: absolute;
   display: none;
+  position: absolute;
   top: 37px;
   right: 0;
-  background-color: #f8f7f4;
   padding: 21px 18px;
+  background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   z-index: 20;
@@ -338,14 +342,14 @@ body {
 
 .login-window input {
   width: 209px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
   font-size: 14px;
   line-height: 24px;
   font-family: inherit;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   background-color: #ffffff;
-  margin-bottom: 20px;
-  padding: 10px 15px;
 }
 
 .login-password-info {
@@ -367,10 +371,10 @@ body {
 }
 
 .button {
-  font-weight: bold;
-  color: #ffffff;
   text-align: center;
   vertical-align: middle;
+  font-weight: bold;
+  color: #ffffff;
   background-image: linear-gradient(0deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   border: none;
   text-shadow:
@@ -380,10 +384,11 @@ body {
 }
 
 .offers-button {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: auto;
   padding: 13px 24px;
   border-radius: 30px;
-  display: inline-block;
-  margin-left: auto;
   background-image: linear-gradient(0deg, rgb(202, 56, 36) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
   text-shadow: none;
@@ -411,23 +416,24 @@ body {
 }
 
 .sign-in {
+  padding: 10px 24px;
+  text-align: center;
   font-size: 18px;
   line-height: 24px;
   font-family: inherit;
   border-radius: 25px;
-  padding: 10px 24px;
-  text-align: center;
 }
 
 .button-item {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .login-password-info a {
+  display: block;
   font-family: inherit;
   font-size: 13px;
   line-height: 24px;
-  display: block;
   color: #323232;
   text-decoration: underline;
 }
@@ -439,20 +445,21 @@ body {
 }
 
 .basket {
-  position: relative;
   display: inline-block;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: bold;
-  border-radius: 20px;
-  background-color: #a0b5a9;
-  background-image: url('../img/basket.svg');
-  background-position: 16px 6px;
-  background-repeat: no-repeat;
+  position: relative;
+  vertical-align: middle;
   box-sizing: border-box;
   padding-right: 15px;
   padding-left: 45px;
   padding-top: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  background-color: #a0b5a9;
+  background-image: url('../img/basket.svg');
+  background-position: 16px 6px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
 }
 
 .basket-table {
@@ -467,19 +474,19 @@ body {
 }
 
 .inner-page-basket {
-  position: relative;
   display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 45px;
+  padding-top: 8px;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
   border-radius: 20px;
   background-position: 16px 6px;
-  box-sizing: border-box;
-  padding-right: 15px;
-  padding-left: 45px;
-  padding-top: 8px;
   color: #323232;
-  box-sizing: border-box;
   background-color: #f7f6f3;
   background-image: url('../img/basket-red.svg');
   background-repeat: no-repeat;
@@ -488,9 +495,9 @@ body {
 .inner-page-basket:hover .basket-table {
   display: block;
   position: absolute;
+  width: 485px;
   top: 37px;
   right: 0;
-  width: 485px;
   z-index: 25;
 }
 
@@ -511,24 +518,24 @@ body {
 
 .basket-sum {
   display: block;
+  text-align: right;
+  margin-top: 15px;
   font-size: 15px;
   line-height: 18px;
   font-weight: bold;
   color: #323232;
-  text-align: right;
-  margin-top: 15px;
 }
 
 .checkout-button {
+  display: block;
+  text-align: right;
+  margin-top: 15px;
+  margin-left: 315px;
+  padding: 10px 14px;
   font-size: 18px;
   line-height: 24px;
-  margin-left: 315px;
-  text-align: right;
-  display: block;
   color: #fefefe;
-  padding: 10px 14px;
   border-radius: 30px;
-  margin-top: 15px;
 }
 
 .breadcrumbs a {
@@ -550,47 +557,47 @@ body {
 }
 
 .main-caption {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
   font-size: 35px;
   line-height: 41px;
-  padding: 0;
-  margin: 0;
-  min-height: 36px;
-  margin-bottom: 25px;
 }
 
-.option-caption{
+.option-caption {
   font-size: 14px;
   line-height: 16px;
 }
 
 .sorting-type {
+  position: relative;
   padding: 0;
   margin: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 16px;
+  padding-right: 28px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
   background-color: #a9bab0;
-  border-radius: 30px;
   border: none;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 16px;
-  padding-right: 28px;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   background-image: url('../img/icon-down-dir.svg');
   background-repeat: no-repeat;
   background-position: 168px 13px;
   background-blend-mode: color-dodge;
+  border-radius: 30px;
 }
 
 .sorting legend {
-  font-weight: 500;
-  padding-bottom: 5px;
   margin-left: 12px;
+  padding-bottom: 5px;
+  font-weight: 500;
 }
 
 .sorting-type:hover {
@@ -598,20 +605,20 @@ body {
   background-blend-mode: normal;
 }
 
-.sorting-type:focus  {
+.sorting-type:focus {
   color: #323232;
   background-color: #ffffff;
   background-blend-mode: normal;
 }
 
 .contact-information-top {
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  right: 27px;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
-  position: absolute;
-  top: 100%;
-  right: 27px;
-  text-align: right;
 }
 
 .contact-information-top p {
@@ -626,17 +633,22 @@ body {
 }
 
 .slider-top p {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 60px;
   line-height: 60px;
   font-weight: bold;
-  margin: 0;
-  margin-bottom: 30px;
 }
 
 .slider-top .button {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 32px;
   line-height: 44px;
-  padding: 12px 40px;
   border-radius: 30px;
 }
 
@@ -645,17 +657,17 @@ body {
 }
 
 .slider-top {
-  text-align: center;
   position: relative;
+  text-align: center;
   z-index: 0;
 }
 
 .slider-controls {
+  position: absolute;
   width: 150px;
   height: 40px;
-  position: absolute;
-  z-index: 1;
   top: 563px;
+  z-index: 1;
 }
 
 .slider-button {
@@ -668,12 +680,13 @@ body {
 
 .slider-button[type='radio'] + label::before {
   content: '';
-  position: absolute;
-  bottom: -3px;
-  left: -30px;
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  position: absolute;
+  vertical-align: middle;
+  height: 17px;
+  width: 17px;
+  bottom: -2px;
+  left: -30px;
   background-color: none;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -682,11 +695,10 @@ body {
 .slider-button[type='radio']:checked + label::before {
   content: '';
   position: absolute;
-  bottom: -3px;
+  height: 17px;
+  width: 17px;
+  bottom: -2px;
   left: -30px;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
   background-color: none;
   background-color: #ffffff;
   border-radius: 50%;
@@ -695,11 +707,10 @@ body {
 .slider-button[type='radio']:checked:hover + label::before {
   content: '';
   position: absolute;
-  bottom: -3px;
+  height: 17px;
+  width: 17px;
+  bottom: -2px;
   left: -30px;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
   background-color: none;
   background-color: #ffffff;
   border-radius: 50%;
@@ -711,29 +722,29 @@ body {
 
 .slider-controls label {
   position: relative;
-  margin-left: 30px;
+  margin-left: 29px;
 }
 
 .first-offer {
+  position: relative;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
   background-color: #820222;
   background-image: url('../img/raspberries-background.jpg');
   background-repeat: no-repeat;
   border-radius: 20px;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
-  position: relative;
 }
 
 .second-offer {
+  position: relative;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
   background-color: #5e3725;
   background-image: url('../img/chocolate-background.jpg');
   background-repeat: no-repeat;
   border-radius: 20px;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
-  position: relative;
 }
 
 .first-offer,
@@ -746,16 +757,16 @@ body {
 
 .first-offer p,
 .second-offer p {
+  text-align: left;
   margin-top: 16px;
   margin-bottom: 45px;
-  text-align: left;
 }
 
 .offers-caption {
+  text-align: left;
+  margin: 0;
   font-size: 35px;
   line-height: 41px;
-  margin: 0;
-  text-align: left;
 }
 
 .offers-buttton {
@@ -768,11 +779,11 @@ body {
 }
 
 .icecream {
-  position: relative;
-  z-index: 20;
   display: block;
-  color: #ffffff;
+  position: relative;
   font-weight: bold;
+  color: #ffffff;
+  z-index: 20;
 }
 
 .icecream-price {
@@ -788,16 +799,16 @@ body {
 
  .icecream-name {
   margin-bottom: 10px;
-  padding-bottom: 0;
   margin-top: -40px;   /*наверно нужно найти другое решение*/
+  padding-bottom: 0;
 }
 
 .icecream-name span {
+  margin-bottom: 0;
+  padding-bottom: 0;
   font-size: 16px;
   line-height: 22px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .icecream-price {
@@ -811,26 +822,26 @@ body {
 
 .product-icecream .button {
   display: none;
+  text-align: center;
+  padding: 13px 17px;
   font-size: 18px;
   line-height: 24px;
-  padding: 13px 17px;
   border-radius: 30px;
-  text-align: center;
 }
 
 .product-icecream li:hover::after {
   content: '';
   position: absolute;
   width: 100%;
-  height: 400px;  /*Не знаю, можно ли задавать высоту в таком случае, он влияет только на обложку при наведении*/
-  opacity: 0.2;
+  height: 400px;
   top: 0;
+  opacity: 0.2;
   background-color: #ffffff;
   box-shadow:
   0 0 0 13px #ffffff,
   0 20px 40px rgba(0, 0, 0, 0.4);
-  z-index: 5;
   border-radius: 1px;
+  z-index: 5;
 }
 
 .product-icecream li:hover {
@@ -841,45 +852,44 @@ body {
   display: block;
   position: absolute;
   text-align: center;
+  top: 340px;
+  left: 25px;
   margin: 0 auto;
   margin-bottom: 20px;
-  top: 340px;
   z-index: 20;
-  left: 25px;
   /* transform: translateY(-50px); */
 }
 
-
 .advantages {
+  margin-bottom: 40px;
   color: #323232;
   background-color: #e9ddc4;
   background-image: url('../img/wafer1200.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
-  margin-bottom: 40px;
 }
 
 .definition {
-  font-size: 24px;
-  line-height: 30px;
-  padding: 0;
   margin: 0;
+  padding: 0;
   padding-left: 20px;
   padding-top: 22px;
   padding-bottom: 10px;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .advantages-list {
-  font-size: 16px;
-  line-height: 22px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  padding-left: 18px;
   padding-bottom: 10px;
+  padding-left: 18px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .making::before {
@@ -920,6 +930,9 @@ body {
 
 .blog {
   width: 48%;
+  padding-top: 24px;
+  padding-left: 18px;
+  padding-bottom: 70px;
   font-size: 16px;
   line-height: 22px;
   color: #323232;
@@ -928,20 +941,16 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
-  padding-top: 24px;
-  padding-left: 18px;
-  padding-bottom: 70px;
 }
 
 .blog-name {
+  padding: 0;
+  margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
   color: #323232;
   text-decoration: underline;
-  padding: 0;
-  margin: 0;
-  padding-right: 250px;
 }
 
 .blog-name:hover,
@@ -951,20 +960,20 @@ body {
 }
 
 .blog-caption {
-  font-weight: 500;
-  padding: 0;
   margin: 0;
+  padding: 0;
   padding-bottom: 10px;
+  font-weight: 500;
 }
 
 .subscription {
   width: 47%;
+  padding: 7px;
   font-size: 16px;
   line-height: 22px;
   color: #5a5a5a;
   background-image: url('../img/bg-post.svg');
   background-repeat: no-repeat;
-  padding: 7px;
   background-size: cover;
   border-radius: 10px;
 }
@@ -980,14 +989,15 @@ body {
 }
 
 .sub-button {
-  display: inline-block;
+  /* display: inline-block;
+  vertical-align: middle;  */
   padding: 10px 18px;
-  border-radius: 30px;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
   font-family: 'Roboto', Arial, sans-serif;
   color: #fefefe;
+  border-radius: 30px;
 }
 
 .sub-info p {
@@ -996,15 +1006,15 @@ body {
 
 .subscription input {
   display: inline-block;
+  vertical-align: middle;
+  padding: 10px 15px;
+  padding-right: 12px;
   width: 338px;
   font-size: 16px;
   line-height: 24px;
   font-family: inherit;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
-  padding-right: 12px;
-  vertical-align: middle;
-  padding: 10px 15px;
 }
 
 .subscription input:hover {
@@ -1017,74 +1027,75 @@ body {
 
 .map {
   position: relative;
-  background-image: url('../img/map.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   margin-top: 40px;
   padding: 0;
   padding-top: 63px;
   padding-bottom: 63px;
+  background-image: url('../img/map.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .contact-information {
   display: block;
   width: 290px;
-  font-size: 14px;
-  line-height: 20px;
-  color: #323232;
-  border-radius: 15px;
-  background-color: #fefefe;
   margin-left: auto;
   padding-left: 24px;
   padding-top: 32px;
   padding-bottom: 30px;
   padding-right: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #323232;
+  background-color: #fefefe;
+  border-radius: 15px;
 }
 
 .pin {
+  position: absolute;
   width: 154px;
   height: 220px;
   top: 160px;
   left: 300px;
-  position: absolute;
   background-image: url('../img/pin.svg');
-  background-repeat: no-repeat;   /*В макете есть еще тень за мороженкой на карте. Их нужно экспортировать вместе в пнг, или есть другой способ?*/
+  background-repeat: no-repeat;
 }
 
 .address {
+  padding-top: 0;
+  margin-top: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  padding-top: 0;
-  margin-top: 0;
 }
 
 .phone {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 6px;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  margin-top: 6px;
-  padding: 0;
-  margin-bottom: 0;
 }
 
 .contact-information .button {
+  padding: 11px 28px;
+  margin-top: 24px;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  padding: 11px 28px;
   border-radius: 30px;
-  margin-top: 24px;
 }
 
 .social-button {
   display: inline-block;
+  vertical-align: middle;
   width: 32px;
   height: 32px;
   border: 3px solid #c2cec7;
-  border-radius: 50%;
   opacity: 0.8;
+  border-radius: 50%;
 }
 
 .twitter {
@@ -1127,18 +1138,18 @@ body {
 }
 
 .for-providers {
-  font-weight: bold;
   position: relative;
+  font-weight: bold;
 }
 
 .for-providers::before {
-  position: absolute;
-  left: -22px;
-  top: 2px;
   content: '';
-  background-image: url('../img/heart.svg');
+  position: absolute;
   width: 15px;
   height: 13px;
+  left: -22px;
+  top: 2px;
+  background-image: url('../img/heart.svg');
 }
 
 .footer-copyright {
@@ -1162,13 +1173,13 @@ body {
   padding: 7px 23px;
   margin-top: 36px;
   margin-left: 14px;
-  border-radius: 30px;
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
   color: #fcfcfc;
   background-color: #a6b7ae;
   border: 2px solid #fcfcfc;
+  border-radius: 30px;
 }
 
 .apply-button:hover {
@@ -1207,7 +1218,6 @@ body {
   color: #ffffff;
 }
 
-
 .active-page a {
   color: #323232;
 }
@@ -1240,8 +1250,8 @@ body {
 
 .pagination .active-page:hover,
 .pagination .active-page:active {
-  background-color: #ffffff;
   color: #353535;
+  background-color: #ffffff;
   cursor: default;
 }
 
@@ -1291,9 +1301,9 @@ body {
 .offers-wrapper {
   display: flex;
   justify-content: space-between;
+  text-align: right;
   margin: 0 auto;
   margin-bottom: 40px;
-  text-align: right;
 }
 
 .product-icecream {
@@ -1309,48 +1319,44 @@ body {
 }
 
 .product-icecream li:not(:nth-of-type(4n)) {
-  margin-right: 26px; /*Выравнивает карточки в каталоге. Обнуляет отступ у каждого 4-го элемента (крайнего в строке)*/
+  margin-right: 26px;
 }
 
 .product-icecream li {
-  text-align: center;
-  width: 267px;
-  padding: 0;
-  margin: 0;
   position: relative;
+  margin: 0;
+  padding: 0;
+  width: 267px;
+  text-align: center;
   z-index: 20;
 }
 
-.product-icecream li::before {
-  content:'';
+.product-icecream li::before:not(.inner-page) {
+  content: '';
   position: absolute;
-  left: 0;
-  z-index: 30;
   width: 61px;
   height: 61px;
+  left: 0;
   background-image: url('../img/hit.svg');
   background-repeat: no-repeat;
-}
-
-.inner-page .product-icecream li::before{
-  background-image: none;
+  z-index: 30;
 }
 
 .product-icecream li::after {
-  content:'';
+  content: '';
   position: absolute;
-  left: 0;
-  z-index: 30;
   width: 61px;
   height: 61px;
+  left: 0;
+  z-index: 30;
 }
 
 .other-info-wrapper {
-  padding: 0;
-  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0;
+  margin-top: 40px;
 }
 
 .advantages-list li {
@@ -1361,12 +1367,12 @@ body {
 
 .advantages-list p {
   margin: 0;
-  font-size: 16px;
-  line-height: 22px;
   padding-top: 10px;
   padding-bottom: 12px;
   padding-left: 58px;
   padding-right: 33px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .main-footer {
@@ -1394,10 +1400,10 @@ body {
 .additional-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 350px;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
 }
 
 .additional-list li {
@@ -1414,22 +1420,21 @@ body {
 }
 
 .breadcrumbs {
+  display: flex;
   padding: 0;
   margin: 0;
-  min-height: 20px;
   margin-bottom: 5px;
   padding-top: 28px;
-  display: flex;
 }
 
 .options {
   display: flex;
   flex-wrap: wrap;
+  width: 1000px;
   margin: 0;
   padding: 0;
-  width: 1000px;
-  font-weight: 500;
   margin-bottom: 40px;
+  font-weight: 500;
 }
 
 .options fieldset {
@@ -1461,15 +1466,16 @@ body {
 .fatness-list {
   margin: 0;
   padding: 0;
+  padding-top: 6px;
+  padding-right: 14px;
+  padding-bottom: 10px;
   background-color: #abbcb2;
   border-radius: 30px;
-  padding-top: 9px;
-  padding-right: 14px;
-  padding-bottom: 8px;
 }
 
 .fatness-list li {
   display: inline-block;
+  vertical-align: middle;
   padding-left: 46px;
 }
 
@@ -1484,38 +1490,40 @@ body {
 .radio-button[type='radio'] + label::before {
   content: '';
   position: absolute;
-  bottom: -3px;
-  left: -36px;
-  display: inline-block;
-  height: 30px;
   width: 40px;
+  height: 28px;
+  bottom: -6px;
+  left: -36px;
   background-image: url('../img/radio-off.svg');
   background-repeat: no-repeat;
   opacity: 0.8;
-  background-position: 0 5px;
   transform: scale(0.88);
 }
 
 .radio-button[type='radio']:checked + label::before {
   content: '';
   position: absolute;
-  bottom: -3px;
-  left: -36px;
-  display: inline-block;
-  height: 30px;
   width: 40px;
+  height: 28px;
+  bottom: -6px;
+  left: -36px;
   background-image: url('../img/radio-on.svg');
   background-repeat: no-repeat;
   opacity: 0.8;
-  background-position: 0 5px;
   transform: scale(0.88);
 }
 
 .radio-button[type='radio']:disabled + label::before,
 .radio-button[type='radio']:disabled:hover + label::before,
+.radio-button[type='radio']:disabled + label,
+.radio-button[type='radio']:disabled + label:hover,
 .checkbox-button[type='checkbox']:disabled + label::before,
-.checkbox-button[type='checkbox']:disabled:hover + label::before {
+.checkbox-button[type='checkbox']:disabled:hover + label::before,
+.checkbox-button[type='checkbox']:disabled + label,
+.checkbox-button[type='checkbox']:disabled + label:hover,
+.checkbox-button[type='checkbox']:checked:disabled:hover + label::before {
   opacity: 0.4;
+  color: inherit;
 }
 
 .radio-button[type='radio']:hover + label::before {
@@ -1525,12 +1533,12 @@ body {
 .add-list {
   margin: 0;
   padding: 0;
+  padding-top: 7px;
+  padding-bottom: 9px;
+  padding-right: 20px;
   font-weight: 500;
   background-color: #abbcb2;
   border-radius: 30px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  padding-right: 20px;
 }
 
 .checkbox-filters {
@@ -1548,9 +1556,10 @@ body {
 }
 
 .add-list li {
-    display: inline-block;
-    position: relative;
-    padding-left: 52px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding-left: 52px;
 }
 
 .checkbox-button[type='checkbox'] {
@@ -1560,11 +1569,10 @@ body {
 .checkbox-button[type='checkbox'] + label::before {
   content: '';
   position: absolute;
+  width: 40px;
+  height: 30px;
   bottom: -4px;
   left: -36px;
-  display: inline-block;
-  height: 30px;
-  width: 40px;
   background-image: url('../img/checkbox-off.svg');
   background-repeat: no-repeat;
   opacity: 0.8;
@@ -1575,11 +1583,10 @@ body {
 .checkbox-button[type='checkbox']:checked + label::before {
   content: '';
   position: absolute;
+  width: 40px;
+  height: 30px;
   bottom: -4px;
   left: -36px;
-  display: inline-block;
-  height: 30px;
-  width: 40px;
   background-image: url('../img/checkbox-on.svg');
   background-repeat: no-repeat;
   opacity: 0.8;
@@ -1603,10 +1610,10 @@ body {
 
 .range-container {
   width: 200px;
-  background-color: #a9bab0;
-  border-radius: 30px;
   padding: 0 21px;
   margin: 0 15px;
+  background-color: #a9bab0;
+  border-radius: 30px;
 }
 
 .range-sort[type='range'] {
@@ -1620,11 +1627,10 @@ body {
 .range-sort[type='range'] + label::before {
   content: '';
   position: absolute;
+  width: 20px;
+  height: 30px;
   bottom: 5px;
   left: 15px;
-  display: inline-block;
-  height: 30px;
-  width: 20px;
   background-image: url('../img/filter-button.svg');
   background-repeat: no-repeat;
   background-position: 0 5px;
@@ -1632,15 +1638,14 @@ body {
   cursor: pointer;
 }
 
-
 .range-sort[type='range'] + label::after {
   content: '';
+  display: inline-block;
   position: absolute;
+  width: 20px;
+  height: 30px;
   bottom: 5px;
   left: 125px;
-  display: inline-block;
-  height: 30px;
-  width: 20px;
   background-image: url('../img/filter-button.svg');
   background-repeat: no-repeat;
   background-position: 0 5px;
@@ -1649,39 +1654,39 @@ body {
 }
 
 .scale {
+  display: inline-block;
+  position: relative;
+  width: 110px;
+  height: 4px;
+  left: 15px;
+  top: 15px;
   padding: 0;
   margin: 0;
-  display: inline-block;
-  height: 4px;
-  width: 110px;
   background-color: #ffffff;
-  position: relative;
-  top: 15px;
-  left: 15px;
 }
 
 .scale::after {
   content: '';
   display: inline-block;
-  height: 4px;
-  width: 106px;
-  background-color: #ffffff;
-  opacity: 0.5;
   position: relative;
+  width: 106px;
+  height: 4px;
   left: 75px;
   top: -29px;
+  background-color: #ffffff;
+  opacity: 0.5;
 }
 
 .scale::before {
   content: '';
   display: inline-block;
-  height: 4px;
-  width: 106px;
-  background-color: #ffffff;
-  opacity: 0.5;
   position: relative;
+  width: 106px;
+  height: 4px;
   right: 20px;
   top: -11px;
+  background-color: #ffffff;
+  opacity: 0.5;
 }
 
 .accept {
@@ -1690,13 +1695,13 @@ body {
 }
 
 .pagination {
-  padding: 0;
-  margin: 0;
-  margin-top: 74px;
-  margin-bottom: 30px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 74px;
+  margin-bottom: 30px;
 }
 
 .pagination li {
@@ -1714,13 +1719,13 @@ body {
 }
 
 .delete {
+  position: absolute;
   padding: 0;
   margin: 0;
-  position: absolute;
-  top: 20px;
-  right: 14px;
   width: 11px;
   height: 11px;
+  top: 20px;
+  right: 14px;
   font-size: 0;
   background-color: inherit;
   background-image: url('../img/cross-small.svg');
@@ -1729,13 +1734,12 @@ body {
   cursor: pointer;
 }
 
-
 .basket-table td {
   font-weight: normal;
 }
 
 .basket-table table {
-  border-collapse:collapse;
+  border-collapse: collapse;
   border-bottom: 1px solid #cacac7;
 }
 
@@ -1759,35 +1763,35 @@ body {
 }
 
 .feedback-window {
-  position: fixed;
   display: none;
+  position: fixed;
   width: 427px;
-  border-radius: 10px;
+  top: 330px;
+  left: 50%;
   padding-top: 17px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 27px;
+  margin-left: -239px;
   background-color: #f8f7f4;
   z-index: 150;
-  left: 50%;
-  top: 330px;
-  margin-left: -239px; /*Это, если что, нас так на лекции учили)*/
+  border-radius: 10px;
 }
 
 .feedback-window b {
-  font-weight: 500;
   font-family: inherit;
   font-size: 24px;
   line-height: 28px;
+  font-weight: 500;
   color: #323232;
 }
 
 .feedback-close {
   position: absolute;
-  top: 15px;
-  right: 16px;
   width: 18px;
   height: 17px;
+  top: 15px;
+  right: 16px;
   font-size: 0;
   border: none;
   cursor: pointer;
@@ -1796,8 +1800,8 @@ body {
 }
 
 .feedback-list {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .feedback-form {
@@ -1807,21 +1811,21 @@ body {
 .feedback-form input[type='text'],
 .feedback-form input[type='email'],
 .feedback-comment {
-  font-size: 16px;
-  line-height: 24px;
-  color: #999999;
-  font-family: inherit;
-  font-weight: 500;
   box-sizing: border-box;
   width: 276px;
   padding-top: 10px;
   padding-bottom: 8px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 20px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #999999;
+  background-color: #ffffff;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
-  background-color: #ffffff;
-  margin-bottom: 20px;
 }
 
 .feedback-comment {
@@ -1831,14 +1835,14 @@ body {
 }
 
 .feedback-button {
-  font-size: 18px;
-  line-height: 24px;
-  font-family: inherit;
-  font-weight: bold;
-  padding: 10px 24px;
-  border-radius: 30px;
   display: block;
   margin-left: auto;
+  padding: 10px 24px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  border-radius: 30px;
 }
 
 .login-window input:hover,
@@ -1860,7 +1864,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  top:0;
+  top: 0;
   background-color: #000000;
   opacity: 0.3;
   z-index: 100;
