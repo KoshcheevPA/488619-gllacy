@@ -626,7 +626,7 @@ img {
 }
 
 .sorting legend {
-  margin-left: 14px;
+  margin-left: 16px;
   padding-bottom: 7px;
   font-weight: 500;
 }
@@ -1455,6 +1455,10 @@ img {
   padding-top: 17px;
 }
 
+.inner-page.main-footer {
+  padding-top: 19px;
+}
+
 .inner-page.main-footer::before {
   content: '';
   position: absolute;
@@ -1539,7 +1543,7 @@ img {
 
 .fatness-radio .option-caption {
   padding-bottom: 7px;
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 .fatness-list {
@@ -1629,7 +1633,7 @@ img {
 }
 
 .checkbox-filters .option-caption {
-  margin-left: 12px;
+  margin-left: 14px;
 }
 
 .add-list label {
@@ -1986,3 +1990,24 @@ img {
 .subscribe-form label {
   display: none;  /*Чтобы в IE11 не выскакивал label при нажатии на форму*/
   }
+
+
+.search-field::-webkit-input-placeholder,
+.login-window input::-webkit-input-placeholder,
+.subscription input::-webkit-input-placeholder,
+.feedback-form input[type='text']::-webkit-input-placeholder,
+.feedback-form input[type='email']::-webkit-input-placeholder,
+.feedback-comment::-webkit-input-placeholder {
+  font-weight: normal;
+  color: #999999;     /*placeholder for Chrome */
+}
+
+.search-field:-ms-input-placeholder,
+.login-window input:-ms-input-placeholder,
+.subscription input:-ms-input-placeholder,
+.feedback-form input[type='text']:-ms-input-placeholder,
+.feedback-form input[type='email']:-ms-input-placeholder,
+.feedback-comment:-ms-input-placeholder {
+  font-weight: normal;     /*placehplder for IE*/
+  color: #999999;
+}
