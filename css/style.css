@@ -826,12 +826,26 @@ img {
 }
 
 .icecream-price {
+  position: relative;
   font-size: 45px;
   line-height: 45px;
   text-shadow: 1px 0 3px rgba(49, 50, 53, 0.5);
 }
 
+.icecream-price::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 28px;
+  height: 33px;
+  left: 80px;
+  top: 5px;
+  background-image: url('../img/ruble.svg');
+  background-repeat: no-repeat;
+}
+
 .icecream-kilo {
+  margin-left: 35px;
   font-size: 30px;
   text-shadow: 1px 0 3px rgba(49, 50, 53, 0.5);
 }
