@@ -840,6 +840,8 @@ img {
   margin-bottom: 10px;
   margin-top: -40px;
   padding-bottom: 0;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .icecream-name span {
@@ -2010,4 +2012,8 @@ img {
 .feedback-comment:-ms-input-placeholder {
   font-weight: normal;     /*placehplder for IE*/
   color: #999999;
+}
+
+.sorting-type::-ms-expand {
+  display: none;           /*Скрывает стрелочку select по умолчанию в IE*/
 }
