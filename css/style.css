@@ -46,6 +46,7 @@ img {
 }
 
 .main-header-logo {
+  position: absolute;
   margin: 0;
   padding: 0;
   padding-top: 9px;
@@ -58,6 +59,7 @@ img {
   padding: 0;
   padding-top: 22px;
   padding-left: 10px;
+  margin-left: 154px;
 }
 
 .site-navigation a {
@@ -602,6 +604,7 @@ img {
 
 .sorting-type {
   position: relative;
+  width: 194px;
   padding: 0;
   margin: 0;
   padding-top: 6px;
@@ -617,7 +620,7 @@ img {
   border: none;
   -ms-appearance: none;
   -moz-appearance: none;
-  -webkit-appearance: none;
+  -webkit-appearance: menulist-text;
   appearance: none;
   background-image: url('../img/icon-down-dir-white.svg');
   background-repeat: no-repeat;
@@ -627,7 +630,7 @@ img {
 
 .sorting legend {
   margin-left: 16px;
-  padding-bottom: 7px;
+  padding-bottom: 8px;
   font-weight: 500;
 }
 
@@ -686,7 +689,7 @@ img {
 }
 
 .slider {
-  margin-top: -73px;
+  margin-top: -55px;
 }
 
 .slider-top {
@@ -1108,11 +1111,11 @@ img {
   background-image: url('../img/map.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
 }
 
 .contact-information {
   display: block;
+  position: relative;
   width: 290px;
   margin-left: auto;
   padding-left: 12px;
@@ -1124,6 +1127,7 @@ img {
   color: #323232;
   background-color: #fefefe;
   border-radius: 15px;
+  z-index: 50;
 }
 
 .contact-information p {
@@ -1511,6 +1515,7 @@ img {
   align-items: flex-start;
   margin: 0 auto;
   padding: 0;
+  margin-top: 21px;
 }
 
 .breadcrumbs {
@@ -1891,6 +1896,7 @@ img {
 
 .feedback-window-show {
   display: block;
+  animation: popup-animation 0.5s;
 }
 
 .feedback-window b {
@@ -2040,7 +2046,7 @@ img {
 }
 
 .sorting-type::-ms-expand {
-  display: none;           /*Скрывает стрелочку select по умолчанию в IE*/
+  display: none;     /*Скрывает стрелочку select по умолчанию в IE*/
 }
 
 .not-show {
@@ -2053,4 +2059,39 @@ img {
 
 .back-color-body-3 {
   background-color: #9d8b84;
+}
+
+.google-map {
+  position: absolute;
+  width: 100%;
+  height: 432px;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.login-form-error {
+}
+
+.input-error {
+  box-shadow: 0 0 5px 2px rgba(219, 0, 0, 0.7);
+}
+
+@keyframes popup-animation {
+  0% {
+    transform: translateX(-1200px);
+  }
+
+  70% {
+    transform: translatex(-20 x);
+  }
+
+  90% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }

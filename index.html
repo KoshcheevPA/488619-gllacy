@@ -9,8 +9,8 @@
   </head>
   <body class='background-wrapper'>
     <header class='main-header container'>
+      <img src='img/logo.svg' width='154' height='64' class='main-header-logo' alt='Логотип GllacyShop'>
       <nav class='main-navigation'>
-        <img src='img/logo.svg' width='154' height='64' class='main-header-logo' alt='Логотип GllacyShop'>
         <ul class='site-navigation'>
           <li class='submenu-container site-navigation-item'><a href='#' class='link main-menu'>Каталог</a>
             <ul class='catalog-navigation'>
@@ -67,11 +67,11 @@
       <h1 class='visually-hidden'>Магазин мороженого Глэйси</h1>
       <div class='slider'>
         <div class='slider-controls'>
-          <input type='radio' name='slider' class='slider-button slider-button-1' id='slider-1' checked autocomplete='off'>
+          <input type='radio' name='slider' class='slider-button slider-button-1' id='slider-1' checked>
           <label for='slider-1'></label>
-          <input type='radio' name='slider' class='slider-button slider-button-2' id='slider-2' autocomplete='off'>
+          <input type='radio' name='slider' class='slider-button slider-button-2' id='slider-2'>
           <label for='slider-2'></label>
-          <input type='radio' name='slider' class='slider-button slider-button-3' id='slider-3' autocomplete='off'>
+          <input type='radio' name='slider' class='slider-button slider-button-3' id='slider-3'>
           <label for='slider-3'></label>
         </div>
         <div class='slider-top first-slide' id='first-slide'>
@@ -198,7 +198,7 @@
             <p>
               Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
             </p>
-            <form action='#' method='post' class='subscribe-form'>
+            <form action='https://echo.htmlacademy.ru' method='post' class='subscribe-form'>
               <label class='visually-hidden' for='subs-email'>Электронная почта</label>
               <input type='email' name='email-subs' id='subs-email' placeholder='Электронная почта'>
               <button type='submit' class='button sub-button'>Отправить</button>
@@ -208,6 +208,7 @@
       </div>
     </main>
     <div class='map'>
+      <iframe class='google-map' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533252!2d30.320858715921254!3d59.938716481876185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1536335170645' allowfullscreen></iframe>
       <div class='container'>
         <div class='contact-information'>
           <p>Адрес главного офиса<p>
@@ -243,7 +244,7 @@
     </footer>
     <div class='feedback-window'>
       <b>Мы обязательно вам ответим!</b>
-      <form action='#' method='post' class='feedback-form'>
+      <form action='https://echo.htmlacademy.ru' method='post' class='feedback-form'>
         <ul class='feedback-list'>
           <li>
             <label class='visually-hidden' for='user-name'>Имя</label>
