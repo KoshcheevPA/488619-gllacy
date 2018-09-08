@@ -7,7 +7,7 @@ var username = popup.querySelector('[name=your-name]');
 var slide1 = document.querySelector('.first-slide');
 var slide2 = document.querySelector('.second-slide');
 var slide3 = document.querySelector('.thrid-slide');
-var sliderbutton = document.querySelector('.slider-button-1')
+var sliderbutton = document.querySelector('.slider-button-1');
 
 var back_color = document.querySelector('.background-wrapper');
 
@@ -25,8 +25,8 @@ var comment = document.querySelector('[name=comment]');
 var isStorageSupport = true;
 var storage = '';
 
-  try {
-    storage = localStorage.getItem('email');
+try {
+  storage = localStorage.getItem('email');
   } catch (err) {
     isStorageSupport = false;
   }

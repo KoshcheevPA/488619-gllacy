@@ -197,8 +197,7 @@ img {
   right: 0;
 }
 
-.site-navigation-item:hover .catalog-navigation,
-.main-menu:focus .catalog-navigation {
+.site-navigation-item:hover .catalog-navigation {
   display: block;
 }
 
@@ -839,6 +838,7 @@ img {
   content: '';
   display: inline-block;
   position: absolute;
+  vertical-align: middle;
   width: 28px;
   height: 33px;
   left: 80px;
@@ -1397,7 +1397,7 @@ img {
 }
 
 .inner-page .icecream {
-  padding-bottom: 27px;
+  padding-bottom: 25px;
 }
 
 .product-icecream li:not(:nth-of-type(4n)) {
@@ -1745,7 +1745,6 @@ img {
 
 .range-sort[type='range'] + label::after {
   content: '';
-  display: inline-block;
   position: absolute;
   width: 20px;
   height: 30px;
@@ -1761,6 +1760,7 @@ img {
 .scale {
   display: inline-block;
   position: relative;
+  vertical-align: inherit;
   width: 110px;
   height: 4px;
   left: -12px;
@@ -1774,6 +1774,7 @@ img {
   content: '';
   display: inline-block;
   position: relative;
+  vertical-align: inherit;
   width: 100px;
   height: 4px;
   left: 55px;
@@ -1786,6 +1787,7 @@ img {
   content: '';
   display: inline-block;
   position: relative;
+  vertical-align: inherit;
   width: 106px;
   height: 4px;
   right: 22px;
@@ -1942,7 +1944,6 @@ img {
   font-family: inherit;
   font-size: 16px;
   line-height: 24px;
-  font-family: inherit;
   font-weight: bold;
   background-color: #ffffff;
   border: 1px solid #d3d3d2;
