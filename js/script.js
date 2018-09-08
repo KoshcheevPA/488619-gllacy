@@ -22,7 +22,6 @@ var feedback_form = document.querySelector('.feedback-form');
 var feedback_email = document.querySelector('[name=email-feedback]');
 var comment = document.querySelector('[name=comment]');
 
-
 var isStorageSupport = true;
 var storage = '';
 
@@ -121,7 +120,6 @@ subscribe_form.addEventListener('submit', function (evt) {
     }
   }
 });
-
 
 feedback_form.addEventListener('submit', function (evt) {
   if (!feedback_email.value || !user_name.value || !comment.value) {
