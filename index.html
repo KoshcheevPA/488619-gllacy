@@ -25,12 +25,13 @@
           <li class='site-navigation-item'><a href='about-company.html' class='link main-menu'>О Компании</a></li>
         </ul>
         <div class='user-navigation'>
-          <div class='search-logo user-navigation-item'>
+          <div class='search-logo user-navigation-item' tabindex='0'>
             <form class='search-form' action='https://echo.htmlacademy.ru' method='get'>
-              <input type='search' class='search-field' name='search' placeholder='Что ищем?' required>
+              <label for='search' class='visually-hidden'>Поиск</label>
+              <input type='search' class='search-field' name='search' placeholder='Что ищем?' id='search' required>
             </form>
           </div>
-          <div class='login-link link user-navigation-item'>Вход
+          <div class='login-link link user-navigation-item' tabindex='0'>Вход
             <form class='login-form' action='https://echo.htmlacademy.ru' method='post'>
               <ul class='login-window'>
                 <li class='login-field'>
@@ -218,16 +219,24 @@
           <p>Для заказов по телефону:</p>
           <p class='phone'> 8 812 450-25-25</p>
           <p>(c 10 до 20 ежедневно)</p>
-          <button type='button' class='button feedback-link'>Форма обратной связи</button>
+          <a href='feedback.html' class='button feedback-link'>Форма обратной связи</a>
         </div>
       </div>
     </div>
     <footer class='main-footer container'>
       <ul class='social-list'>
-        <li><a class='social-button twitter link' href='#' aria-label='Твиттер'></a></li>
-        <li><a class='social-button instagram link' href='#' aria-label='Инстаграм'></a></li>
-        <li><a class='social-button facebook link' href='#' aria-label='Фэйсбук'></a></li>
-        <li><a class='social-button vk link' href='#' aria-label='В контакте'></a></li>
+        <li>
+          <a class='social-button twitter link' href='#' aria-label='Твиттер'><span class='visually-hidden'>Twitter</span></a>
+        </li>
+        <li>
+          <a class='social-button instagram link' href='#' aria-label='Инстаграм'><span class='visually-hidden'>Instagram</span></a>
+        </li>
+        <li>
+          <a class='social-button facebook link' href='#' aria-label='Фэйсбук'><span class='visually-hidden'>Facebook</span></a>
+        </li>
+        <li>
+          <a class='social-button vk link' href='#' aria-label='В контакте'><span class='visually-hidden'>Вконтакте</span></a>
+        </li>
       </ul>
       <ul class='additional-list'>
         <li><a class='for-providers link' href='#'>Для поставщиков</a></li>

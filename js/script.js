@@ -41,12 +41,14 @@ link.addEventListener('click', function (evt) {
 close.addEventListener('click', function (evt) {
   evt.preventDefault();
   popup.classList.remove('feedback-window-show');
+  popup.classList.remove('feedback-window-error');
   overlay.classList.remove('overlay-show');
 });
 
 overlay.addEventListener('click', function (evt) {
   evt.preventDefault();
   popup.classList.remove('feedback-window-show');
+  popup.classList.remove('feedback-window-error');
   overlay.classList.remove('overlay-show');
 });
 
@@ -55,6 +57,7 @@ window.addEventListener('keydown', function (evt) {
     evt.preventDefault();
     if (popup.classList.contains('feedback-window-show')) {
       popup.classList.remove('feedback-window-show');
+      popup.classList.remove('feedback-window-error');
       overlay.classList.remove('overlay-show');
     }
   }
@@ -124,6 +127,9 @@ subscribe_form.addEventListener('submit', function (evt) {
 feedback_form.addEventListener('submit', function (evt) {
   if (!feedback_email.value || !user_name.value || !comment.value) {
     evt.preventDefault();
+    popup.classList.remove('feedback-window-error');
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add('feedback-window-error');
     if (!feedback_email.value) {
       feedback_email.classList.add('input-error');
     } else {
